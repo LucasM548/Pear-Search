@@ -129,37 +129,4 @@ function getEngineURL(engine) {
       return '';
   }
 }
-
-// Enregistrer le choix du moteur de recherche dans un cookie
-function saveEngineChoice(engine) {
-  document.cookie = "engineChoice=" + engine + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-}
-
-// Récupérer le choix du moteur de recherche à partir du cookie
-function getEngineChoice() {
-  var name = "engineChoice=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var cookieArray = decodedCookie.split(';');
-  for (var i = 0; i < cookieArray.length; i++) {
-    var cookie = cookieArray[i];
-    while (cookie.charAt(0) === ' ') {
-      cookie = cookie.substring(1);
-    }
-    if (cookie.indexOf(name) === 0) {
-      return cookie.substring(name.length, cookie.length);
-    }
-  }
-  return "";
-}
-
-// Exemple d'utilisation
-var engineChoice = getEngineChoice();
-if (engineChoice) {
-  var engineURL = getEngineURL(engineChoice);
-  // Utiliser l'URL du moteur de recherche pour effectuer la recherche
-  console.log(engineURL);
-} else {
-  // Aucun choix de moteur enregistré, afficher une interface pour faire un choix
-  console.log("Faites un choix de moteur de recherche.");
-}
 /*=============== FIN DU CHOIX MOTEUR ==============*/
