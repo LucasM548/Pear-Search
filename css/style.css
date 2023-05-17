@@ -19,23 +19,28 @@ html {
 /**============================================
  *               SCROLLBAR
  *=============================================**/
-* {
-	scrollbar-width: auto;
-}
-
-*::-webkit-scrollbar {
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
 	width: 10px;
-}
-
-*::-webkit-scrollbar-track {
-	background: #212129;
-}
-
-*::-webkit-scrollbar-thumb {
-	background-color: rgb(103, 102, 102);
-	border-radius: 20px;
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.5)
-}
+	height: 10px;
+  }
+  
+  /* Set the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+	background-color: #212129;
+	border-radius: 10px;
+  }
+  
+  /* Set the background color of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+	background-color: #555;
+	border-radius: 10px;
+  }
+  
+  /* Set the opacity of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb:hover {
+	opacity: 0.5;
+  }  
 /*=============== END OF SCROLLBAR ==============*/
 
 
