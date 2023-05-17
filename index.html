@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="img\Pear.png">
+  <title>Pear Search</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!--================= TOP BAR ================-->
+  <div class="topbar">
+    <a href="https://mail.google.com" target="_blank" class="button">π-mail</a>
+    <input type="radio" id="Applications" checked onclick="toggleAppPanel(event)">
+    <label for="Applications" class="button" data-panel="#appPanel">Ap-π-cations</label>
+  </div>
+
+  <!--====== APPS PANEL ======-->
+  <div class="app-panel" id="appPanel"></div>
+  <!--=== END OF APPS PANEL ===-->
+
+  <!--============== END OF TOP BAR =============-->
+
+
+  <!--====== BOUTON RECHERCHE ======-->
+  <div class="search-wrapper">
+    <div class="input-holder">
+      <input type="text" class="search-input" placeholder="Écrivez pour trouver votre bonheur - Pear" />
+      <button class="search-icon" onclick="searchToggle(this, event);"><span class="span"></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+  </div>
+  <!--=== END OF BOUTON RECHERCHE ===-->
+
+  <!--================= CHOIX MOTEUR ================-->
+  <div style="position: fixed; top: 50%; left: 10px; transform: translate(0, -50%);">
+    <h2 class="boxenav">
+      Choix du navigateur
+      <br>
+      <br>
+      <input type="radio" id="google" name="search_engine" value="Google">
+      <label for="google" class="search-engine-label">Google</label>
+      <br>
+      <input type="radio" id="brave_search" name="search_engine" value="Brave_search" checked>
+      <label for="brave_search" class="search-engine-label">Brave Search</label>
+      <br>
+      <input type="radio" id="duckduckgo" name="search_engine" value="DuckDuckGo">
+      <label for="duckduckgo" class="search-engine-label">DuckDuckGo</label>
+    </h2>
+  </div>
+  <!--============== END OF CHOIX MOTEUR =============-->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

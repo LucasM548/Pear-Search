@@ -1,0 +1,372 @@
+/**======================
+ *    GENERAL STYLE
+ *========================**/
+body {
+	background: #212129;
+	background-image: url("../img/Pear Wallpaper.jpg");
+}
+
+html {
+	font-family: "Open Sans", Arial, Verdana;
+}
+
+::selection {
+	background: rgba(24, 143, 3, 0.4);
+}
+/*==== END OF GENERAL STYLE ====*/
+
+
+/**============================================
+ *               SCROLLBAR
+ *=============================================**/
+* {
+	scrollbar-width: auto;
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #212129;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgb(103, 102, 102);
+	border-radius: 20px;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.5)
+}
+/*=============== END OF SCROLLBAR ==============*/
+
+
+/**========================================================================
+ *                           TOP BAR
+ *========================================================================**/
+.topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #1c1c23;
+	padding: 10px;
+	z-index: 100;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 4px 2px;
+	font-size: 16px;
+	color: white;
+	background-color: transparent;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 0.5s;
+}
+
+.button:hover,
+.button.hovered {
+	background-color: #2e2e3a;
+	border-radius: 10px;
+}
+
+.button.active {
+	background-color: #282833;
+}
+
+.label.hovered {
+	background-color: #2e2e3a;
+	border-radius: 10px;
+}
+/*============================ END OF TOP BAR ============================*/
+
+
+/**========================================================================
+ *                           APPS PANEL
+ *========================================================================**/
+.app-panel {
+	transform: scaleY(0);
+	position: absolute;
+	top: 75px;
+	right: 15px;
+	width: 100%;
+	max-width: 300px;
+	background-color: #3c3c48;
+	padding: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	z-index: 1;
+	user-select: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	overflow-y: auto;
+	transform-origin: top;
+	transition: transform 0.2s ease-in-out;
+	max-height: 380px; /* Limite de hauteur pour le panneau */
+}
+
+.app-panel.visible {
+	transform: scaleY(1);
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.app {
+	display: inline-block;
+	width: 33.33%;
+	padding: 0px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	user-select: none;
+	aspect-ratio: 1/1;
+	margin-bottom: 5px;
+}
+
+.app img {
+	width: 50%;
+	height: 50%;
+	object-fit: contain;
+	object-position: center;
+	margin-bottom: -10px;
+}
+
+.app:hover {
+	background-color: #2e2e3a;
+	transition: background-color 0.5s;
+	border-radius: 10px;
+}
+
+.app-panel::-webkit-scrollbar {
+	width: 8px;
+}
+
+.app-panel::-webkit-scrollbar-track {
+	background-color: #3c3c48;
+	border-radius: 10px;
+}
+
+.app-panel::-webkit-scrollbar-thumb {
+	background-color: #2e2e3a;
+	border-radius: 10px;
+}
+/*============================ END OF APPS PANEL ============================*/
+
+
+/**============================================
+ *               CHOIX MOTEUR
+ *=============================================**/
+.boxenav {
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px;
+	user-select: none;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.search-engine-label {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: rgba(0, 128, 0, 0.5);
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-bottom: 10px;
+}
+
+input[type="radio"]:checked + .search-engine-label {
+	background-color: rgba(0, 128, 0, 0.8);
+	transform: scale(1.1);
+	transition: transform 0.5s;
+}
+
+.search-engine-label:hover {
+	background-color: rgba(0, 128, 0, 0.3);
+}
+
+input[type="radio"] + .search-engine-label {
+	transition: background-color 0.3s;
+}
+
+input[type="radio"]:not(:checked) + .search-engine-label {
+	transform: scale(1);
+	transition: transform 0.5s;
+}
+/*=============== END OF CHOIX MOTEUR ==============*/
+
+
+/**========================================================================
+ *                           BOUTON RECHERCHE
+ *========================================================================**/
+.search-wrapper {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+.search-wrapper.active {
+	visibility: visible;
+}
+
+.search-wrapper .input-holder {
+	height: 70px;
+	width: 70px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0);
+	border-radius: 6px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	user-select: none;
+}
+
+.search-wrapper.active .input-holder {
+	width: 450px;
+	border-radius: 50px;
+	background: rgba(0, 0, 0, 0.5);
+	transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+
+.search-wrapper .input-holder .search-input {
+	width: 100%;
+	height: 50px;
+	padding: 0px 70px 0 20px;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: transparent;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	font-family: "Open Sans", Arial, Verdana;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #FFF;
+	transform: translate(0, 60px);
+	transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	transition-delay: 0.3s;
+}
+
+.search-wrapper.active .input-holder .search-input {
+	opacity: 1;
+	transform: translate(0, 10px);
+}
+
+.search-wrapper .input-holder .search-icon {
+	width: 70px;
+	height: 70px;
+	border: none;
+	border-radius: 6px;
+	background: burlywood;
+	padding: 0px;
+	outline: none;
+	position: relative;
+	z-index: 2;
+	float: right;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.search-wrapper.active .input-holder .search-icon {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	border-radius: 30px;
+}
+
+.search-wrapper .input-holder .search-icon span {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	transform: rotate(45deg);
+	transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+}
+
+.search-wrapper.active .input-holder .search-icon span {
+	transform: rotate(-45deg);
+}
+
+.search-wrapper .input-holder .search-icon span::before,
+.search-wrapper .input-holder .search-icon span::after {
+	position: absolute;
+	content: '';
+}
+
+.search-wrapper .input-holder .search-icon span::before {
+	width: 4px;
+	height: 11px;
+	left: 9px;
+	top: 18px;
+	border-radius: 2px;
+	background: green;
+}
+
+.search-wrapper .input-holder .search-icon span::after {
+	width: 14px;
+	height: 14px;
+	left: 0px;
+	top: 0px;
+	border-radius: 16px;
+	border: 4px solid green;
+}
+
+.search-wrapper .close {
+	position: absolute;
+	z-index: 1;
+	top: 24px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	transform: rotate(-180deg);
+	transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+	transition-delay: 0.2s;
+}
+
+.search-wrapper.active .close {
+	right: -50px;
+	transform: rotate(45deg);
+	transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	transition-delay: 0.5s;
+}
+
+.search-wrapper .close::before,
+.search-wrapper .close::after {
+	position: absolute;
+	content: '';
+	background: green;
+	border-radius: 2px;
+}
+
+.search-wrapper .close::before {
+	width: 5px;
+	height: 25px;
+	left: 10px;
+	top: 0px;
+}
+
+.search-wrapper .close::after {
+	width: 25px;
+	height: 5px;
+	left: 0px;
+	top: 10px;
+}
+/*============================ END OF BOUTON RECHERCHE ============================*/
