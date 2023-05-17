@@ -3,6 +3,7 @@
  *========================================================================**/
 const appLinks = [
   { href: "https://discord.com/", imgSrc: "img/Apps/π-Scord.png", alt: "π-Scord", text: "π-Scord" },
+  { href: "https://github.com/", imgSrc: "img/Apps/π-Hub.png", alt: "π-Hub", text: "π-Hub" },
   { href: "https://www.youtube.com/", imgSrc: "img/Apps/π-Tube.png", alt: "π-Tube", text: "π-Tube" },
   { href: "https://www.google.com/maps", imgSrc: "img/Apps/π-Maps.png", alt: "π-Maps", text: "π-Maps" },
   { href: "https://play.google.com/", imgSrc: "img/Apps/π-Play.png", alt: "π-Play", text: "π-Play" },
