@@ -45,39 +45,36 @@ function toggleAppPanel(event) {
   applicationsLabel.classList.toggle("hovered");
 }
 
-// Ajoutez cet écouteur d'événements pour gérer le retrait de la classe 'active' et 'hovered' lorsque l'utilisateur clique en dehors du panneau
+function hideAppPanel() {
+  const applicationsLabel = document.querySelector('label[for="Applications"]');
+  appPanel.classList.remove("visible");
+  applicationsLabel.classList.remove("active");
+  applicationsLabel.classList.remove("hovered");
+}
+
 document.addEventListener("click", function (event) {
   const applicationsLabel = document.querySelector('label[for="Applications"]');
   if (!appPanel.contains(event.target) && event.target.id !== "Applications" && event.target.tagName !== "LABEL") {
-      appPanel.classList.remove("visible");
-      applicationsLabel.classList.remove("active");
-      if (applicationsLabel.classList.contains("hovered")) {
-          applicationsLabel.classList.remove("hovered");
-      }
+    hideAppPanel();
   }
 });
 
-// Ajoutez cet écouteur d'événements pour gérer l'ajout de la classe 'hovered' lorsque l'utilisateur survole le bouton "Ap-pi-cations"
 const applicationsLabel = document.querySelector('label[for="Applications"]');
 applicationsLabel.addEventListener("mouseenter", function (event) {
   if (appPanel.classList.contains("visible")) {
-      applicationsLabel.classList.add("hovered");
+    applicationsLabel.classList.add("hovered");
   }
 });
 
-// Ajoutez cet écouteur d'événements pour gérer le retrait de la classe 'hovered' lorsque l'utilisateur ne survole plus le bouton "Ap-pi-cations"
 applicationsLabel.addEventListener("mouseleave", function (event) {
   applicationsLabel.classList.remove("hovered");
 });
 
 document.addEventListener("click", function (event) {
   if (!appPanel.contains(event.target) && event.target.id !== "Applications" && event.target.tagName !== "LABEL") {
-      appPanel.classList.remove("visible");
+    hideAppPanel();
   }
 });
-/*============================ END OF APPS PANEL ============================*/
-
-
 /**============================================
  *               CHOIX MOTEUR
  *=============================================**/
@@ -148,7 +145,7 @@ function searchToggle(obj, evt) {
   }
 }
 
-$('.search-input').on('keypress', function(evt) {
+$('.search-input').on('keypress', function (evt) {
   if (evt.key === 'Enter' || evt.key === 'Return') {
     searchToggle(this, evt);
   }
