@@ -78,12 +78,44 @@ document.addEventListener("click", function (event) {
 /*============================ END OF APPS PANEL ============================*/
 
 
+/**============================================
+ *               CHOIX MOTEUR
+ *=============================================**/
+function getEngineURL(engine) {
+  switch (engine) {
+    case 'Google':
+      return 'https://www.google.com/search?q=';
+    case 'Brave_search':
+      return 'https://search.brave.com/search?q=';
+    case 'DuckDuckGo':
+      return 'https://duckduckgo.com/?q=';
+    default:
+      return '';
+  }
+}
+
+function getSelectedEngine() {
+  const storedEngine = localStorage.getItem('selectedEngine');
+  if (storedEngine) {
+    return storedEngine;
+  } else {
+    return 'Brave_search';
+  }
+}
+
+$('input[name="search_engine"]').on('change', function() {
+  const newSelectedEngine = $('input[name="search_engine"]:checked').val();
+  localStorage.setItem('selectedEngine', newSelectedEngine);
+});
+/*=============== FIN DU CHOIX MOTEUR ==============*/
+
+
 /**========================================================================
  *                           BOUTON RECHERCHE
  *========================================================================**/
 function searchToggle(obj, evt) {
   const container = $(obj).closest('.search-wrapper');
-  const selectedEngine = $('input[name="search_engine"]:checked').val();
+  const selectedEngine = getSelectedEngine();
 
   if (!container.hasClass('active')) {
     container.addClass('active');
@@ -112,21 +144,3 @@ $('.search-input').on('keypress', function(evt) {
   }
 });
 /*============================ END OF BOUTON RECHERCHE ============================*/
-
-
-/**============================================
- *               CHOIX MOTEUR
- *=============================================**/
-function getEngineURL(engine) {
-  switch (engine) {
-    case 'Google':
-      return 'https://www.google.com/search?q=';
-    case 'Brave_search':
-      return 'https://search.brave.com/search?q=';
-    case 'DuckDuckGo':
-      return 'https://duckduckgo.com/?q=';
-    default:
-      return '';
-  }
-}
-/*=============== FIN DU CHOIX MOTEUR ==============*/
