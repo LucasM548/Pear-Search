@@ -103,9 +103,19 @@ function getSelectedEngine() {
   }
 }
 
+function setSelectedEngine(engine) {
+  localStorage.setItem('selectedEngine', engine);
+  $('input[name="search_engine"][value="' + engine + '"]').prop('checked', true);
+}
+
+$(document).ready(function() {
+  const selectedEngine = getSelectedEngine();
+  setSelectedEngine(selectedEngine);
+});
+
 $('input[name="search_engine"]').on('change', function() {
   const newSelectedEngine = $('input[name="search_engine"]:checked').val();
-  localStorage.setItem('selectedEngine', newSelectedEngine);
+  setSelectedEngine(newSelectedEngine);
 });
 /*=============== FIN DU CHOIX MOTEUR ==============*/
 
