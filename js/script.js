@@ -117,7 +117,6 @@ $('.search-input').on('keypress', function(evt) {
 /**============================================
  *               CHOIX MOTEUR
  *=============================================**/
-// Récupérer l'URL du moteur de recherche sélectionné
 function getEngineURL(engine) {
   switch (engine) {
     case 'Google':
