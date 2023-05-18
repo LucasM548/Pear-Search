@@ -170,6 +170,13 @@ html {
  *               CHOIX MOTEUR
  *=============================================**/
 .boxenav {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translate(0, -50%);
+}
+
+.boxenav_text {
 	background-color: rgba(0, 0, 0, 0.3);
 	color: white;
 	text-align: center;
