@@ -15,15 +15,16 @@ To clear all markers, press `CTRL+C`. The markers will automatically show up whe
 
 ## 📝 Todo
 
-- [x] Adaptation pour télépgone
-- [ ] Mode sombre/jour bouton
+- [x] Photo Adaptation
+- [ ] Assistant Button
+- [ ] Switch Night/Day
 <br>
-Prochaine contribution...
+Next contribution...
 
 ## 🚩 Contribution
 
-1. Fork ce dépôt
-2. Créez une branche (`git checkout -b fonctionnalité/nouvelle-fonctionnalite`)
-3. Commit vos modifications (`git commit -am 'Ajouter une nouvelle fonctionnalité'`)
-4. Push la branche (`git push origin fonctionnalité/nouvelle-fonctionnalite`)
-5. Ouvrez une Pull Request
+1. Fork this repository
+2. Create a branch (`git checkout -b fonctionnalité/nouvelle-fonctionnalite`)
+3. Commit your changes (`git commit -am 'Ajouter une nouvelle fonctionnalité'`)
+4. Push the branc (`git push origin fonctionnalité/nouvelle-fonctionnalite`)
+5. Open a Pull Request
