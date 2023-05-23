@@ -4,14 +4,8 @@ Ce dépôt contient le code source du site Pear Search.
 
 ## ⭐ Features
 
-- Fast & responsive
-- Intuitive user experience
-- Minimal design
-- Keyboard oriented
-- Autoplay
-- Searching
-- Marker
-
+- Apps panel
+- Personnalise Search
 
 <!-- ## 🚩 Marker
 
