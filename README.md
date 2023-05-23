@@ -15,7 +15,7 @@ To clear all markers, press `CTRL+C`. The markers will automatically show up whe
 
 ## 📝 Todo
 
-- [x] Adaptation pour télépgone
+- [x] Adaptation pour téléphone
 - [ ] Mode sombre/jour bouton
 <br>
 Prochaine contribution...
