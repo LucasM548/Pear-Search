@@ -2,14 +2,25 @@
 
 Ce dépôt contient le code source du site Pear Search.
 
-## Fonctionnalités
+## ⭐ Features
 
-- [ ] Adaptation pour télépgone
+- Apps panel
+- Personnalise Search
+
+<!-- ## 🚩 Marker
+
+To add a marker, press `CTRL+M`. The marker will appear on the seekbar which can be useful to highlight or mark favourite parts.
+To clear all markers, press `CTRL+C`. The markers will automatically show up when playing songs.
+-->
+
+## 📝 Todo
+
+- [x] Adaptation pour télépgone
 - [ ] Mode sombre/jour bouton
 <br>
 Prochaine contribution...
 
-## Contribution
+## 🚩 Contribution
 
 1. Fork ce dépôt
 2. Créez une branche (`git checkout -b fonctionnalité/nouvelle-fonctionnalite`)
