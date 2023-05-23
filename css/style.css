@@ -379,14 +379,18 @@ input[type="radio"]:not(:checked) + .search-engine-label {
 }
 /*============================ END OF BOUTON RECHERCHE ============================*/
 
+
+/**========================================================================
+ *                           MEDIAS
+ *========================================================================**/
 @media only screen and (max-width: 900px) {
-	.search-wrapper.active .input-holder {
-        width: calc(100vw - 130px); /* Adapter la largeur à la taille de l'écran */
-        max-width: 450px; /* Ne pas dépasser 280px */
+    .search-wrapper.active .input-holder {
+        width: calc(100vw - 130px);
+        max-width: 450px;
     }
 
     .search-wrapper .input-holder .search-input {
-        font-size: 14px; /* Réduction de la taille de la police */
+        font-size: 14px;
     }
 
     .search-wrapper .input-holder .search-icon,
@@ -488,14 +492,14 @@ input[type="radio"]:not(:checked) + .search-engine-label {
         height: 5px;
         left: 0px;
         top: 10px;
-	}
+    }
 
     .boxenav {
         top: 60%;
         left: 50%;
         transform: translateX(-50%);
-		height: 75%;
-		width: 75%;
+        height: 75%;
+        width: 75%;
     }
 
     .boxenav_text {
@@ -503,14 +507,14 @@ input[type="radio"]:not(:checked) + .search-engine-label {
     }
 
     .topbar {
-        height: 8vw;
+        height: 10vw;
         padding: 5px;
-		max-height: 55px;
+        max-height: 55px;
     }
 
     .button {
         padding: 7px 15px;
-        font-size: min(2.5vw, 15px);
+        font-size: min(2.8vw, 17px);
     }
 
     .app-panel {
@@ -520,3 +524,4 @@ input[type="radio"]:not(:checked) + .search-engine-label {
         height: 33vh;
     }
 }
+/*============================ END OF SECTION MEDIAS ============================*/
