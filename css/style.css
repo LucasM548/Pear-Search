@@ -510,13 +510,13 @@ input[type="radio"]:not(:checked) + .search-engine-label {
 
     .button {
         padding: 7px 15px;
-        font-size: 2.3vw;
+        font-size: min(2.5vw, 15px);
     }
 
     .app-panel {
-        top: 60px;
+        top: min(11vw, 75px);
         right: 10px;
-        width: 50vw;
-        height: 30vh;
+        width: 60vw;
+        height: 33vh;
     }
 }
