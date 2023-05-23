@@ -378,3 +378,90 @@ input[type="radio"]:not(:checked) + .search-engine-label {
 	top: 10px;
 }
 /*============================ END OF BOUTON RECHERCHE ============================*/
+
+@media only screen and (max-width: 900px) {
+	.boxenav {
+		size: 60%;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+	}
+
+	.search-wrapper .input-holder {
+	  height: 50px;
+	  width: 50px;
+	}
+	
+	.search-wrapper.active .input-holder {
+	  width: 300px;
+	}
+	
+	.search-wrapper .input-holder .search-input {
+	  height: 30px;
+	  padding: 0px 50px 0 10px;
+	  font-size: 14px;
+	  transform: translate(0, 40px);
+	}
+	
+	.search-wrapper.active .input-holder .search-input {
+	  transform: translate(0, 5px);
+	}
+	
+	.search-wrapper .input-holder .search-icon {
+	  width: 50px;
+	  height: 50px;
+	}
+	
+	.search-wrapper.active .input-holder .search-icon {
+	  margin: 5px;
+	  border-radius: 25px;
+	 
+	.search-wrapper .input-holder .search-icon span {
+	  width: 18px;
+	  height: 18px;
+	  top: 16px;
+	}
+	
+	.search-wrapper .input-holder .search-icon span::before {
+	  width: 3px;
+	  height: 8px;
+	  left: 6px;
+	  top: 13px;
+	  border-radius: 2px;
+	}
+	
+	.search-wrapper .input-holder .search-icon span::after {
+	  width: 10px;
+	  height: 10px;
+	  left: 0px;
+	  top: 0px;
+	  border-radius: 10px;
+	  border: 3px solid green;
+	}
+	
+	.search-wrapper .close {
+	  top: 16px;
+	  right: 10px;
+	  width: 20px;
+	  height: 20px;
+	}
+	
+	.search-wrapper.active .close {
+	  right: -30;
+	}
+	
+	.search-wrapper .close::before {
+	  width: 4px;
+	  height: 20px;
+	  left: 8px;
+	  top: 0px;
+	}
+	
+	.search-wrapper .close::after {
+	  width:20px;
+	  height: 4px;
+	  left: 0px;
+	  top: 8px;
+	}
+  }
+}
