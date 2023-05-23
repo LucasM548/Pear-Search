@@ -26,7 +26,7 @@ To clear all markers, press `CTRL+C`. The markers will automatically show up whe
 <br>
 Prochaine contribution...
 
-## Contribution
+## 🚩 Contribution
 
 1. Fork ce dépôt
 2. Créez une branche (`git checkout -b fonctionnalité/nouvelle-fonctionnalite`)
