@@ -2,44 +2,44 @@
  *                           APPS PANEL
  *========================================================================**/
 const appLinks = [
-  { href: "https://discord.com/", imgSrc: "img/Apps/π-Scord.png", alt: "π-Scord", text: "π-Scord" },
-  { href: "https://github.com/", imgSrc: "img/Apps/π-Hub.png", alt: "π-Hub", text: "π-Hub" },
-  { href: "https://www.paypal.com/", imgSrc: "img/Apps/π-Pal.png", alt: "π-Pal", text: "π-Pal" },
-  { href: "https://www.youtube.com/", imgSrc: "img/Apps/π-Tube.png", alt: "π-Tube", text: "π-Tube" },
-  { href: "https://translate.google.com/", imgSrc: "img/Apps/π-Translate.png", alt: "π-Translate", text: "π-Translate" },
-  { href: "https://www.google.com/maps/", imgSrc: "img/Apps/π-Maps.png", alt: "π-Maps", text: "π-Maps" },
-  { href: "https://play.google.com/", imgSrc: "img/Apps/π-Play.png", alt: "π-Play", text: "π-Play" },
-  { href: "https://docs.google.com/", imgSrc: "img/Apps/π-Docx.png", alt: "π-Docx", text: "π-Docx" },
-  { href: "https://sheets.google.com/", imgSrc: "img/Apps/π-Sheets.png", alt: "π-Sheets", text: "π-Sheets" },
-  { href: "https://slides.google.com/", imgSrc: "img/Apps/π-Slides.png", alt: "π-Slides", text: "π-Slides" },
-  { href: "https://forms.google.com/", imgSrc: "img/Apps/π-Forms.png", alt: "π-Forms", text: "π-Forms" },
-  { href: "https://earth.google.com/", imgSrc: "img/Apps/π-Earth.png", alt: "π-Earth", text: "π-Earth" },
-  { href: "https://meet.google.com/", imgSrc: "img/Apps/π-Meet.png", alt: "π-Meet", text: "π-Meet" },
-  { href: "https://news.google.com/", imgSrc: "img/Apps/π-News.png", alt: "π-News", text: "π-News" },
-  { href: "https://shopping.google.com/", imgSrc: "img/Apps/Shopp-π-G.png", alt: "Shopp-π-G", text: "Shopp-π-G" },
-];
-
-const appPanel = document.getElementById("appPanel");
-
-appLinks.forEach((app) => {
-    const appElement = document.createElement("a");
-    appElement.href = app.href;
-    appElement.target = "_blank";
-    appElement.classList.add("app");
-
-    const imgElement = document.createElement("img");
-    imgElement.src = app.imgSrc;
-    imgElement.alt = app.alt;
-
-    const textElement = document.createElement("p");
-    textElement.textContent = app.text;
-
-    appElement.appendChild(imgElement);
-    appElement.appendChild(textElement);
-    appPanel.appendChild(appElement);
-});
-
-function toggleAppPanel(event) {
+    { href: "https://discord.com/", imgSrc: "img/Apps/π-Scord.png", alt: "π-Scord", text: "π-Scord" },
+    { href: "https://github.com/", imgSrc: "img/Apps/π-Hub.png", alt: "π-Hub", text: "π-Hub" },
+    { href: "https://www.paypal.com/", imgSrc: "img/Apps/π-Pal.png", alt: "π-Pal", text: "π-Pal" },
+    { href: "https://www.youtube.com/", imgSrc: "img/Apps/π-Tube.png", alt: "π-Tube", text: "π-Tube" },
+    { href: "https://translate.google.com/", imgSrc: "img/Apps/π-Translate.png", alt: "π-Translate", text: "π-Translate" },
+    { href: "https://www.google.com/maps/", imgSrc: "img/Apps/π-Maps.png", alt: "π-Maps", text: "π-Maps" },
+    { href: "https://play.google.com/", imgSrc: "img/Apps/π-Play.png", alt: "π-Play", text: "π-Play" },
+    { href: "https://docs.google.com/", imgSrc: "img/Apps/π-Docx.png", alt: "π-Docx", text: "π-Docx" },
+    { href: "https://sheets.google.com/", imgSrc: "img/Apps/π-Sheets.png", alt: "π-Sheets", text: "π-Sheets" },
+    { href: "https://slides.google.com/", imgSrc: "img/Apps/π-Slides.png", alt: "π-Slides", text: "π-Slides" },
+    { href: "https://forms.google.com/", imgSrc: "img/Apps/π-Forms.png", alt: "π-Forms", text: "π-Forms" },
+    { href: "https://earth.google.com/", imgSrc: "img/Apps/π-Earth.png", alt: "π-Earth", text: "π-Earth" },
+    { href: "https://meet.google.com/", imgSrc: "img/Apps/π-Meet.png", alt: "π-Meet", text: "π-Meet" },
+    { href: "https://news.google.com/", imgSrc: "img/Apps/π-News.png", alt: "π-News", text: "π-News" },
+    { href: "https://shopping.google.com/", imgSrc: "img/Apps/Shopp-π-G.png", alt: "Shopp-π-G", text: "Shopp-π-G" },
+  ];
+  
+  const appPanel = document.getElementById("appPanel");
+  
+  appLinks.forEach((app) => {
+      const appElement = document.createElement("a");
+      appElement.href = app.href;
+      appElement.target = "_blank";
+      appElement.classList.add("app");
+  
+      const imgElement = document.createElement("img");
+      imgElement.src = app.imgSrc;
+      imgElement.alt = app.alt;
+  
+      const textElement = document.createElement("p");
+      textElement.textContent = app.text;
+  
+      appElement.appendChild(imgElement);
+      appElement.appendChild(textElement);
+      appPanel.appendChild(appElement);
+  });
+  
+  function toggleAppPanel(event) {
     event.stopPropagation();
     const applicationsLabel = document.querySelector('label[for="Applications"]');
     appPanel.classList.toggle("visible");
@@ -123,7 +123,7 @@ $('input[name="search_engine"]').on('change', function() {
     const newSelectedEngine = $('input[name="search_engine"]:checked').val();
     setSelectedEngine(newSelectedEngine);
 });
-/*=============== FIN DU CHOIX MOTEUR ==============*/
+/*=============== END OF CHOIX MOTEUR ==============*/
 
 
 /**========================================================================
