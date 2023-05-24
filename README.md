@@ -1,4 +1,4 @@
-# Pear Search
+# 🍐Pear Search🍐
 
 The best search engine of all time, it will allow you to find what you're looking for while letting you wander the web. You can forget about your personal data, which will be stored directly on our servers to simplify your life.
 
