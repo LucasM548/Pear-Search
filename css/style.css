@@ -405,10 +405,8 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 /* END MIXINS */
 
 :root {
-	--purple: #1c1c23;
-	/*7f00ff*/
-	--pink: #216b16;
-	/*e100ff*/
+	--purple: #1c1c23;	/*7f00ff*/
+	--pink: #216b16;	/*e100ff*/
 }
 
 .contribution-button {
@@ -614,7 +612,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	}
 
 	.boxenav {
-		top: 60vh;
+		top: 57vh;
 		left: 50%;
 		transform: translateX(-50%);
 		height: 75%;
@@ -637,7 +635,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	}
 
 	.app-panel {
-		top: min(11vw, 75px);
+		top: min(14vw, 75px);
 		right: 10px;
 		width: 60vw;
 		height: 33vh;
