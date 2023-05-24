@@ -44,7 +44,11 @@ function toggleAppPanel(event) {
     const applicationsLabel = document.querySelector('label[for="Applications"]');
     appPanel.classList.toggle("visible");
     applicationsLabel.classList.toggle("active");
-    applicationsLabel.classList.toggle("hovered");
+    if (appPanel.classList.contains("visible")) {
+        applicationsLabel.classList.add("hovered");
+    } else {
+        applicationsLabel.classList.remove("hovered");
+    }
 }
 
 function hideAppPanel() {
