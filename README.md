@@ -1,11 +1,11 @@
-# Pear Search
+# 🍐Pear Search🍐
 
-Ce dépôt contient le code source du site Pear Search.
+The best search engine of all time, it will allow you to find what you're looking for while letting you wander the web. You can forget about your personal data, which will be stored directly on our servers to simplify your life.
 
 ## ⭐ Features
 
-- Apps panel
-- Personnalise Search
+- Apps panel with lots of π-Apps
+- Customize search
 
 <!-- ## 🚩 Marker
 
@@ -15,8 +15,8 @@ To clear all markers, press `CTRL+C`. The markers will automatically show up whe
 
 ## 📝 Todo
 
-- [x] Photo Adaptation
-- [ ] Assistant Button
+- [x] Phone Adaptation
+- [x] Contribution Button
 - [ ] Switch Night/Day
 <br>
 Next contribution...
@@ -28,3 +28,9 @@ Next contribution...
 3. Commit your changes (`git commit -am 'Ajouter une nouvelle fonctionnalité'`)
 4. Push the branc (`git push origin fonctionnalité/nouvelle-fonctionnalite`)
 5. Open a Pull Request
+
+<h4 align="center">
+  <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"> Support the CEO <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"></h4>
+ <p align="center">
+  <a href="https://www.paypal.me/biquidouLIV"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" target="_blank" width="220"/></a>
+</p>
