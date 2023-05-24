@@ -16,7 +16,7 @@ To clear all markers, press `CTRL+C`. The markers will automatically show up whe
 ## 📝 Todo
 
 - [x] Photo Adaptation
-- [ ] Assistant Button
+- [x] Contribution Button
 - [ ] Switch Night/Day
 <br>
 Next contribution...
