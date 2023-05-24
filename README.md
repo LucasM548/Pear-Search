@@ -28,3 +28,9 @@ Next contribution...
 3. Commit your changes (`git commit -am 'Ajouter une nouvelle fonctionnalité'`)
 4. Push the branc (`git push origin fonctionnalité/nouvelle-fonctionnalite`)
 5. Open a Pull Request
+
+<h4 align="center">
+  <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"> Support Me <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"></h4>
+ <p align="center">
+  <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Fsummary&state="><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="220"/></a>
+</p>
