@@ -624,21 +624,21 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	}
 
 	.topbar {
-		height: 10vw;
+		height: 15vw;
 		padding: 5px;
 		max-height: 55px;
 	}
 
 	.button {
 		padding: 7px 15px;
-		font-size: min(2.8vw, 17px);
+		font-size: min(4vw, 17px);
 	}
 
 	.app-panel {
-		top: min(14vw, 75px);
+		top: min(18vw, 75px);
 		right: 10px;
 		width: 60vw;
-		height: 33vh;
+		height: 34vh;
 	}
 }
 /*============================ END OF SECTION MEDIAS ============================*/
