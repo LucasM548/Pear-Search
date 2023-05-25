@@ -2,8 +2,8 @@
  *    GENERAL STYLE
  *========================**/
 body {
-	background: #212129;
-	background-image: url("../img/Pear Wallpaper.jpg");
+	background: var(--background-color);
+	background-image: url("../img/White Pear Wallpaper.jpg");
 }
 
 html {
@@ -20,14 +20,27 @@ html {
 }
 
 :root {
-	--dark-mode: #1c1c23;
-	--dark-mode-text: white;
-	--dark-mode-hover: #2e2e3a;
-	--dark-mode-scrollbar-thumb: #555;
-	--Day-mode: #FFF; /**BETA VERSION**/
-	--Day-mode-text: black;
-	--Day-mode-hover: #FFF; /**BETA VERSION**/
-	--Day-mode-scrollbar-thumb: #FFF; /**BETA VERSION**/
+	--background-color: #212129;
+	--theme: #1c1c23;
+	--text-color: white;
+	--hover-color: #2e2e3a;
+	--scrollbar-thumb-color: #555;
+	--apps-panel-color: #3c3c48;
+	--boxnav-button-color: 0, 128, 0;
+	--search-icon-color: burlywood;
+	--search-icon-span-color: green;
+}
+
+.day-mode {
+	--background-color: #deded6;
+	--theme: #bdbdbd;
+	--text-color: black;
+	--hover-color: #a2a2a2;
+	--scrollbar-thumb-color: #8b8b8b;
+	--apps-panel-color: #FFF;		/* BETA VERSION */
+	--boxnav-button-color: 0, 0, 0;	/* BETA VERSION */
+	--search-icon-color: #FFF;		/* BETA VERSION */
+	--day-mode-search-icon-span: #FFF;	/* BETA VERSION */
 }
 /*==== END OF GENERAL STYLE ====*/
 
@@ -41,12 +54,12 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--dark-mode);
+	background-color: var(--background-color);
 	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--dark-mode-scrollbar-thumb);
+	background-color: var(--scrollbar-thumb-color);
 	border-radius: 10px;
 }
 
@@ -67,7 +80,7 @@ html {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	background-color: var(--dark-mode);
+	background-color: var(--theme);
 	padding: 10px;
 	z-index: 100;
 }
@@ -77,7 +90,7 @@ html {
 	padding: 10px 20px;
 	margin: 4px 2px;
 	font-size: 16px;
-	color: var(--dark-mode-text);
+	color: var(--text-color);
 	background-color: transparent;
 	border: none;
 	border-radius: 10px;
@@ -88,16 +101,16 @@ html {
 
 .button:hover,
 .button.hovered {
-	background-color: var(--dark-mode-hover);
+	background-color: var(--hover-color);
 	border-radius: 10px;
 }
 
 .button.active {
-	background-color: #282833;
+	background-color: var(--hover-color);
 }
 
 .label.hovered {
-	background-color: var(--dark-mode-hover);
+	background-color: var(--hover-color);
 	border-radius: 10px;
 }
 /*============================ END OF TOP BAR ============================*/
@@ -113,7 +126,7 @@ html {
 	right: 15px;
 	width: 100%;
 	max-width: 300px;
-	background-color: #3c3c48;
+	background-color: var(--apps-panel-color);
 	padding: 10px;
 	border-radius: 10px;
 	box-sizing: border-box;
@@ -138,7 +151,7 @@ html {
 	width: 33.33%;
 	padding: 0px;
 	text-align: center;
-	color: var(--dark-mode-text);
+	color: var(--text-color);
 	text-decoration: none;
 	white-space: nowrap;
 	overflow: hidden;
@@ -157,7 +170,7 @@ html {
 }
 
 .app:hover {
-	background-color: var(--dark-mode-hover);
+	background-color: var(--hover-color);
 	transition: background-color 0.5s;
 	border-radius: 10px;
 }
@@ -167,12 +180,12 @@ html {
 }
 
 .app-panel::-webkit-scrollbar-track {
-	background-color: #3c3c48;
+	background-color: var(--apps-panel-color);
 	border-radius: 10px;
 }
 
 .app-panel::-webkit-scrollbar-thumb {
-	background-color: var(--dark-mode-hover);
+	background-color: var(--hover-color);
 	border-radius: 10px;
 }
 /*============================ END OF APPS PANEL ============================*/
@@ -190,7 +203,7 @@ html {
 
 .boxenav_text {
 	background-color: rgba(0, 0, 0, 0.3);
-	color: var(--dark-mode-text);
+	color: var(--text-color);
 	text-align: center;
 	border-radius: 10px;
 	padding: 10px;
@@ -204,8 +217,8 @@ input[type="radio"] {
 .search-engine-label {
 	display: inline-block;
 	padding: 10px 20px;
-	background-color: rgba(0, 128, 0, 0.5);
-	color: var(--dark-mode-text);
+	background-color: rgba(var(--boxnav-button-color), 0.5);
+	color: var(--text-color);
 	border-radius: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s;
@@ -213,13 +226,13 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked+.search-engine-label {
-	background-color: rgba(0, 128, 0, 0.8);
+	background-color: rgba(var(--boxnav-button-color), 0.8);
 	transform: scale(1.1);
 	transition: transform 0.5s;
 }
 
 .search-engine-label:hover {
-	background-color: rgba(0, 128, 0, 0.3);
+	background-color: rgba(var(--boxnav-button-color), 0.3);
 }
 
 input[type="radio"]+.search-engine-label {
@@ -296,7 +309,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	height: 70px;
 	border: none;
 	border-radius: 6px;
-	background: burlywood;
+	background: var(--search-icon-color);
 	padding: 0px;
 	outline: none;
 	position: relative;
@@ -339,7 +352,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	left: 9px;
 	top: 18px;
 	border-radius: 2px;
-	background: green;
+	background: var(--search-icon-span-color);
 }
 
 .search-wrapper .input-holder .search-icon span::after {
@@ -348,7 +361,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	left: 0px;
 	top: 0px;
 	border-radius: 16px;
-	border: 4px solid green;
+	border: 4px solid var(--search-icon-span-color);
 }
 
 .search-wrapper .close {
@@ -375,7 +388,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 .search-wrapper .close::after {
 	position: absolute;
 	content: '';
-	background: green;
+	background: var(--search-icon-span-color);
 	border-radius: 2px;
 }
 
@@ -416,8 +429,8 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 /* END MIXINS */
 
 :root {
-	--grey: var(--dark-mode);	/*7f00ff*/
-	--green: #216b16;	/*e100ff*/
+	--grey: var(--theme);	/*7f00ff*/
+	--green: rgb(33, 107, 22);	/*e100ff*/
 	--dark-blue-π-Pal: #02025e;
 	--blue-π-Pal: #0303ab;
 }
@@ -605,7 +618,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 /*============================ END OF SECTION MEDIAS ============================*/
 
 .day-mode {
-	background-color: #FFF;
+	background-color: var(--Day-mode);
 	background-image: url("../img/White Pear Wallpaper.jpg");
 
 	.topbar {
