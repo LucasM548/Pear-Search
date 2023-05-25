@@ -3,7 +3,7 @@
  *========================**/
 body {
 	background: var(--background-color);
-	background-image: url("../img/White Pear Wallpaper.jpg");
+	background-image: var(--background-image);
 }
 
 html {
@@ -20,27 +20,31 @@ html {
 }
 
 :root {
+	--background-image: url("../img/Pear Wallpaper.jpg");
 	--background-color: #212129;
-	--theme: #1c1c23;
-	--text-color: white;
-	--hover-color: #2e2e3a;
+	--theme-color: #1c1c23;
 	--scrollbar-thumb-color: #555;
+	--text-color: white;
+	--text-color-rgba: 0, 0, 0;
+	--hover-color: #2e2e3a;
 	--apps-panel-color: #3c3c48;
 	--boxnav-button-color: 0, 128, 0;
 	--search-icon-color: burlywood;
 	--search-icon-span-color: green;
 }
 
-.day-mode {
+.White-mode {
+	--background-image: url("../img/White Pear Wallpaper.jpg");
 	--background-color: #deded6;
-	--theme: #bdbdbd;
-	--text-color: black;
-	--hover-color: #a2a2a2;
+	--theme-color: #bdbdbd;
 	--scrollbar-thumb-color: #8b8b8b;
-	--apps-panel-color: #FFF;		/* BETA VERSION */
-	--boxnav-button-color: 0, 0, 0;	/* BETA VERSION */
-	--search-icon-color: #FFF;		/* BETA VERSION */
-	--day-mode-search-icon-span: #FFF;	/* BETA VERSION */
+	--text-color: rgb(38, 38, 38);
+	--text-color-rgba: 255, 255, 255;
+	--hover-color: #a2a2a2;
+	--apps-panel-color: #bdbdbd;
+	--boxnav-button-color: 0, 128, 0;
+	--search-icon-color: #FFF;
+	--search-icon-span-color: green;
 }
 /*==== END OF GENERAL STYLE ====*/
 
@@ -80,7 +84,7 @@ html {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	background-color: var(--theme);
+	background-color: var(--theme-color);
 	padding: 10px;
 	z-index: 100;
 }
@@ -114,6 +118,13 @@ html {
 	border-radius: 10px;
 }
 /*============================ END OF TOP BAR ============================*/
+
+
+/**========================================================================
+ *                           SWITCH DAY/NIGHT MODE
+ *========================================================================**/
+ 
+ /*============================ END OF SWITCH DAY/NIGHT MODE ============================*/
 
 
 /**========================================================================
@@ -274,7 +285,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 .search-wrapper.active .input-holder {
 	width: 450px;
 	border-radius: 50px;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(var(--text-color-rgba), 0.5);
 	transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
 }
 
@@ -429,7 +440,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 /* END MIXINS */
 
 :root {
-	--grey: var(--theme);	/*7f00ff*/
+	--grey: var(--theme-color);	/*7f00ff*/
 	--green: rgb(33, 107, 22);	/*e100ff*/
 	--dark-blue-π-Pal: #02025e;
 	--blue-π-Pal: #0303ab;
@@ -456,7 +467,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	padding: 0.75em 1.75em;
 	border-radius: 50px;
 	display: inline-block;
-	color: #fff;
+	color: var(--text-color);
 	background: linear-gradient(to right, var(--grey), var(--green));
 }
 
