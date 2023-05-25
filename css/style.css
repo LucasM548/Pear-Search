@@ -126,7 +126,7 @@ html {
 /**========================================================================
  *                           SWITCH DAY/NIGHT
  *========================================================================**/
-#theme-toggle {
+ #theme-toggle {
 	position: relative;
 	width: min(15vw, 60px);
 	height: min(10vw, 30px);
@@ -140,7 +140,8 @@ html {
 	border-radius: 15px;
 	cursor: pointer;
 	user-select: none;
-	transition: background-color 0.5s;
+	transition: background-color 0.5s, box-shadow 0.3s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #theme-toggle-cursor {
@@ -151,11 +152,13 @@ html {
 	height: min(8vw, 26px);
 	background-color: var(--text-color);
 	border-radius: 50%;
-	transition: transform 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out, background-color 0.5s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #theme-toggle:hover {
 	background-color: var(--hover-color);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .White-mode #theme-toggle-cursor {
