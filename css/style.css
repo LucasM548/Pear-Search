@@ -1,7 +1,7 @@
 /**======================
  *    GENERAL STYLE
  *========================**/
-body {
+ body {
 	background: var(--background-color);
 	background-image: var(--background-image);
 	transition: all 0.3s ease-in-out;
@@ -141,9 +141,9 @@ html {
 	cursor: pointer;
 	user-select: none;
 	transition: background-color 0.5s;
-  }
+}
 
-  #theme-toggle-cursor {
+#theme-toggle-cursor {
 	position: absolute;
 	top: 2px;
 	left: 2px;
@@ -152,17 +152,17 @@ html {
 	background-color: var(--text-color);
 	border-radius: 50%;
 	transition: transform 0.2s ease-in-out;
-  }
-  
-  #theme-toggle:hover {
+}
+
+#theme-toggle:hover {
 	background-color: var(--hover-color);
-  }
-  
-  .White-mode #theme-toggle-cursor {
+}
+
+.White-mode #theme-toggle-cursor {
 	transform: translateX(30px);
 	background-color: var(--background-color);
-  }  
- /*============================ END OF SWITCH DAY/NIGHT ============================*/
+}
+/*============================ END OF SWITCH DAY/NIGHT ============================*/
 
 
 /**========================================================================
@@ -464,10 +464,10 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	--green: rgb(33, 107, 22);
 	--dark-blue-π-Pal: #02025e;
 	--blue-π-Pal: #0303ab;
-  }
-  
-  .contribution-button,
-  .π-Pal-button {
+}
+
+.contribution-button,
+.π-Pal-button {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: min(3.5vw, 16px);
 	position: fixed;
@@ -486,18 +486,18 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	display: inline-block;
 	color: var(--text-color);
 	background: linear-gradient(to right, var(--theme-color), var(--green));
-  }
-  
-  .π-Pal-button {
+}
+
+.π-Pal-button {
 	right: 160px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
-  }
-  
-  .contribution-button::after,
-  .π-Pal-button::after {
+}
+
+.contribution-button::after,
+.π-Pal-button::after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -510,75 +510,75 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	background: inherit;
 	filter: blur(6px);
 	transition: all 0.2s;
-  }
-  
-  .contribution-button:hover::after,
-  .π-Pal-button:hover::after {
+}
+
+.contribution-button:hover::after,
+.π-Pal-button:hover::after {
 	filter: blur(4px);
 	width: 100%;
 	bottom: -5px;
 	left: 0;
-  }
-  
-  .contribution-button:active::after,
-  .π-Pal-button:active::after {
+}
+
+.contribution-button:active::after,
+.π-Pal-button:active::after {
 	filter: blur(10px);
-  }
-  
-  /* FIX For Edge and IE */
-  
-  @supports (-ms-ime-align: auto) {
+}
+
+/* FIX For Edge and IE */
+
+@supports (-ms-ime-align: auto) {
+
 	.contribution-button,
 	.π-Pal-button {
-	  -webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-	  box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+		-webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+		box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
 	}
-  
+
 	.π-Pal-button {
-	  -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-	  box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
 	}
-  
+
 	.contribution-button::after,
 	.π-Pal-button::after {
-	  display: none;
+		display: none;
 	}
-  }
-  
-  @media screen and (-ms-high-contrast: active),
-  (-ms-high-contrast: none) {
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
 	.contribution-button,
 	.π-Pal-button {
-		background: -webkit-gradient(
-		  linear,
-		  left top,
-		  right top,
-		  from(var(--dark-blue-π-Pal)),
-		  to(var(--blue-π-Pal))
-		);
+		background: -webkit-gradient(linear,
+				left top,
+				right top,
+				from(var(--dark-blue-π-Pal)),
+				to(var(--blue-π-Pal)));
 		background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
 		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
 		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-	  }
-  
-	  .contribution-button::after,
-	  .π-Pal-button::after {
+	}
+
+	.contribution-button::after,
+	.π-Pal-button::after {
 		display: none;
-	  }
-  
-	  @keyframes gradient {
+	}
+
+	@keyframes gradient {
 		0% {
-		  background-position: 0% 50%;
+			background-position: 0% 50%;
 		}
-  
+
 		50% {
-		  background-position: 100% 50%;
+			background-position: 100% 50%;
 		}
-  
+
 		100% {
-		  background-position: 0% 50%;
+			background-position: 0% 50%;
 		}
-	  }
+	}
 }
 /*=============== END OF CONTRIBUTION BUTTON ==============*/
 
