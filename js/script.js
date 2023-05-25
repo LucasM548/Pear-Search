@@ -160,3 +160,44 @@ $('.search-input').on('keypress', function(evt) {
     }
 });
 /*============================ END OF BOUTON RECHERCHE ============================*/
+
+
+/**============================================
+ *               SWITCH NIGHT/DAY
+ *=============================================**/
+// Récupération du bouton et du curseur
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleCursor = document.getElementById('theme-toggle-cursor');
+
+// Récupération du thème actif dans le stockage local
+const activeTheme = localStorage.getItem('activeTheme');
+
+// Si le thème actif est "White-mode", on ajoute la classe correspondante à la balise <html>
+if (activeTheme === 'White-mode') {
+  document.querySelector('html').classList.add('White-mode');
+  // On déplace le curseur à droite pour représenter le mode nuit
+  themeToggleCursor.style.transform = 'translateX(30px)';
+}
+
+// Ajout d'un écouteur d'événement sur le clic du bouton
+themeToggle.addEventListener('click', () => {
+  // Récupération de la balise <html>
+  const html = document.querySelector('html');
+
+  // Si la classe "White-mode" est présente, on la supprime et on ajoute la classe par défaut
+  if (html.classList.contains('White-mode')) {
+    html.classList.remove('White-mode');
+    // On déplace le curseur à gauche pour représenter le mode jour
+    themeToggleCursor.style.transform = 'translateX(0)';
+    // On enregistre le thème actif dans le stockage local
+    localStorage.setItem('activeTheme', '');
+  } else {
+    // Sinon, on ajoute la classe "White-mode"
+    html.classList.add('White-mode');
+    // On déplace le curseur à droite pour représenter le mode nuit
+    themeToggleCursor.style.transform = 'translateX(30px)';
+    // On enregistre le thème actif dans le stockage local
+    localStorage.setItem('activeTheme', 'White-mode');
+  }
+});
+/*=============== END OF SWITCH NIGHT/DAY ==============*/

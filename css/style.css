@@ -121,10 +121,45 @@ html {
 
 
 /**========================================================================
- *                           SWITCH DAY/NIGHT MODE
+ *                           SWITCH DAY/NIGHT
  *========================================================================**/
- 
- /*============================ END OF SWITCH DAY/NIGHT MODE ============================*/
+#theme-toggle {
+	position: relative;
+	width: 60px;
+	height: 30px;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 4px 2px;
+	font-size: 16px;
+	color: var(--text-color);
+	background-color: transparent;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 0.5s;
+  }
+
+  #theme-toggle-cursor {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 26px;
+	height: 26px;
+	background-color: var(--text-color);
+	border-radius: 50%;
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  #theme-toggle:hover {
+	background-color: var(--hover-color);
+  }
+  
+  .White-mode #theme-toggle-cursor {
+	transform: translateX(30px);
+	background-color: var(--background-color);
+  }  
+ /*============================ END OF SWITCH DAY/NIGHT ============================*/
 
 
 /**========================================================================
