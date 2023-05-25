@@ -18,7 +18,7 @@ To clear all markers, press `CTRL+C`. The markers will automatically show up whe
 - [x] Phone Adaptation
 - [x] Contribution Button
 - [x] π-Pal Button
-- [ ] Switch Night/Day
+- [x] Switch Night/Day
 <br>
 Next contribution...
 
