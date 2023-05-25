@@ -39,7 +39,7 @@ html {
 	--background-color: #deded6;
 	--theme-color: #c8c8c8;
 	--scrollbar-thumb-color: #8b8b8b;
-	--text-color: rgb(38, 38, 38);
+	--text-color: black;
 	--text-color-rgba: 255, 255, 255;
 	--hover-color: #a2a2a2;
 	--apps-panel-color: #bababa;
@@ -126,7 +126,7 @@ html {
 /**========================================================================
  *                           SWITCH DAY/NIGHT
  *========================================================================**/
- #theme-toggle {
+#theme-toggle {
 	position: relative;
 	width: min(15vw, 60px);
 	height: min(10vw, 30px);
@@ -154,6 +154,7 @@ html {
 	border-radius: 50%;
 	transition: transform 0.2s ease-in-out, background-color 0.5s;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	user-select: none;
 }
 
 #theme-toggle:hover {
@@ -492,7 +493,10 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 }
 
 .π-Pal-button {
-	right: 160px;
+	right: 50%;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-50%, -50%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -601,15 +605,17 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	}
 
 	.boxenav {
-		top: 57vh;
-		left: 50%;
-		transform: translateX(-50%);
-		height: 75%;
-		width: 75%;
+		top: 73vh;
+		right: 20%;
+		left: 20%
 	}
 
 	.boxenav_text {
 		font-size: min(5vw, 20px);
+	}
+
+	.search-wrapper {
+		top: 45%;
 	}
 }
 /*============================ END OF SECTION MEDIAS ============================*/
