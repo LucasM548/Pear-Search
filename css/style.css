@@ -82,6 +82,7 @@ html {
 	top: 0;
 	left: 0;
 	right: 0;
+	height: min(15vw, 55px);
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -95,7 +96,7 @@ html {
 	display: inline-block;
 	padding: 10px 20px;
 	margin: 4px 2px;
-	font-size: 16px;
+	font-size: min(4vw, 17px);
 	color: var(--text-color);
 	background-color: transparent;
 	border: none;
@@ -127,8 +128,8 @@ html {
  *========================================================================**/
 #theme-toggle {
 	position: relative;
-	width: 60px;
-	height: 30px;
+	width: min(15vw, 60px);
+	height: min(10vw, 30px);
 	display: inline-block;
 	padding: 10px 20px;
 	margin: 4px 2px;
@@ -146,8 +147,8 @@ html {
 	position: absolute;
 	top: 2px;
 	left: 2px;
-	width: 26px;
-	height: 26px;
+	width: min(8vw, 26px);
+	height: min(8vw, 26px);
 	background-color: var(--text-color);
 	border-radius: 50%;
 	transition: transform 0.2s ease-in-out;
@@ -170,7 +171,7 @@ html {
 .app-panel {
 	transform: scaleY(0);
 	position: absolute;
-	top: 75px;
+	top: min(22vw, 80px);
 	right: 15px;
 	width: 100%;
 	max-width: 300px;
@@ -320,7 +321,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 }
 
 .search-wrapper.active .input-holder {
-	width: 450px;
+	width: min(calc(100vw - 130px), 450px);
 	border-radius: 50px;
 	background: rgba(var(--text-color-rgba), 0.5);
 	transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
@@ -338,12 +339,12 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	box-sizing: border-box;
 	border: none;
 	outline: none;
-	font-size: 16px;
+	font-size: min(3.3vw, 16px);
 	font-weight: 400;
 	line-height: 20px;
 	color: #FFF;
 	transform: translate(0, 60px);
-	transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570), font-size 0s;
 	transition-delay: 0.3s;
 }
 
@@ -353,8 +354,8 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 }
 
 .search-wrapper .input-holder .search-icon {
-	width: 70px;
-	height: 70px;
+	width: min(17vw, 70px);
+	height: min(17vw, 70px);
 	border: none;
 	border-radius: 6px;
 	background: var(--search-icon-color);
@@ -375,8 +376,8 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 }
 
 .search-wrapper .input-holder .search-icon span {
-	width: 22px;
-	height: 22px;
+	width: min(17vw, 22px);
+	height: min(17vw, 22px);
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -460,14 +461,13 @@ input[type="radio"]:not(:checked)+.search-engine-label {
  *               CONTRIBUTION BUTTON
  *=============================================**/
 :root {
-	--grey: var(--theme-color);	/*7f00ff*/
-	--green: rgb(33, 107, 22);	/*e100ff*/
+	--green: rgb(33, 107, 22);
 	--dark-blue-π-Pal: #02025e;
 	--blue-π-Pal: #0303ab;
-}
-
-.contribution-button,
-.π-Pal-button {
+  }
+  
+  .contribution-button,
+  .π-Pal-button {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: min(3.5vw, 16px);
 	position: fixed;
@@ -480,28 +480,24 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
 	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	padding: 0.75em 1.75em;
 	border-radius: 50px;
 	display: inline-block;
 	color: var(--text-color);
-	background: linear-gradient(to right, var(--grey), var(--green));
-}
-
-.π-Pal-button {
-	bottom: 20px;
+	background: linear-gradient(to right, var(--theme-color), var(--green));
+  }
+  
+  .π-Pal-button {
 	right: 160px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
-}
-
-.contribution-button::after,
-.π-Pal-button::after {
+  }
+  
+  .contribution-button::after,
+  .π-Pal-button::after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -514,92 +510,75 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	background: inherit;
 	filter: blur(6px);
 	transition: all 0.2s;
-}
-
-.contribution-button:hover::after,
-.π-Pal-button:hover::after {
+  }
+  
+  .contribution-button:hover::after,
+  .π-Pal-button:hover::after {
 	filter: blur(4px);
 	width: 100%;
 	bottom: -5px;
 	left: 0;
-}
-
-.contribution-button:active::after,
-.π-Pal-button:active::after {
+  }
+  
+  .contribution-button:active::after,
+  .π-Pal-button:active::after {
 	filter: blur(10px);
-}
-
-/* FIX For Edge and IE */
-
-@supports (-ms-ime-align: auto) {
-	.contribution-button {
-		-webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-		box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-	}
-
+  }
+  
+  /* FIX For Edge and IE */
+  
+  @supports (-ms-ime-align: auto) {
+	.contribution-button,
 	.π-Pal-button {
-		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+	  -webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+	  box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
 	}
-
+  
+	.π-Pal-button {
+	  -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+	  box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+	}
+  
 	.contribution-button::after,
-	.contribution-button:hover::after,
-	.contribution-button:active::after,
-	.π-Pal-button::after,
-	.π-Pal-button:hover::after,
-	.π-Pal-button:active::after {
-		display: none;
+	.π-Pal-button::after {
+	  display: none;
 	}
-}
-
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
-	.contribution-button {
-		background: -webkit-gradient(linear,
-				left top,
-				right top,
-				from(var(--grey)),
-				to(var(--green)));
-		background: linear-gradient(to right, var(--grey), var(--green));
-		-webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-		box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-		border-collapse: separate;
-	}
-
+  }
+  
+  @media screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+	.contribution-button,
 	.π-Pal-button {
-		background: -webkit-gradient(linear,
-				left top,
-				right top,
-				from(var(--dark-blue-π-Pal)),
-				to(var(--blue-π-Pal)));
+		background: -webkit-gradient(
+		  linear,
+		  left top,
+		  right top,
+		  from(var(--dark-blue-π-Pal)),
+		  to(var(--blue-π-Pal))
+		);
 		background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
 		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
 		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-		border-collapse: separate;
-	}
-
-	.con-button::after,
-	.contribution-button:hover::after,
-	.contribution-button:active::after,
-	.π-Pal-button::after,
-	.π-Pal-button:hover::after,
-	.π-Pal-button:active::after {
+	  }
+  
+	  .contribution-button::after,
+	  .π-Pal-button::after {
 		display: none;
-	}
-
-	@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
-}
+	  }
+  
+	  @keyframes gradient {
+		0% {
+		  background-position: 0% 50%;
+		}
+  
+		50% {
+		  background-position: 100% 50%;
+		}
+  
+		100% {
+		  background-position: 0% 50%;
+		}
+	  }
 }
 /*=============== END OF CONTRIBUTION BUTTON ==============*/
 
@@ -608,26 +587,14 @@ input[type="radio"]:not(:checked)+.search-engine-label {
  *                           MEDIAS
  *========================================================================**/
 @media only screen and (max-width: 800px) {
-	.search-wrapper.active .input-holder {
-		width: calc(100vw - 130px);
-		max-width: 450px;
+	.button {
+		padding: 7px 15px;
 	}
 
-	.search-wrapper .input-holder .search-input {
-		font-size: 14px;
-	}
-
-	.search-wrapper .input-holder .search-icon,
-	.search-wrapper.active .input-holder .search-icon {
-		width: 80%;
-		height: 80%;
-	}
-
-	.search-wrapper.active .input-holder .search-icon {
-		width: 50px;
-		height: 50px;
-		margin: 10px;
-		border-radius: 30px;
+	.app-panel {
+		right: 10px;
+		width: 60vw;
+		height: 34vh;
 	}
 
 	.boxenav {
@@ -639,25 +606,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	}
 
 	.boxenav_text {
-		font-size: 20px;
-	}
-
-	.topbar {
-		height: 15vw;
-		padding: 5px;
-		max-height: 55px;
-	}
-
-	.button {
-		padding: 7px 15px;
-		font-size: min(4vw, 17px);
-	}
-
-	.app-panel {
-		top: min(18vw, 75px);
-		right: 10px;
-		width: 60vw;
-		height: 34vh;
+		font-size: min(5vw, 20px);
 	}
 }
 /*============================ END OF SECTION MEDIAS ============================*/
