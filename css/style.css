@@ -94,7 +94,7 @@ html {
 
 .button {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 10px min(4vw, 20px);
 	margin: 4px 2px;
 	font-size: min(4vw, 17px);
 	color: var(--text-color);
@@ -594,10 +594,6 @@ input[type="radio"]:not(:checked)+.search-engine-label {
  *                           MEDIAS
  *========================================================================**/
 @media only screen and (max-width: 800px) {
-	.button {
-		padding: 7px 15px;
-	}
-
 	.app-panel {
 		right: 10px;
 		width: 60vw;
