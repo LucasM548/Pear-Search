@@ -315,7 +315,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 
 .search-wrapper .input-holder {
 	height: 70px;
-	width: 70px;
+	width: min(17vw, 70px);
 	overflow: hidden;
 	background: rgba(255, 255, 255, 0);
 	border-radius: 6px;
@@ -348,8 +348,8 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	line-height: 20px;
 	color: var(--text-color);
 	transform: translate(0, 60px);
-	transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570), font-size 0s;
-	transition-delay: 0.3s;
+	transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570), font-size 0s, color 0s;
+	transition-delay: 0.3s, color 0s;
 }
 
 .search-wrapper.active .input-holder .search-input {
