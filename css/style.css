@@ -428,13 +428,15 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	transform: rotate(-180deg);
 	transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
 	transition-delay: 0.2s;
+	opacity: 0;
 }
 
 .search-wrapper.active .close {
 	right: -50px;
 	transform: rotate(45deg);
-	transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570), opacity 0s;
 	transition-delay: 0.5s;
+	opacity: 1;
 }
 
 .search-wrapper .close::before,
