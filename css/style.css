@@ -261,6 +261,7 @@ html {
 	border-radius: 10px;
 	padding: 10px;
 	user-select: none;
+	transition: color .3s ease-in-out;
 }
 
 input[type="radio"] {
@@ -275,7 +276,6 @@ input[type="radio"] {
 	border-radius: 10px;
 	cursor: pointer;
 	margin-bottom: 10px;
-	transition: background-color 0.3s;
 }
 
 input[type="radio"]:checked+.search-engine-label {
@@ -492,6 +492,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	display: inline-block;
 	color: var(--text-color);
 	background: linear-gradient(to right, var(--theme-color), var(--green));
+	transition: all 0.3s ease-in-out;
 }
 
 .π-Pal-button {
