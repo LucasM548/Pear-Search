@@ -231,14 +231,3 @@ const links = [
     window.open(randomLink, "_blank");
   }  
 /*==== END OF BOUTON CONTRIBUTION ====*/
-
-
-/**======================
- *    GOOGLE ANALYTICS
- *========================**/
-window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-6MV2RQWCTV');
-/*==== END OF GOOGLE ANALYTICS ====*/
