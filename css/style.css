@@ -477,8 +477,8 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: min(3.5vw, 16px);
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	bottom: 3vh;
+	right: 2vw;
 	outline: none;
 	border: none;
 	text-decoration: none;
@@ -497,12 +497,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 
 .π-Pal-button {
 	right: 50%;
-	left: 50%;
-	bottom: 5px;
-	transform: translate(-50%, -50%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	transform: translateX(50%);
 	background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
 }
 
@@ -600,11 +595,11 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	.app-panel {
 		right: 10px;
 		width: 60vw;
-		height: 34vh;
+		height: max(34vh, 180px);
 	}
 
 	.boxenav {
-		top: 73vh;
+		top: max(400px, 73vh);
 		right: 20%;
 		left: 20%
 	}
@@ -614,7 +609,7 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	}
 
 	.search-wrapper {
-		top: 45%;
+		top: max(45%, 180px);
 	}
 }
 /*============================ END OF SECTION MEDIAS ============================*/
