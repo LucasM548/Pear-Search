@@ -236,12 +236,6 @@ const links = [
 /**======================
  *    GOOGLE ANALYTICS
  *========================**/
-(function(i,s,o,r){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date()})(window,document,'script','ga');
-  ga('create', 'G-6MV2RQWCTV', 'auto');
-  ga('send', 'pageview');
-
-/*
 window.dataLayer = window.dataLayer || []
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
