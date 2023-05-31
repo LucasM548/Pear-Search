@@ -238,7 +238,7 @@ const links = [
  *========================**/
 (function(i,s,o,r){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date()})(window,document,'script','ga');
-  ga('create', 'UA-6MV2RQWCTV', 'auto');
+  ga('create', 'G-6MV2RQWCTV', 'auto');
   ga('send', 'pageview');
 
 /*
