@@ -236,7 +236,13 @@ const links = [
 /**======================
  *    GOOGLE ANALYTICS
  *========================**/
-window.dataLayer = window.dataLayer || [];
+(function(i,s,o,r){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date()})(window,document,'script','ga');
+  ga('create', 'UA-6MV2RQWCTV', 'auto');
+  ga('send', 'pageview');
+
+/*
+window.dataLayer = window.dataLayer || []
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
