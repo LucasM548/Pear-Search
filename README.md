@@ -31,7 +31,9 @@ Next contribution...
 5. Open a Pull Request
 
 <h4 align="center">
-  <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"> Support the CEO <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"></h4>
- <p align="center">
+  <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center">
+  Support the CEO
+  <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"></h4>
+<p align="center">
   <a href="https://www.paypal.me/biquidouLIV"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" target="_blank" width="220"/></a>
 </p>
