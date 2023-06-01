@@ -35,5 +35,5 @@ Next contribution...
   Support the CEO
   <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="30px" height="30px" align="center"></h4>
 <p align="center">
-  <a href="https://www.paypal.me/biquidouLIV"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" target="_blank" width="220"/></a>
+  <a href="https://lucasm548.github.io/Pear-Search/Coffee.html"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" target="_blank" width="220"/></a>
 </p>
