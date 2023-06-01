@@ -1,0 +1,3 @@
+{% assign links = "https://www.paypal.me/biquidouLIV,https://www.example.com" | split "," %}
+{% assign random_index = (0..links.size) | random %}
+{% assign random_link = links[random_index] %}
