@@ -248,3 +248,63 @@ gtag('config', 'G-6MV2RQWCTV');
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "hdfskdqo11");
 /*==== END OF ANALYTICS ====*/
+
+i18next.init({
+  lng: 'fr',
+  resources: {
+    fr: {
+      translation: {
+        "placeholder": "Écrivez pour trouver votre bonheur - Pear",
+        "contribution": "Contribuer"
+      }
+    },
+    en: {
+      translation: {
+        "placeholder": "Write to find your happiness - Pear",
+        "contribution": "Contribution"
+      }
+    },
+    es: {
+      translation: {
+        "placeholder": "Escribe para encontrar tu felicidad - Pear",
+        "contribution": "Contribuir"
+      }
+    },
+    it: {
+      translation: {
+        "placeholder": "Scrivi per trovare la tua felicità - Pear",
+        "contribution": "Contribuire"
+      }
+    },
+    ru: {
+      translation: {
+        "placeholder": "Пишите, чтобы найти свое счастье - Pear",
+        "contribution": "Сотрудничать"
+      }
+    }
+  }
+}, function(err, t) {
+  updateContent();
+});
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(function(element) {
+    var key = element.getAttribute('data-i18n');
+    if (key === 'placeholder') {
+      element.setAttribute('placeholder', i18next.t(key));
+    } else {
+      element.textContent = i18next.t(key);
+    }
+  });
+}
+
+function changeLanguage(event) {
+  var selectedLanguage = event.target.value;
+  i18next.changeLanguage(selectedLanguage, function(err, t) {
+    if (err) {
+      console.log('Erreur lors du changement de langue :', err);
+      return;
+    }
+    updateContent();
+  });
+}
