@@ -129,7 +129,6 @@ html {
 .language {
 	display: inline-block;
 	position: relative;
-	right: 76vw;
 	border: 2px solid var(--text-color);
 	border-radius: 10px;
 	overflow: hidden;
