@@ -94,7 +94,7 @@ html {
 
 .button {
 	display: inline-block;
-	padding: 10px min(4vw, 20px);
+	padding: min(3vw, 10px) min(3vw, 20px);
 	margin: 4px 2px;
 	font-size: min(4vw, 17px);
 	color: var(--text-color);
@@ -124,9 +124,9 @@ html {
 
 
 /**============================================
- *               TRADUCTION
+ *               CHOIX LANGUE
  *=============================================**/
-.language {
+ .language {
 	display: inline-block;
 	position: relative;
 	border: 2px solid var(--text-color);
@@ -138,12 +138,13 @@ html {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
 .language select {
 	appearance: none;
 	background-color: transparent;
 	border: none;
 	color: var(--text-color);
-	font-size: min(4vw, 17px);
+	font-size: min(3vw, 17px);
 	padding: 10px min(4vw, 20px);
 	padding-right: min(8vw, 40px);
 	cursor: pointer;
@@ -151,16 +152,18 @@ html {
 	width: 100%;
 }
 
+
 .language::after {
 	content: "▼";
 	position: absolute;
 	top: 50%;
-	right: min(2vw, 10px);
+	right: min(1vw, 10px);
 	transform: translateY(-50%);
 	color: var(--text-color);
 	pointer-events: none;
 	transition: transform .3s ease-in-out;
 }
+
 
 .language:hover,
 .language:focus-within {
@@ -168,15 +171,18 @@ html {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+
 .language:hover select,
 .language:focus-within select {
 	color: var(--text-color);
 }
 
+
 .language:hover::after,
 .language:focus-within::after {
 	color: var(--text-color);
 }
+
 
 .language select option {
 	background-color: var(--theme-color);
@@ -184,14 +190,17 @@ html {
 	transition: background-color 0.3s ease-in-out;
 }
 
+
 .language select option:hover,
 .language select option:checked {
 	background-color: var(--hover-color);
 }
 
+
 .language select:focus {
 	outline: none;
 }
+
 
 .select-list {
 	position: absolute;
@@ -206,6 +215,7 @@ html {
 	opacity: 0;
 }
 
+
 .select-list option {
 	display: block;
 	padding: 10px min(4vw, 20px);
@@ -214,9 +224,11 @@ html {
 	transition: background-color 0.3s ease-in-out;
 }
 
+
 .select-list option:hover {
 	background-color: var(--hover-color);
 }
+
 
 .language:focus-within::after,
 .language:focus-within .select-list {
@@ -224,7 +236,7 @@ html {
 	max-height: 200px;
 	opacity: 1;
 }
-/*=============== END OF TRADUCTION ==============*/
+/*=============== END OF CHOIX LANGUE ==============*/
 
 
 /**========================================================================
