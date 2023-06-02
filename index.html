@@ -18,13 +18,27 @@
 
   <!--================= TOP BAR ================-->
   <div class="topbar">
+    
+    <!--====== TRADUCTION ======-->
+    <span id="language" class="language">
+      <select>
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="ru">Russian</option>
+      </select>
+    </span>
+    <!--=== END OF TRADUCTION ===-->
+
     <!--====== SWITCH DAY/NIGHT MODE ======-->
     <button id="theme-toggle">
       <span id="theme-toggle-cursor"></span>
     </button>
     <!--=== END OF SWITCH DAY/NIGHT MODE ===-->
+
     <a href="https://mail.google.com" target="_blank" class="button">π-mail</a>
-    <input type="radio" id="Applications" checked onclick="toggleAppPanel(event)">
+    <input type="radio" id="Applications" onclick="toggleAppPanel(event)">
     <label for="Applications" class="button" data-panel="#appPanel">Ap-π-cations</label>
   </div>
 
@@ -65,7 +79,7 @@
 
 
   <!--====== CONTRIBUTION BUTTON ======-->
-  <a class="contribution-button" href="https://github.com/LucasM548/Pear-Search#-contribution" target="_blank">Contribuer</a>
+  <a class="contribution-button" href="https://github.com/LucasM548/Pear-Search#-contribution" target="_blank" data-lang='{"fr": "Contribuer", "en": "Contribute", "es": "Contribuir", "it": "Contribuire", "ru": "способствовать"}'>Contribuer</a>
   <a class="π-Pal-button" onclick="openRandomLink()">
     <img src="img/Apps/π-Pal.png" style="height:min(3.5vw, 16px);" alt="π-Pal"/>
   </a>
