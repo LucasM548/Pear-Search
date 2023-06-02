@@ -6,33 +6,59 @@ i18next.init({
   resources: {
     fr: {
       translation: {
+        "Ap-π-cations": "Ap-π-cations",
         "placeholder": "Écrivez pour trouver votre bonheur - Pear",
+        "search-choice": "Choix du navigateur",
         "contribution": "Contribuer",
-        "app-pi-cations": "Ap-π-cations",
       }},
     en: {
       translation: {
+        "Ap-π-cations": "Ap-π-cations",
         "placeholder": "Write to find your happiness - Pear",
+        "search-choice": "Choice of browser",
         "contribution": "Contribution",
-        "app-pi-cations": "Ap-π-cations",
       }},
     es: {
       translation: {
+        "Ap-π-cations": "Aπ-licaciones",
         "placeholder": "Escribe para encontrar tu felicidad - Pear",
+        "search-choice": "Elección del navegador",
         "contribution": "Contribuir",
-        "app-pi-cations": "Aπ-licaciones",
       }},
     it: {
       translation: {
+        "Ap-π-cations": "Aπ-plicazioni",
         "placeholder": "Scrivi per trovare la tua felicità - Pear",
+        "search-choice": "Scelta del navigatore",
         "contribution": "Contribuire",
-        "app-pi-cations": "Aπ-plicazioni",
       }},
     ru: {
       translation: {
+        "Ap-π-cations": "Приложе-π-ии",
         "placeholder": "Пишите, чтобы найти свое счастье - Pear",
+        "search-choice": "Выбор браузера",
         "contribution": "Сотрудничать",
-        "app-pi-cations": "Приложе-π-ии",
+      }},
+    zh: {
+      translation: {
+        "Ap-π-cations": "应用π",
+        "placeholder": "写信寻找你的幸福 - Pear",
+        "search-choice": "浏览器的选择",
+        "contribution": "贡献",
+      }},
+    ko: {
+      translation: {
+        "Ap-π-cations": "응용프로-π-램",
+        "placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
+        "search-choice": "브라우저 선택",
+        "contribution": "기여하다",
+      }},
+    π: {
+      translation: {
+        "Ap-π-cations": "1 16 - π - 3 1 20 9 15 14 19",
+        "placeholder": "23 18 9 20 5   20 15   6 9 14 4   25 15 21 18   8 1 16 16 9 14 5 19 19   -   16 5 1 18",
+        "search-choice": "3 8 15 9 3 5  15 6  2 18 15 23 19 5 18",
+        "contribution": "3 15 14 20 18 15 20 21 2 9 15 14",
       }},
   }
 }, function(err, t) {
