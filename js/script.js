@@ -83,9 +83,33 @@ function changeLanguage(event) {
       console.log('Erreur lors du changement de langue :', err);
       return;
     }
+    localStorage.setItem('language', selectedLanguage);
     updateContent();
   });
 }
+
+window.addEventListener('load', function() {
+  var language = localStorage.getItem('language');
+  if (!language) {
+    // If no language is stored, use the user's preferred language
+    var userLanguage = navigator.language.split('-')[0];
+    if (['fr', 'en', 'es', 'it', 'ru', 'zh', 'ko', 'π'].includes(userLanguage)) {
+      language = userLanguage;
+    } else {
+      // If the user's preferred language is not supported, use English as the default language
+      language = 'en';
+    }
+    localStorage.setItem('language', language);
+  }
+  document.querySelector('#language select').value = language;
+  i18next.changeLanguage(language, function(err, t) {
+    if (err) {
+      console.log('Erreur lors du changement de langue :', err);
+      return;
+    }
+    updateContent();
+  });
+});
 /*============================ END OF CHOIX LANGUE ============================*/
 
 
