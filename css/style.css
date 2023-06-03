@@ -251,16 +251,14 @@ html {
 
 .day-light:checked+label,
 .day-light:not(:checked)+label {
-	top: 10px;
-	right: 10px;
 	display: block;
 	border-radius: 50%;
-	width: 46px;
-	height: 46px;
+	width: min(10vw, 46px);
+	height: min(10vw, 46px);
 	margin: 7px;
 	cursor: pointer;
 	transition: all 200ms linear;
-	box-shadow: 0 0 25px rgba(255, 235, 167, 0.45);
+	box-shadow: 0 0 min(5vw, 20px) rgba(255, 235, 167, 0.45);
 	user-select: none;
 }
 
@@ -278,11 +276,11 @@ html {
 	z-index: 2;
 	display: block;
 	border-radius: 50%;
-	width: 44px;
-	height: 44px;
+	width: min(9.56vw, 44px);
+	height: min(9.56vw, 44px);
 	background-color: #102770;
 	background-image: url('https://assets.codepen.io/1462889/moon.svg');
-	background-size: 20px 20px;
+	background-size: min(4.35vw, 20px) min(4.35vw, 20px);
 	background-repeat: no-repeat;
 	background-position: center;
 	transition: all 200ms linear;
@@ -300,11 +298,11 @@ html {
 	overflow: hidden;
 	display: block;
 	border-radius: 50%;
-	width: 46px;
-	height: 46px;
+	width: min(10vw, 46px);
+	height: min(10vw, 46px);
 	background-color: #48dbfb;
 	background-image: url('https://assets.codepen.io/1462889/sun.svg');
-	background-size: 25px 25px;
+	background-size: min(5.43vw, 25px) min(5.43vw, 25px);
 	background-repeat: no-repeat;
 	background-position: center;
 	transition: all 200ms linear;
