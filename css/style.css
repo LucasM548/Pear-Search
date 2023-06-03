@@ -32,6 +32,8 @@ html {
 	--boxnav-button-color: 0, 128, 0;
 	--search-icon-color: burlywood;
 	--search-icon-span-color: green;
+	--switch-background-image: url('https://assets.codepen.io/1462889/moon.svg');
+	--switch-background-color: #102770;
 }
 
 .Day-mode {
@@ -46,6 +48,8 @@ html {
 	--boxnav-button-color: 60, 201, 60;
 	--search-icon-color: #FFF;
 	--search-icon-span-color: green;
+	--switch-background-image: url('https://assets.codepen.io/1462889/sun.svg');
+	--switch-background-color: #48dbfb;
 }
 /*==== END OF GENERAL STYLE ====*/
 
@@ -258,9 +262,9 @@ html {
 	height: min(10vw, 46px);
 	margin: 7px;
 	cursor: pointer;
-	transition: all 200ms linear;
 	box-shadow: 0 0 min(5vw, 20px) rgba(255, 235, 167, 0.45);
 	user-select: none;
+	transition: all 200ms linear;
 }
 
 .day-light:checked+label {
@@ -268,49 +272,29 @@ html {
 }
 
 .day-light:checked+label:after,
-.day-light:not(:checked)+label:after {
-	position: absolute;
-	content: '';
-	top: 1px;
-	left: 1px;
-	overflow: hidden;
-	z-index: 2;
-	display: block;
-	border-radius: 50%;
-	width: min(9.56vw, 44px);
-	height: min(9.56vw, 44px);
-	background-color: #102770;
-	background-image: url('https://assets.codepen.io/1462889/moon.svg');
-	background-size: min(4.35vw, 20px) min(4.35vw, 20px);
-	background-repeat: no-repeat;
-	background-position: center;
-	transition: all 200ms linear;
-	opacity: 0;
-}
-
-.day-light:checked+label:after {
-	opacity: 1;
-}
-
 .day-light:checked+label:before,
+.day-light:not(:checked)+label:after,
 .day-light:not(:checked)+label:before {
-	position: relative;
+	position: absolute;
 	content: '';
 	overflow: hidden;
 	display: block;
 	border-radius: 50%;
 	width: min(10vw, 46px);
 	height: min(10vw, 46px);
-	background-color: #48dbfb;
-	background-image: url('https://assets.codepen.io/1462889/sun.svg');
-	background-size: min(5.43vw, 25px) min(5.43vw, 25px);
+	background-color: var(--switch-background-color);
+	background-image: var(--switch-background-image);
+	background-size: min(4.35vw, 20px) min(4.35vw, 20px);
 	background-repeat: no-repeat;
 	background-position: center;
 	transition: all 200ms linear;
 }
 
-.day-light:checked+label:before {
-	background-color: var(--theme-color);
+.day-light:not(:checked)+label:after {
+	background-size: min(5.43vw, 25px) min(5.43vw, 25px);
+}
+.day-light:checked+label:after {
+	opacity: 1;
 }
 /*============================ END OF SWITCH DAY/NIGHT ============================*/
 
