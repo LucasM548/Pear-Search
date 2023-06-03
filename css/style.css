@@ -263,12 +263,8 @@ html {
 	margin: 7px;
 	cursor: pointer;
 	box-shadow: 0 0 min(5vw, 20px) rgba(255, 235, 167, 0.45);
-	user-select: none;
 	transition: all 200ms linear;
-}
-
-.day-light:checked+label {
-	transform: rotate(360deg);
+	user-select: none;
 }
 
 .day-light:checked+label:after,
@@ -288,12 +284,15 @@ html {
 	background-repeat: no-repeat;
 	background-position: center;
 	transition: all 200ms linear;
+	user-select: none;
 }
 
 .day-light:not(:checked)+label:after {
 	background-size: min(5.43vw, 25px) min(5.43vw, 25px);
 }
+
 .day-light:checked+label:after {
+	transform: rotate(360deg);
 	opacity: 1;
 }
 /*============================ END OF SWITCH DAY/NIGHT ============================*/
