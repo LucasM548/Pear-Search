@@ -261,6 +261,7 @@ function searchToggle(obj, evt) {
   if (!container.hasClass("active")) {
     container.addClass("active");
     evt.preventDefault();
+    searchInput.focus();
   } else if (
     searchInput.val().trim() !== "" &&
     (evt.target.classList.contains("search-icon") ||
