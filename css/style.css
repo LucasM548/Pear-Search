@@ -267,9 +267,9 @@ html {
 .day-light:not(:checked)+label {
 	display: block;
 	border-radius: 50%;
-	width: min(10vw, 46px);
-	height: min(10vw, 46px);
-	margin: 7px;
+	width: min(10vw, 10vh, 46px);
+	height: min(10vw, 10vh, 46px);
+	margin: min(1vw, 7px);
 	cursor: pointer;
 	box-shadow: 0 0 min(5vw, 20px) rgba(255, 235, 167, 0.45);
 	transition: all 200ms linear;
@@ -285,8 +285,8 @@ html {
 	overflow: hidden;
 	display: block;
 	border-radius: 50%;
-	width: min(10vw, 46px);
-	height: min(10vw, 46px);
+	width: min(10vw, 10vh, 46px);
+	height: min(10vw, 10vh, 46px);
 	background-color: var(--switch-background-color);
 	background-image: var(--switch-background-image);
 	background-size: min(4.35vw, 20px) min(4.35vw, 20px);
