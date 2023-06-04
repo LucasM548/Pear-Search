@@ -260,7 +260,9 @@ function searchToggle(obj, evt) {
   if (!container.hasClass("active")) {
     container.addClass("active");
     evt.preventDefault();
-    searchInput.focus();
+    setTimeout(function() {
+      container.find(".search-input").focus();
+    }, 200);
   } else if (
     container.find(".search-input").val().trim() !== "" &&
     (evt.target.classList.contains("search-icon") ||
