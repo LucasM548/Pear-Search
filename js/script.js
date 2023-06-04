@@ -260,6 +260,7 @@ function searchToggle(obj, evt) {
   if (!container.hasClass("active")) {
     container.addClass("active");
     evt.preventDefault();
+    searchInput.focus();
   } else if (
     container.find(".search-input").val().trim() !== "" &&
     (evt.target.classList.contains("search-icon") ||
@@ -281,12 +282,6 @@ function searchToggle(obj, evt) {
     container.find(".search-input").val("");
   }
 }
-
-$(".search-input").on("keypress", function (evt) {
-  if (evt.key === "Enter" || evt.key === "Return") {
-    searchToggle(this, evt);
-  }
-});
 
 $(".search-input").on("keypress", function (evt) {
   if (evt.key === "Enter" || evt.key === "Return") {
