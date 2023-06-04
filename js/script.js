@@ -162,6 +162,7 @@ const appLinks = [
   { href: "https://meet.google.com/", imgSrc: "img/Apps/π-Meet.png", alt: "π-Meet", text: "π-Meet" },
   { href: "https://news.google.com/", imgSrc: "img/Apps/π-News.png", alt: "π-News", text: "π-News" },
   { href: "https://shopping.google.com/", imgSrc: "img/Apps/Shopp-π-G.png", alt: "Shopp-π-G", text: "Shopp-π-G" },
+  { href: "https://lucasm548.github.io/Projets-Lucas/", imgSrc: "img/Logo Axolotl.png", alt: "Logo Axolotl", text: "Projets" },
 ];
 
 const appPanel = document.getElementById("appPanel");
