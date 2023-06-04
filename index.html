@@ -18,30 +18,34 @@
   <!--================= TOP BAR ================-->
   <div class="topbar">
     
-    <!--====== CHOIX LANGUE ======-->
-    <span id="language" class="language">
-      <select onchange="changeLanguage(event)">
-        <!-- https://www.flaticon.com/packs/countrys-flags -->
-        <option value="en">English</option> <!--src="img/Country Flags/united-kingdom.png"-->
-        <option value="fr">Français</option> <!--src="img/Country Flags/france.png"-->
-        <option value="es">Español</option> <!--src="img/Country Flags/spain.png"-->
-        <option value="it">Italiano</option> <!--src="img/Country Flags/italy.png"-->
-        <option value="ru">Русский</option> <!--src="img/Country Flags/russia.png"-->
-        <option value="zh">中文</option> <!--src="img/Country Flags/china.png"-->
-        <option value="ko">한국어</option> <!--src="img/Country Flags/south-korea.png"-->
-        <option value="π">π</option>
-      </select>
-    </span>
-    <!--=== END OF CHOIX LANGUE ===-->
+    <div class="left-container">
+      <!--====== SWITCH DAY/NIGHT MODE ======-->
+      <input class="day-light" type="checkbox" id="day-light" name="day-light"/>
+      <label for="day-light"></label>
+      <!--=== END OF SWITCH DAY/NIGHT MODE ===-->
 
-    <!--====== SWITCH DAY/NIGHT MODE ======-->
-    <input class="day-light" type="checkbox" id="day-light" name="day-light"/>
-  	<label for="day-light"></label>
-    <!--=== END OF SWITCH DAY/NIGHT MODE ===-->
+      <!--====== CHOIX LANGUE ======-->
+      <span id="language" class="language">
+        <select onchange="changeLanguage(event)">
+          <!-- https://www.flaticon.com/packs/countrys-flags -->
+          <option value="en">English</option> <!--src="img/Country Flags/united-kingdom.png"-->
+          <option value="fr">Français</option> <!--src="img/Country Flags/france.png"-->
+          <option value="es">Español</option> <!--src="img/Country Flags/spain.png"-->
+          <option value="it">Italiano</option> <!--src="img/Country Flags/italy.png"-->
+          <option value="ru">Русский</option> <!--src="img/Country Flags/russia.png"-->
+          <option value="zh">中文</option> <!--src="img/Country Flags/china.png"-->
+          <option value="ko">한국어</option> <!--src="img/Country Flags/south-korea.png"-->
+          <option value="π">π</option>
+        </select>
+      </span>
+      <!--=== END OF CHOIX LANGUE ===-->
+    </div>
 
-    <a href="https://mail.google.com" target="_blank" class="button">π-mail</a>
-    <input type="radio" id="Applications" onclick="toggleAppPanel(event)">
-    <label for="Applications" class="button" data-panel="#appPanel" data-i18n="Ap-π-cations"></label>
+    <div class="right-container">
+      <a href="https://mail.google.com" target="_blank" class="button">π-mail</a>
+      <input type="radio" id="Applications" onclick="toggleAppPanel(event)">
+      <label for="Applications" class="button" data-panel="#appPanel" data-i18n="Ap-π-cations"></label>
+    </div>
   </div>
 
   <!--====== APPS PANEL ======-->

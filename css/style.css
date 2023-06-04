@@ -88,12 +88,21 @@ html {
 	right: 0;
 	height: min(15vw, 55px);
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
 	background-color: var(--theme-color);
 	padding: 10px;
 	z-index: 100;
 	transition: background-color 0.3s ease-in-out;
+}
+
+.left-container {
+	display: flex;
+	align-items: center;
+}
+
+.right-container {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
 }
 
 .button {
