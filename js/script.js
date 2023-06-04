@@ -256,20 +256,18 @@ $('input[name="search_engine"]').on("change", function () {
 function searchToggle(obj, evt) {
   const container = $(obj).closest(".search-wrapper");
   const selectedEngine = getSelectedEngine();
-  const searchInput = container.find(".search-input");
 
   if (!container.hasClass("active")) {
     container.addClass("active");
     evt.preventDefault();
-    searchInput.focus();
   } else if (
-    searchInput.val().trim() !== "" &&
+    container.find(".search-input").val().trim() !== "" &&
     (evt.target.classList.contains("search-icon") ||
       evt.target.classList.contains("span") ||
       (evt.type === "keypress" &&
         (evt.key === "Enter" || evt.key === "Return")))
   ) {
-    const searchText = searchInput.val();
+    const searchText = container.find(".search-input").val();
     const webUrl = getEngineURL(selectedEngine);
     if (webUrl) {
       const finalURL = webUrl + encodeURIComponent(searchText);
@@ -280,9 +278,15 @@ function searchToggle(obj, evt) {
     !$(obj).closest(".input-holder").length
   ) {
     container.removeClass("active");
-    searchInput.val("");
+    container.find(".search-input").val("");
   }
 }
+
+$(".search-input").on("keypress", function (evt) {
+  if (evt.key === "Enter" || evt.key === "Return") {
+    searchToggle(this, evt);
+  }
+});
 
 $(".search-input").on("keypress", function (evt) {
   if (evt.key === "Enter" || evt.key === "Return") {
