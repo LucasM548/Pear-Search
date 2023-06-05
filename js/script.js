@@ -75,7 +75,7 @@ const translations = {
 };
 
 i18next.init({
-  lng: 'fr',
+  lng: 'en',
   resources: translations,
 }, function(err, t) {
   updateContent();
