@@ -2,15 +2,6 @@
  *                           CHOIX LANGUE
  *========================================================================**/
 const translations = {
-  fr: {
-    translation: {
-      "Ap-π-cations": "Ap-π-cations",
-      "Projects": "Projets",
-      "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
-      "Search-Choice": "Choix du navigateur",
-      "Contribution": "Contribuer",
-    }
-  },
   en: {
     translation: {
       "Ap-π-cations": "Ap-π-cations",
@@ -18,6 +9,15 @@ const translations = {
       "Placeholder": "Write to find your happiness - Pear",
       "Search-Choice": "Choice of browser",
       "Contribution": "Contribution",
+    }
+  },
+  fr: {
+    translation: {
+      "Ap-π-cations": "Ap-π-cations",
+      "Projects": "Projets",
+      "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
+      "Search-Choice": "Choix du navigateur",
+      "Contribution": "Contribuer",
     }
   },
   es: {
