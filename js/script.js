@@ -4,19 +4,14 @@
 const translations = {
   en: {
     translation: {
-      "Ap-π-cations": "Ap-π-cations",
-      "Projects": "Projects",
       "Placeholder": "Write to find your happiness - Pear",
-      "Search-Choice": "Choice of browser",
-      "Contribute": "Contribute",
     }
   },
   fr: {
     translation: {
-      "Ap-π-cations": "Ap-π-cations",
       "Projects": "Projets",
       "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
-      "Search-Choice": "Choix du navigateur",
+      "Choice of browser": "Choix du navigateur",
       "Contribute": "Contribuer",
     }
   },
@@ -25,7 +20,7 @@ const translations = {
       "Ap-π-cations": "Aπ-licaciones",
       "Projects": "Proyectos",
       "Placeholder": "Escribe para encontrar tu felicidad - Pear",
-      "Search-Choice": "Elección del navegador",
+      "Choice of browser": "Elección del navegador",
       "Contribute": "Contribuir",
     }
   },
@@ -34,7 +29,7 @@ const translations = {
       "Ap-π-cations": "Aπ-plicazioni",
       "Projects": "Progetti",
       "Placeholder": "Scrivi per trovare la tua felicità - Pear",
-      "Search-Choice": "Scelta del navigatore",
+      "Choice of browser": "Scelta del navigatore",
       "Contribute": "Contribuire",
     }
   },
@@ -43,7 +38,7 @@ const translations = {
       "Ap-π-cations": "Приложе-π-ии",
       "Projects": "Проекты",
       "Placeholder": "Пишите, чтобы найти свое счастье - Pear",
-      "Search-Choice": "Выбор браузера",
+      "Choice of browser": "Выбор браузера",
       "Contribute": "Сотрудничать",
     }
   },
@@ -52,7 +47,7 @@ const translations = {
       "Ap-π-cations": "应用π",
       "Projects": "項目",
       "Placeholder": "写信寻找你的幸福 - Pear",
-      "Search-Choice": "浏览器的选择",
+      "Choice of browser": "浏览器的选择",
       "Contribute": "贡献",
     }
   },
@@ -61,7 +56,7 @@ const translations = {
       "Ap-π-cations": "응용프로-π-램",
       "Projects": "프로젝트",
       "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
-      "Search-Choice": "브라우저 선택",
+      "Choice of browser": "브라우저 선택",
       "Contribute": "기여하다",
     }
   },
@@ -69,8 +64,11 @@ const translations = {
     translation: {
       "Ap-π-cations": "1-16 - π - 3-1-20-9-15-14-19",
       "Projects": "16-18-15-10-5-3-20-19",
-      "Placeholder": "23-18-9-20-5   20-15   6-9-14-4   25-15-21-18   8-1-16-16-9-14-5-19-19 - Pear",
-      "Search-Choice": "3-8-15-9-3-5   15-6   2-18-15-23-19-5-18",
+      "Placeholder": "23-18-9-20-5  20-15  6-9-14-4  25-15-21-18  8-1-16-16-9-14-5-19-19 - Pear",
+      "Choice of browser": "3-8-15-9-3-5  15-6  2-18-15-23-19-5-18",
+      "Google": "7-15-15-7-12-5",
+      "Brave Search": "2-18-1-22-5  19-5-1-18-3-8",
+      "DuckDuckGo": "4-21-3-11-4-21-3-11-7-15",
       "Contribute": "3-15-14-20-18-15-20-21-2-9-15-14",
     }
   },
