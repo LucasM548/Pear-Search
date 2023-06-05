@@ -265,43 +265,30 @@ $('input[name="search_engine"]').on("change", function () {
 /**========================================================================
  *                           BOUTON RECHERCHE
  *========================================================================**/
-function searchToggle(obj, evt) {
-  const container = $(obj).closest(".search-wrapper");
-  const selectedEngine = getSelectedEngine();
+function searchToggle(evt) {
+  const container = document.querySelector(".search-wrapper");
+  const searchInput = container.querySelector(".search-input");
+  const isActive = container.classList.contains("active");
 
-  if (!container.hasClass("active")) {
-    container.addClass("active");
-    evt.preventDefault();
-    setTimeout(function() {
-      container.find(".search-input").focus();
-    }, 200);
-  } else if (
-    container.find(".search-input").val().trim() !== "" &&
-    (evt.target.classList.contains("search-icon") ||
-      evt.target.classList.contains("span") ||
-      (evt.type === "keypress" &&
-        (evt.key === "Enter" || evt.key === "Return")))
-  ) {
-    const searchText = container.find(".search-input").val();
-    const webUrl = getEngineURL(selectedEngine);
+  if (!isActive) {
+    container.classList.add("active");
+    setTimeout(() => searchInput.focus(), 200);
+  } else if (searchInput.value.trim() !== "" && (evt.key === "Enter" || evt.type === "click")) {
+    const searchText = searchInput.value;
+    const webUrl = getEngineURL(getSelectedEngine());
     if (webUrl) {
       const finalURL = webUrl + encodeURIComponent(searchText);
       window.location.href = finalURL;
     }
-  } else if (
-    container.hasClass("active") &&
-    !$(obj).closest(".input-holder").length
-  ) {
-    container.removeClass("active");
-    container.find(".search-input").val("");
+  } else if (isActive && evt.target.classList.contains("close")) {
+    container.classList.remove("active");
+    searchInput.value = "";
   }
 }
 
-$(".search-input").on("keypress", function (evt) {
-  if (evt.key === "Enter" || evt.key === "Return") {
-    searchToggle(this, evt);
-  }
-});
+document.querySelector(".search-icon").addEventListener("click", searchToggle);
+document.querySelector(".search-input").addEventListener("keypress", searchToggle);
+document.querySelector(".close").addEventListener("click", searchToggle);
 /*============================ END OF BOUTON RECHERCHE ============================*/
 
 
