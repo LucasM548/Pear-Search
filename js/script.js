@@ -5,65 +5,73 @@ const translations = {
   fr: {
     translation: {
       "Ap-π-cations": "Ap-π-cations",
-      "placeholder": "Écrivez pour trouver votre bonheur - Pear",
-      "search-choice": "Choix du navigateur",
-      "contribution": "Contribuer",
+      "Projects": "Projets",
+      "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
+      "Search-Choice": "Choix du navigateur",
+      "Contribution": "Contribuer",
     }
   },
   en: {
     translation: {
       "Ap-π-cations": "Ap-π-cations",
-      "placeholder": "Write to find your happiness - Pear",
-      "search-choice": "Choice of browser",
-      "contribution": "Contribution",
+      "Projects": "Projects",
+      "Placeholder": "Write to find your happiness - Pear",
+      "Search-Choice": "Choice of browser",
+      "Contribution": "Contribution",
     }
   },
   es: {
     translation: {
       "Ap-π-cations": "Aπ-licaciones",
-      "placeholder": "Escribe para encontrar tu felicidad - Pear",
-      "search-choice": "Elección del navegador",
-      "contribution": "Contribuir",
+      "Projects": "Proyectos",
+      "Placeholder": "Escribe para encontrar tu felicidad - Pear",
+      "Search-Choice": "Elección del navegador",
+      "Contribution": "Contribuir",
     }
   },
   it: {
     translation: {
       "Ap-π-cations": "Aπ-plicazioni",
-      "placeholder": "Scrivi per trovare la tua felicità - Pear",
-      "search-choice": "Scelta del navigatore",
-      "contribution": "Contribuire",
+      "Projects": "Progetti",
+      "Placeholder": "Scrivi per trovare la tua felicità - Pear",
+      "Search-Choice": "Scelta del navigatore",
+      "Contribution": "Contribuire",
     }
   },
   ru: {
     translation: {
       "Ap-π-cations": "Приложе-π-ии",
-      "placeholder": "Пишите, чтобы найти свое счастье - Pear",
-      "search-choice": "Выбор браузера",
-      "contribution": "Сотрудничать",
+      "Projects": "Проекты",
+      "Placeholder": "Пишите, чтобы найти свое счастье - Pear",
+      "Search-Choice": "Выбор браузера",
+      "Contribution": "Сотрудничать",
     }
   },
   zh: {
     translation: {
       "Ap-π-cations": "应用π",
-      "placeholder": "写信寻找你的幸福 - Pear",
-      "search-choice": "浏览器的选择",
-      "contribution": "贡献",
+      "Projects": "項目",
+      "Placeholder": "写信寻找你的幸福 - Pear",
+      "Search-Choice": "浏览器的选择",
+      "Contribution": "贡献",
     }
   },
   ko: {
     translation: {
       "Ap-π-cations": "응용프로-π-램",
-      "placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
-      "search-choice": "브라우저 선택",
-      "contribution": "기여하다",
+      "Projects": "프로젝트",
+      "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
+      "Search-Choice": "브라우저 선택",
+      "Contribution": "기여하다",
     }
   },
   π: {
     translation: {
-      "Ap-π-cations": "1 16 - π - 3 1 20 9 15 14 19",
-      "placeholder": "23 18 9 20 5   20 15   6 9 14 4   25 15 21 18   8 1 16 16 9 14 5 19 19 - Pear",
-      "search-choice": "3 8 15 9 3 5   15 6   2 18 15 23 19 5 18",
-      "contribution": "3 15 14 20 18 15 20 21 2 9 15 14",
+      "Ap-π-cations": "1-16 - π - 3-1-20-9-15-14-19",
+      "Projects": "16-18-15-10-5-3-20-19",
+      "Placeholder": "23-18-9-20-5   20-15   6-9-14-4   25-15-21-18   8-1-16-16-9-14-5-19-19 - Pear",
+      "Search-Choice": "3-8-15-9-3-5   15-6   2-18-15-23-19-5-18",
+      "Contribution": "3-15-14-20-18-15-20-21-2-9-15-14",
     }
   },
 };
@@ -162,7 +170,7 @@ const appLinks = [
   { href: "https://meet.google.com/", imgSrc: "img/Apps/π-Meet.png", alt: "π-Meet", text: "π-Meet" },
   { href: "https://news.google.com/", imgSrc: "img/Apps/π-News.png", alt: "π-News", text: "π-News" },
   { href: "https://shopping.google.com/", imgSrc: "img/Apps/Shopp-π-G.png", alt: "Shopp-π-G", text: "Shopp-π-G" },
-  { href: "https://lucasm548.github.io/Projets-Lucas/", imgSrc: "img/Logo Axolotl.png", alt: "Logo Axolotl", text: "Projets" },
+  { href: "https://lucasm548.github.io/Projets-Lucas/", imgSrc: "img/Logo Axolotl.png", alt: "Logo Axolotl", dataI18n: "Projects" },
 ];
 
 const appPanel = document.getElementById("appPanel");
@@ -180,6 +188,11 @@ appLinks.forEach((app) => {
 
   const textElement = document.createElement("p");
   textElement.textContent = app.text;
+  if (app.dataI18n) {
+    textElement.setAttribute('data-i18n', app.dataI18n);
+  } else {
+    textElement.textContent = app.text;
+  }
 
   appElement.appendChild(imgElement);
   appElement.appendChild(textElement);
