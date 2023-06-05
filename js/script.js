@@ -8,7 +8,7 @@ const translations = {
       "Projects": "Projects",
       "Placeholder": "Write to find your happiness - Pear",
       "Search-Choice": "Choice of browser",
-      "Contribution": "Contribute",
+      "Contribute": "Contribute",
     }
   },
   fr: {
@@ -17,7 +17,7 @@ const translations = {
       "Projects": "Projets",
       "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
       "Search-Choice": "Choix du navigateur",
-      "Contribution": "Contribuer",
+      "Contribute": "Contribuer",
     }
   },
   es: {
@@ -26,7 +26,7 @@ const translations = {
       "Projects": "Proyectos",
       "Placeholder": "Escribe para encontrar tu felicidad - Pear",
       "Search-Choice": "Elección del navegador",
-      "Contribution": "Contribuir",
+      "Contribute": "Contribuir",
     }
   },
   it: {
@@ -35,7 +35,7 @@ const translations = {
       "Projects": "Progetti",
       "Placeholder": "Scrivi per trovare la tua felicità - Pear",
       "Search-Choice": "Scelta del navigatore",
-      "Contribution": "Contribuire",
+      "Contribute": "Contribuire",
     }
   },
   ru: {
@@ -44,7 +44,7 @@ const translations = {
       "Projects": "Проекты",
       "Placeholder": "Пишите, чтобы найти свое счастье - Pear",
       "Search-Choice": "Выбор браузера",
-      "Contribution": "Сотрудничать",
+      "Contribute": "Сотрудничать",
     }
   },
   zh: {
@@ -53,7 +53,7 @@ const translations = {
       "Projects": "項目",
       "Placeholder": "写信寻找你的幸福 - Pear",
       "Search-Choice": "浏览器的选择",
-      "Contribution": "贡献",
+      "Contribute": "贡献",
     }
   },
   ko: {
@@ -62,7 +62,7 @@ const translations = {
       "Projects": "프로젝트",
       "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
       "Search-Choice": "브라우저 선택",
-      "Contribution": "기여하다",
+      "Contribute": "기여하다",
     }
   },
   π: {
@@ -71,7 +71,7 @@ const translations = {
       "Projects": "16-18-15-10-5-3-20-19",
       "Placeholder": "23-18-9-20-5   20-15   6-9-14-4   25-15-21-18   8-1-16-16-9-14-5-19-19 - Pear",
       "Search-Choice": "3-8-15-9-3-5   15-6   2-18-15-23-19-5-18",
-      "Contribution": "3-15-14-20-18-15-20-21-2-9-15-14",
+      "Contribute": "3-15-14-20-18-15-20-21-2-9-15-14",
     }
   },
 };
