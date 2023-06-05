@@ -86,8 +86,8 @@ i18next.init({
 function updateContent() {
   document.querySelectorAll('[data-i18n]').forEach(function(element) {
     var key = element.getAttribute('data-i18n');
-    if (key === 'placeholder') {
-      element.setAttribute('placeholder', i18next.t(key));
+    if (key === 'Placeholder') {
+      element.setAttribute('Placeholder', i18next.t(key));
     } else {
       element.textContent = i18next.t(key);
     }
