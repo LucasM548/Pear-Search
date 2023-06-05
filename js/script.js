@@ -8,7 +8,7 @@ const translations = {
       "Projects": "Projects",
       "Placeholder": "Write to find your happiness - Pear",
       "Search-Choice": "Choice of browser",
-      "Contribution": "Contribution",
+      "Contribution": "Contribute",
     }
   },
   fr: {
