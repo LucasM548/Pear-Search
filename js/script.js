@@ -9,6 +9,7 @@ const translations = {
   },
   fr: {
     translation: {
+      "π-Translate": "π-Traduction",
       "Projects": "Projets",
       "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
       "Choice of browser": "Choix du navigateur",
@@ -18,6 +19,7 @@ const translations = {
   es: {
     translation: {
       "Ap-π-cations": "Aπ-licaciones",
+      "π-Translate": "π-Traducir",
       "Projects": "Proyectos",
       "Placeholder": "Escribe para encontrar tu felicidad - Pear",
       "Choice of browser": "Elección del navegador",
@@ -27,6 +29,7 @@ const translations = {
   it: {
     translation: {
       "Ap-π-cations": "Aπ-plicazioni",
+      "π-Translate": "π-Traduttore",
       "Projects": "Progetti",
       "Placeholder": "Scrivi per trovare la tua felicità - Pear",
       "Choice of browser": "Scelta del navigatore",
@@ -36,6 +39,7 @@ const translations = {
   ru: {
     translation: {
       "Ap-π-cations": "Приложе-π-ии",
+      "π-Translate": "π-Переводчик",
       "Projects": "Проекты",
       "Placeholder": "Пишите, чтобы найти свое счастье - Pear",
       "Choice of browser": "Выбор браузера",
@@ -45,6 +49,7 @@ const translations = {
   zh: {
     translation: {
       "Ap-π-cations": "应用π",
+      "π-Translate": "π-翻譯",
       "Projects": "項目",
       "Placeholder": "写信寻找你的幸福 - Pear",
       "Choice of browser": "浏览器的选择",
@@ -54,6 +59,7 @@ const translations = {
   ko: {
     translation: {
       "Ap-π-cations": "응용프로-π-램",
+      "π-Translate": "π-변환",
       "Projects": "프로젝트",
       "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
       "Choice of browser": "브라우저 선택",
@@ -63,6 +69,7 @@ const translations = {
   π: {
     translation: {
       "Ap-π-cations": "1-16 - π - 3-1-20-9-15-14-19",
+      "π-Translate": "π - 20-18-1-14-19-12-1-20-5",
       "Projects": "16-18-15-10-5-3-20-19",
       "Placeholder": "23-18-9-20-5  20-15  6-9-14-4  25-15-21-18  8-1-16-16-9-14-5-19-19 - Pear",
       "Choice of browser": "3-8-15-9-3-5  15-6  2-18-15-23-19-5-18",
@@ -157,7 +164,7 @@ const appLinks = [
   { href: "https://github.com/", imgSrc: "img/Apps/π-Hub.png", alt: "π-Hub", text: "π-Hub" },
   { href: "https://www.paypal.com/", imgSrc: "img/Apps/π-Pal.png", alt: "π-Pal", text: "π-Pal" },
   { href: "https://www.youtube.com/", imgSrc: "img/Apps/π-Tube.png", alt: "π-Tube", text: "π-Tube" },
-  { href: "https://translate.google.com/", imgSrc: "img/Apps/π-Translate.png", alt: "π-Translate", text: "π-Translate" },
+  { href: "https://translate.google.com/", imgSrc: "img/Apps/π-Translate.png", alt: "π-Translate", dataI18n: "π-Translate" },
   { href: "https://www.google.com/maps/", imgSrc: "img/Apps/π-Maps.png", alt: "π-Maps", text: "π-Maps" },
   { href: "https://play.google.com/", imgSrc: "img/Apps/π-Play.png", alt: "π-Play", text: "π-Play" },
   { href: "https://docs.google.com/", imgSrc: "img/Apps/π-Docx.png", alt: "π-Docx", text: "π-Docx" },
