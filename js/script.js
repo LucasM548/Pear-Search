@@ -1,3 +1,25 @@
+/**============================================
+*               SWITCH NIGHT/DAY
+*=============================================**/
+const checkbox = document.getElementById('day-light');
+const root = document.documentElement;
+const theme = localStorage.getItem('theme');
+
+root.classList.toggle('Day-mode', theme === 'Day-mode');
+checkbox.checked = theme !== 'Day-mode';
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+      root.classList.remove('Day-mode');
+      localStorage.removeItem('theme');
+  } else {
+      root.classList.add('Day-mode');
+      localStorage.setItem('theme', 'Day-mode');
+  }
+});
+/*=============== END OF SWITCH NIGHT/DAY ==============*
+
+
 /**========================================================================
  *                           CHOIX LANGUE
  *========================================================================**/
@@ -90,130 +112,90 @@ i18next.init({
 
 function updateContent() {
   document.querySelectorAll('[data-i18n]').forEach(function(element) {
-      var key = element.getAttribute('data-i18n');
-      if (key === 'Placeholder') {
-          element.setAttribute('Placeholder', i18next.t(key));
-      } else {
-          element.textContent = i18next.t(key);
-      }
+    var key = element.getAttribute('data-i18n');
+    if (key === 'Placeholder') {
+      element.setAttribute('Placeholder', i18next.t(key));
+    } else {
+      element.textContent = i18next.t(key);
+    }
   });
 }
 
 function changeLanguage(event) {
   var selectedLanguage = event.target.value;
   i18next.changeLanguage(selectedLanguage, function(err, t) {
-      if (err) {
-          console.log('Erreur lors du changement de langue :', err);
-          return;
-      }
-      localStorage.setItem('language', selectedLanguage);
-      updateContent();
+    if (err) {
+      console.log('Erreur lors du changement de langue :', err);
+      return;
+    }
+    localStorage.setItem('language', selectedLanguage);
+    updateContent();
+    updateFlag(selectedLanguage);
   });
 }
 
 window.addEventListener('load', function() {
-  var language = localStorage.getItem('language');
-  if (!language) {
-      var userLanguage = navigator.language.split('-')[0];
-      if (['fr', 'en', 'es', 'it', 'ru', 'zh', 'ko', 'π'].includes(userLanguage)) {
-          language = userLanguage;
-      } else {
-          language = 'en';
-      }
-      localStorage.setItem('language', language);
+  var language = localStorage.getItem('language') || navigator.language.split('-')[0];
+  if (!['fr', 'en', 'es', 'it', 'ru', 'zh', 'ko', 'π'].includes(language)) {
+    language = 'en';
   }
+  localStorage.setItem('language', language);
   document.querySelector('#language select').value = language;
   i18next.changeLanguage(language, function(err, t) {
-      if (err) {
-          console.log('Erreur lors du changement de langue :', err);
-          return;
-      }
-      updateContent();
+    if (err) {
+      console.log('Erreur lors du changement de langue :', err);
+      return;
+    }
+    updateContent();
   });
+  updateFlag(language);
 });
-
-function changeLanguage(event) {
-  var selectedLanguage = event.target.value;
-  i18next.changeLanguage(selectedLanguage, function(err, t) {
-      if (err) {
-          console.log('Erreur lors du changement de langue :', err);
-          return;
-      }
-      localStorage.setItem('language', selectedLanguage);
-      updateContent();
-      updateFlag(selectedLanguage);
-  });
-}
 
 function updateFlag(language) {
   var flagImg = document.getElementById('flag');
   var flagSrc = '';
 
   switch (language) {
-      case 'en':
-          flagSrc = 'img/Country Flags/united-kingdom.png';
-          break;
-      case 'fr':
-          flagSrc = 'img/Country Flags/france.png';
-          break;
-      case 'es':
-          flagSrc = 'img/Country Flags/spain.png';
-          break;
-      case 'it':
-          flagSrc = 'img/Country Flags/italy.png';
-          break;
-      case 'ru':
-          flagSrc = 'img/Country Flags/russia.png';
-          break;
-      case 'zh':
-          flagSrc = 'img/Country Flags/china.png';
-          break;
-      case 'ko':
-          flagSrc = 'img/Country Flags/south-korea.png';
-          break;
-      case 'π':
-          flagSrc = 'img/Pear.png';
-          break;
-      default:
-          flagSrc = '';
+    case 'en':
+      flagSrc = 'img/Country Flags/united-kingdom.png';
+      break;
+    case 'fr':
+      flagSrc = 'img/Country Flags/france.png';
+      break;
+    case 'es':
+      flagSrc = 'img/Country Flags/spain.png';
+      break;
+    case 'it':
+      flagSrc = 'img/Country Flags/italy.png';
+      break;
+    case 'ru':
+      flagSrc = 'img/Country Flags/russia.png';
+      break;
+    case 'zh':
+      flagSrc = 'img/Country Flags/china.png';
+      break;
+    case 'ko':
+      flagSrc = 'img/Country Flags/south-korea.png';
+      break;
+    case 'π':
+      flagSrc = 'img/Pear.png';
+      break;
+    default:
+      flagSrc = '';
   }
 
   if (flagSrc) {
-      flagImg.src = flagSrc;
-      flagImg.style.display = 'block';
-      flagImg.style.animation = 'flagAnimation 1s';
-      setTimeout(function() {
-          flagImg.style.display = 'none';
-      }, 1000);
-  } else {
+    flagImg.src = flagSrc;
+    flagImg.style.display = 'block';
+    flagImg.style.animation = 'flagAnimation 1s';
+    setTimeout(function() {
       flagImg.style.display = 'none';
+    }, 1000);
+  } else {
+    flagImg.style.display = 'none';
   }
 }
-
-updateFlag(language);
 /*============================ END OF CHOIX LANGUE ============================*/
-
-
-/**============================================
-*               SWITCH NIGHT/DAY
-*=============================================**/
-const checkbox = document.getElementById('day-light');
-const root = document.documentElement;
-const theme = localStorage.getItem('theme');
-
-root.classList.toggle('Day-mode', theme === 'Day-mode');
-checkbox.checked = theme !== 'Day-mode';
-
-checkbox.addEventListener('change', function() {
-  if (this.checked) {
-      root.classList.remove('Day-mode');
-      localStorage.removeItem('theme');
-  } else {
-      root.classList.add('Day-mode');
-      localStorage.setItem('theme', 'Day-mode');
-  }
-});
-/*=============== END OF SWITCH NIGHT/DAY ==============*/
 
 
 /**========================================================================
@@ -294,6 +276,36 @@ applicationsLabel.addEventListener("mouseleave", function(event) {
 /*============================ END OF APPS PANEL ============================*/
 
 
+/**========================================================================
+*                           BOUTON RECHERCHE
+*========================================================================**/
+function searchToggle(evt) {
+  const container = document.querySelector(".search-wrapper");
+  const searchInput = container.querySelector(".search-input");
+  const isActive = container.classList.contains("active");
+
+  if (!isActive) {
+      container.classList.add("active");
+      setTimeout(() => searchInput.focus(), 200);
+  } else if (searchInput.value.trim() !== "" && (evt.key === "Enter" || evt.type === "click")) {
+      const searchText = searchInput.value;
+      const webUrl = getEngineURL(getSelectedEngine());
+      if (webUrl) {
+          const finalURL = webUrl + encodeURIComponent(searchText);
+          window.location.href = finalURL;
+      }
+  } else if (isActive && evt.target.classList.contains("close")) {
+      container.classList.remove("active");
+      searchInput.value = "";
+  }
+}
+
+document.querySelector(".search-icon").addEventListener("click", searchToggle);
+document.querySelector(".search-input").addEventListener("keypress", searchToggle);
+document.querySelector(".close").addEventListener("click", searchToggle);
+/*============================ END OF BOUTON RECHERCHE ============================*/
+
+
 /**============================================
 *               CHOIX MOTEUR
 *=============================================**/
@@ -327,36 +339,6 @@ $('input[name="search_engine"]').on("change", function() {
   setSelectedEngine(newSelectedEngine);
 });
 /*=============== END OF CHOIX MOTEUR ==============*/
-
-
-/**========================================================================
-*                           BOUTON RECHERCHE
-*========================================================================**/
-function searchToggle(evt) {
-  const container = document.querySelector(".search-wrapper");
-  const searchInput = container.querySelector(".search-input");
-  const isActive = container.classList.contains("active");
-
-  if (!isActive) {
-      container.classList.add("active");
-      setTimeout(() => searchInput.focus(), 200);
-  } else if (searchInput.value.trim() !== "" && (evt.key === "Enter" || evt.type === "click")) {
-      const searchText = searchInput.value;
-      const webUrl = getEngineURL(getSelectedEngine());
-      if (webUrl) {
-          const finalURL = webUrl + encodeURIComponent(searchText);
-          window.location.href = finalURL;
-      }
-  } else if (isActive && evt.target.classList.contains("close")) {
-      container.classList.remove("active");
-      searchInput.value = "";
-  }
-}
-
-document.querySelector(".search-icon").addEventListener("click", searchToggle);
-document.querySelector(".search-input").addEventListener("keypress", searchToggle);
-document.querySelector(".close").addEventListener("click", searchToggle);
-/*============================ END OF BOUTON RECHERCHE ============================*/
 
 
 /**======================
