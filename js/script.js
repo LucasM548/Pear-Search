@@ -3,81 +3,81 @@
  *========================================================================**/
 const translations = {
   en: {
-    translation: {
-      "Placeholder": "Write to find your happiness - Pear",
-    }
+      translation: {
+          "Placeholder": "Write to find your happiness - Pear",
+      }
   },
   fr: {
-    translation: {
-      "π-Translate": "π-Traduction",
-      "Projects": "Projets",
-      "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
-      "Choice of browser": "Choix du navigateur",
-      "Contribute": "Contribuer",
-    }
+      translation: {
+          "π-Translate": "π-Traduction",
+          "Projects": "Projets",
+          "Placeholder": "Écrivez pour trouver votre bonheur - Pear",
+          "Choice of browser": "Choix du navigateur",
+          "Contribute": "Contribuer",
+      }
   },
   es: {
-    translation: {
-      "Ap-π-cations": "Aπ-licaciones",
-      "π-Translate": "π-Traducir",
-      "Projects": "Proyectos",
-      "Placeholder": "Escribe para encontrar tu felicidad - Pear",
-      "Choice of browser": "Elección del navegador",
-      "Contribute": "Contribuir",
-    }
+      translation: {
+          "Ap-π-cations": "Aπ-licaciones",
+          "π-Translate": "π-Traducir",
+          "Projects": "Proyectos",
+          "Placeholder": "Escribe para encontrar tu felicidad - Pear",
+          "Choice of browser": "Elección del navegador",
+          "Contribute": "Contribuir",
+      }
   },
   it: {
-    translation: {
-      "Ap-π-cations": "Aπ-plicazioni",
-      "π-Translate": "π-Traduttore",
-      "Projects": "Progetti",
-      "Placeholder": "Scrivi per trovare la tua felicità - Pear",
-      "Choice of browser": "Scelta del navigatore",
-      "Contribute": "Contribuire",
-    }
+      translation: {
+          "Ap-π-cations": "Aπ-plicazioni",
+          "π-Translate": "π-Traduttore",
+          "Projects": "Progetti",
+          "Placeholder": "Scrivi per trovare la tua felicità - Pear",
+          "Choice of browser": "Scelta del navigatore",
+          "Contribute": "Contribuire",
+      }
   },
   ru: {
-    translation: {
-      "Ap-π-cations": "Приложе-π-ии",
-      "π-Translate": "π-Переводчик",
-      "Projects": "Проекты",
-      "Placeholder": "Пишите, чтобы найти свое счастье - Pear",
-      "Choice of browser": "Выбор браузера",
-      "Contribute": "Сотрудничать",
-    }
+      translation: {
+          "Ap-π-cations": "Приложе-π-ии",
+          "π-Translate": "π-Переводчик",
+          "Projects": "Проекты",
+          "Placeholder": "Пишите, чтобы найти свое счастье - Pear",
+          "Choice of browser": "Выбор браузера",
+          "Contribute": "Сотрудничать",
+      }
   },
   zh: {
-    translation: {
-      "Ap-π-cations": "应用π",
-      "π-Translate": "π-翻譯",
-      "Projects": "項目",
-      "Placeholder": "写信寻找你的幸福 - Pear",
-      "Choice of browser": "浏览器的选择",
-      "Contribute": "贡献",
-    }
+      translation: {
+          "Ap-π-cations": "应用π",
+          "π-Translate": "π-翻譯",
+          "Projects": "項目",
+          "Placeholder": "写信寻找你的幸福 - Pear",
+          "Choice of browser": "浏览器的选择",
+          "Contribute": "贡献",
+      }
   },
   ko: {
-    translation: {
-      "Ap-π-cations": "응용프로-π-램",
-      "π-Translate": "π-변환",
-      "Projects": "프로젝트",
-      "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
-      "Choice of browser": "브라우저 선택",
-      "Contribute": "기여하다",
-    }
+      translation: {
+          "Ap-π-cations": "응용프로-π-램",
+          "π-Translate": "π-변환",
+          "Projects": "프로젝트",
+          "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
+          "Choice of browser": "브라우저 선택",
+          "Contribute": "기여하다",
+      }
   },
   π: {
-    translation: {
-      "Ap-π-cations": "1-16 - π - 3-1-20-9-15-14-19",
-      "π-Translate": "π - 20-18-1-14-19-12-1-20-5",
-      "Projects": "16-18-15-10-5-3-20-19",
-      "Placeholder": "23-18-9-20-5  20-15  6-9-14-4  25-15-21-18  8-1-16-16-9-14-5-19-19 - Pear",
-      "Choice of browser": "3-8-15-9-3-5  15-6  2-18-15-23-19-5-18",
-      "Google": "7-15-15-7-12-5",
-      "Brave Search": "2-18-1-22-5  19-5-1-18-3-8",
-      "DuckDuckGo": "4-21-3-11-4-21-3-11-7-15",
-      "Contribute": "3-15-14-20-18-15-20-21-2-9-15-14",
-    }
+      translation: {
+          "Ap-π-cations": "1-16 - π - 3-1-20-9-15-14-19",
+          "π-Translate": "π - 20-18-1-14-19-12-1-20-5",
+          "Projects": "16-18-15-10-5-3-20-19",
+          "Placeholder": "23-18-9-20-5  20-15  6-9-14-4  25-15-21-18  8-1-16-16-9-14-5-19-19 - Pear",
+          "Choice of browser": "3-8-15-9-3-5  15-6  2-18-15-23-19-5-18",
+          "Google": "7-15-15-7-12-5",
+          "Brave Search": "2-18-1-22-5  19-5-1-18-3-8",
+          "DuckDuckGo": "4-21-3-11-4-21-3-11-7-15",
+          "Contribute": "3-15-14-20-18-15-20-21-2-9-15-14",
+      }
   },
 };
 
@@ -90,58 +90,58 @@ i18next.init({
 
 function updateContent() {
   document.querySelectorAll('[data-i18n]').forEach(function(element) {
-    var key = element.getAttribute('data-i18n');
-    if (key === 'Placeholder') {
-      element.setAttribute('Placeholder', i18next.t(key));
-    } else {
-      element.textContent = i18next.t(key);
-    }
+      var key = element.getAttribute('data-i18n');
+      if (key === 'Placeholder') {
+          element.setAttribute('Placeholder', i18next.t(key));
+      } else {
+          element.textContent = i18next.t(key);
+      }
   });
 }
 
 function changeLanguage(event) {
   var selectedLanguage = event.target.value;
   i18next.changeLanguage(selectedLanguage, function(err, t) {
-    if (err) {
-      console.log('Erreur lors du changement de langue :', err);
-      return;
-    }
-    localStorage.setItem('language', selectedLanguage);
-    updateContent();
+      if (err) {
+          console.log('Erreur lors du changement de langue :', err);
+          return;
+      }
+      localStorage.setItem('language', selectedLanguage);
+      updateContent();
   });
 }
 
 window.addEventListener('load', function() {
   var language = localStorage.getItem('language');
   if (!language) {
-    var userLanguage = navigator.language.split('-')[0];
-    if (['fr', 'en', 'es', 'it', 'ru', 'zh', 'ko', 'π'].includes(userLanguage)) {
-      language = userLanguage;
-    } else {
-      language = 'en';
-    }
-    localStorage.setItem('language', language);
+      var userLanguage = navigator.language.split('-')[0];
+      if (['fr', 'en', 'es', 'it', 'ru', 'zh', 'ko', 'π'].includes(userLanguage)) {
+          language = userLanguage;
+      } else {
+          language = 'en';
+      }
+      localStorage.setItem('language', language);
   }
   document.querySelector('#language select').value = language;
   i18next.changeLanguage(language, function(err, t) {
-    if (err) {
-      console.log('Erreur lors du changement de langue :', err);
-      return;
-    }
-    updateContent();
+      if (err) {
+          console.log('Erreur lors du changement de langue :', err);
+          return;
+      }
+      updateContent();
   });
 });
 
 function changeLanguage(event) {
   var selectedLanguage = event.target.value;
   i18next.changeLanguage(selectedLanguage, function(err, t) {
-    if (err) {
-      console.log('Erreur lors du changement de langue :', err);
-      return;
-    }
-    localStorage.setItem('language', selectedLanguage);
-    updateContent();
-    updateFlag(selectedLanguage);
+      if (err) {
+          console.log('Erreur lors du changement de langue :', err);
+          return;
+      }
+      localStorage.setItem('language', selectedLanguage);
+      updateContent();
+      updateFlag(selectedLanguage);
   });
 }
 
@@ -150,43 +150,43 @@ function updateFlag(language) {
   var flagSrc = '';
 
   switch (language) {
-    case 'en':
-      flagSrc = 'img/Country Flags/united-kingdom.png';
-      break;
-    case 'fr':
-      flagSrc = 'img/Country Flags/france.png';
-      break;
-    case 'es':
-      flagSrc = 'img/Country Flags/spain.png';
-      break;
-    case 'it':
-      flagSrc = 'img/Country Flags/italy.png';
-      break;
-    case 'ru':
-      flagSrc = 'img/Country Flags/russia.png';
-      break;
-    case 'zh':
-      flagSrc = 'img/Country Flags/china.png';
-      break;
-    case 'ko':
-      flagSrc = 'img/Country Flags/south-korea.png';
-      break;
-    case 'π':
-      flagSrc = 'img/Pear.png';
-      break;
-    default:
-      flagSrc = '';
+      case 'en':
+          flagSrc = 'img/Country Flags/united-kingdom.png';
+          break;
+      case 'fr':
+          flagSrc = 'img/Country Flags/france.png';
+          break;
+      case 'es':
+          flagSrc = 'img/Country Flags/spain.png';
+          break;
+      case 'it':
+          flagSrc = 'img/Country Flags/italy.png';
+          break;
+      case 'ru':
+          flagSrc = 'img/Country Flags/russia.png';
+          break;
+      case 'zh':
+          flagSrc = 'img/Country Flags/china.png';
+          break;
+      case 'ko':
+          flagSrc = 'img/Country Flags/south-korea.png';
+          break;
+      case 'π':
+          flagSrc = 'img/Pear.png';
+          break;
+      default:
+          flagSrc = '';
   }
 
   if (flagSrc) {
-    flagImg.src = flagSrc;
-    flagImg.style.display = 'block';
-    flagImg.style.animation = 'flagAnimation 1s';
-    setTimeout(function() {
-      flagImg.style.display = 'none';
-    }, 1000);
+      flagImg.src = flagSrc;
+      flagImg.style.display = 'block';
+      flagImg.style.animation = 'flagAnimation 1s';
+      setTimeout(function() {
+          flagImg.style.display = 'none';
+      }, 1000);
   } else {
-    flagImg.style.display = 'none';
+      flagImg.style.display = 'none';
   }
 }
 
@@ -195,8 +195,8 @@ updateFlag(language);
 
 
 /**============================================
- *               SWITCH NIGHT/DAY
- *=============================================**/
+*               SWITCH NIGHT/DAY
+*=============================================**/
 const checkbox = document.getElementById('day-light');
 const root = document.documentElement;
 const theme = localStorage.getItem('theme');
@@ -206,19 +206,19 @@ checkbox.checked = theme !== 'Day-mode';
 
 checkbox.addEventListener('change', function() {
   if (this.checked) {
-    root.classList.remove('Day-mode');
-    localStorage.removeItem('theme');
+      root.classList.remove('Day-mode');
+      localStorage.removeItem('theme');
   } else {
-    root.classList.add('Day-mode');
-    localStorage.setItem('theme', 'Day-mode');
+      root.classList.add('Day-mode');
+      localStorage.setItem('theme', 'Day-mode');
   }
 });
 /*=============== END OF SWITCH NIGHT/DAY ==============*/
 
 
 /**========================================================================
- *                           APPS PANEL
- *========================================================================**/
+*                           APPS PANEL
+*========================================================================**/
 const appLinks = [
   { href: "https://discord.com/", imgSrc: "img/Apps/π-Scord.png", alt: "π-Scord", text: "π-Scord" },
   { href: "https://github.com/", imgSrc: "img/Apps/π-Hub.png", alt: "π-Hub", text: "π-Hub" },
@@ -254,9 +254,9 @@ appLinks.forEach((app) => {
   const textElement = document.createElement("p");
   textElement.textContent = app.text;
   if (app.dataI18n) {
-    textElement.setAttribute('data-i18n', app.dataI18n);
+      textElement.setAttribute('data-i18n', app.dataI18n);
   } else {
-    textElement.textContent = app.text;
+      textElement.textContent = app.text;
   }
 
   appElement.appendChild(imgElement);
@@ -276,32 +276,32 @@ function hideAppPanel() {
   applicationsLabel.classList.remove("active", "hovered");
 }
 
-document.addEventListener("click", function (event) {
+document.addEventListener("click", function(event) {
   if (!appPanel.contains(event.target) && event.target.id !== "Applications" && event.target.tagName !== "LABEL") {
-    hideAppPanel();
+      hideAppPanel();
   }
 });
 
-applicationsLabel.addEventListener("mouseenter", function (event) {
+applicationsLabel.addEventListener("mouseenter", function(event) {
   if (appPanel.classList.contains("visible")) {
-    applicationsLabel.classList.add("hovered");
+      applicationsLabel.classList.add("hovered");
   }
 });
 
-applicationsLabel.addEventListener("mouseleave", function (event) {
+applicationsLabel.addEventListener("mouseleave", function(event) {
   applicationsLabel.classList.remove("hovered");
 });
 /*============================ END OF APPS PANEL ============================*/
 
 
 /**============================================
- *               CHOIX MOTEUR
- *=============================================**/
+*               CHOIX MOTEUR
+*=============================================**/
 function getEngineURL(engine) {
   const engineURLs = {
-    Google: "https://www.google.com/search?q=",
-    Brave_search: "https://search.brave.com/search?q=",
-    DuckDuckGo: "https://duckduckgo.com/?q="
+      Google: "https://www.google.com/search?q=",
+      Brave_search: "https://search.brave.com/search?q=",
+      DuckDuckGo: "https://duckduckgo.com/?q="
   };
 
   return engineURLs[engine] || "";
@@ -317,12 +317,12 @@ function setSelectedEngine(engine) {
   $('input[name="search_engine"]').filter('[value="' + engine + '"]').prop("checked", true);
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
   const selectedEngine = getSelectedEngine();
   setSelectedEngine(selectedEngine);
 });
 
-$('input[name="search_engine"]').on("change", function () {
+$('input[name="search_engine"]').on("change", function() {
   const newSelectedEngine = $('input[name="search_engine"]:checked').val();
   setSelectedEngine(newSelectedEngine);
 });
@@ -330,26 +330,26 @@ $('input[name="search_engine"]').on("change", function () {
 
 
 /**========================================================================
- *                           BOUTON RECHERCHE
- *========================================================================**/
+*                           BOUTON RECHERCHE
+*========================================================================**/
 function searchToggle(evt) {
   const container = document.querySelector(".search-wrapper");
   const searchInput = container.querySelector(".search-input");
   const isActive = container.classList.contains("active");
 
   if (!isActive) {
-    container.classList.add("active");
-    setTimeout(() => searchInput.focus(), 200);
+      container.classList.add("active");
+      setTimeout(() => searchInput.focus(), 200);
   } else if (searchInput.value.trim() !== "" && (evt.key === "Enter" || evt.type === "click")) {
-    const searchText = searchInput.value;
-    const webUrl = getEngineURL(getSelectedEngine());
-    if (webUrl) {
-      const finalURL = webUrl + encodeURIComponent(searchText);
-      window.location.href = finalURL;
-    }
+      const searchText = searchInput.value;
+      const webUrl = getEngineURL(getSelectedEngine());
+      if (webUrl) {
+          const finalURL = webUrl + encodeURIComponent(searchText);
+          window.location.href = finalURL;
+      }
   } else if (isActive && evt.target.classList.contains("close")) {
-    container.classList.remove("active");
-    searchInput.value = "";
+      container.classList.remove("active");
+      searchInput.value = "";
   }
 }
 
@@ -360,8 +360,8 @@ document.querySelector(".close").addEventListener("click", searchToggle);
 
 
 /**======================
- *    BOUTON CONTRIBUTION
- *========================**/
+*    BOUTON CONTRIBUTION
+*========================**/
 const links = [
   "https://www.paypal.com/paypalme/LucasM54",
   "https://www.paypal.com/paypalme/biquidouLIV"
@@ -375,17 +375,25 @@ function openRandomLink() {
 
 
 /**======================
- *    ANALYTICS
- *========================**/
+*    ANALYTICS
+*========================**/
 window.dataLayer = window.dataLayer || []
-function gtag(){dataLayer.push(arguments);}
+
+function gtag() {
+  dataLayer.push(arguments);
+}
 gtag('js', new Date());
 
 gtag('config', 'G-6MV2RQWCTV');
 
-(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "hdfskdqo11");
+(function(c, l, a, r, i, t, y) {
+  c[a] = c[a] || function() {
+      (c[a].q = c[a].q || []).push(arguments)
+  };
+  t = l.createElement(r);
+  t.async = 1;
+  t.src = "https://www.clarity.ms/tag/" + i;
+  y = l.getElementsByTagName(r)[0];
+  y.parentNode.insertBefore(t, y);
+})(window, document, "clarity", "script", "hdfskdqo11");
 /*==== END OF ANALYTICS ====*/
