@@ -131,6 +131,66 @@ window.addEventListener('load', function() {
     updateContent();
   });
 });
+
+function changeLanguage(event) {
+  var selectedLanguage = event.target.value;
+  i18next.changeLanguage(selectedLanguage, function(err, t) {
+    if (err) {
+      console.log('Erreur lors du changement de langue :', err);
+      return;
+    }
+    localStorage.setItem('language', selectedLanguage);
+    updateContent();
+    updateFlag(selectedLanguage);
+  });
+}
+
+function updateFlag(language) {
+  var flagImg = document.getElementById('flag');
+  var flagSrc = '';
+
+  switch (language) {
+    case 'en':
+      flagSrc = 'img/Country Flags/united-kingdom.png';
+      break;
+    case 'fr':
+      flagSrc = 'img/Country Flags/france.png';
+      break;
+    case 'es':
+      flagSrc = 'img/Country Flags/spain.png';
+      break;
+    case 'it':
+      flagSrc = 'img/Country Flags/italy.png';
+      break;
+    case 'ru':
+      flagSrc = 'img/Country Flags/russia.png';
+      break;
+    case 'zh':
+      flagSrc = 'img/Country Flags/china.png';
+      break;
+    case 'ko':
+      flagSrc = 'img/Country Flags/south-korea.png';
+      break;
+    case 'π':
+      flagSrc = 'img/Pear.png';
+      break;
+    default:
+      flagSrc = '';
+  }
+
+  if (flagSrc) {
+    flagImg.src = flagSrc;
+    flagImg.style.display = 'block';
+    flagImg.style.animation = 'flagAnimation 1s';
+    setTimeout(function() {
+      flagImg.style.display = 'none';
+    }, 1000);
+  } else {
+    flagImg.style.display = 'none';
+  }
+}
+
+updateFlag(language);
 /*============================ END OF CHOIX LANGUE ============================*/
 
 

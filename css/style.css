@@ -250,6 +250,36 @@ html {
 	max-height: 200px;
 	opacity: 1;
 }
+
+.language #flag {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 0;
+	height: 0;
+	opacity: 0;
+	user-select: none;
+	pointer-events: none;
+}
+
+@keyframes flagAnimation {
+	0% {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	50% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 0;
+		width: min(30vw, 100px);
+		height: min(30vw, 100px);
+	}
+}
 /*=============== END OF CHOIX LANGUE ==============*/
 
 
@@ -604,14 +634,14 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 /**============================================
  *               CONTRIBUTION BUTTON
  *=============================================**/
- :root {
+:root {
 	--green: rgb(33, 107, 22);
 	--dark-blue-π-Pal: #02025e;
 	--blue-π-Pal: #0303ab;
-  }
-  
-  .contribution-button,
-  .π-Pal-button {
+}
+
+.contribution-button,
+.π-Pal-button {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: min(3.5vw, 16px);
 	position: fixed;
@@ -631,16 +661,16 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	color: var(--text-color);
 	background: linear-gradient(to right, var(--theme-color), var(--green));
 	transition: all 0.3s ease-in-out;
-  }
-  
-  .π-Pal-button {
+}
+
+.π-Pal-button {
 	right: 50%;
 	transform: translateX(50%);
 	background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
-  }
-  
-  .contribution-button::after,
-  .π-Pal-button::after {
+}
+
+.contribution-button::after,
+.π-Pal-button::after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -653,70 +683,72 @@ input[type="radio"]:not(:checked)+.search-engine-label {
 	background: inherit;
 	filter: blur(6px);
 	transition: all 0.2s;
-  }
-  
-  .contribution-button:hover::after,
-  .π-Pal-button:hover::after {
+}
+
+.contribution-button:hover::after,
+.π-Pal-button:hover::after {
 	filter: blur(4px);
 	width: 100%;
 	bottom: -5px;
 	left: 0;
-  }
-  
-  .contribution-button:active::after,
-  .π-Pal-button:active::after {
+}
+
+.contribution-button:active::after,
+.π-Pal-button:active::after {
 	filter: blur(10px);
-  }
-  
-  /* FIX For Edge and IE */
-  
-  @supports (-ms-ime-align: auto) {
+}
+
+/* FIX For Edge and IE */
+
+@supports (-ms-ime-align: auto) {
+
 	.contribution-button,
 	.π-Pal-button {
-	  -webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-	  box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+		-webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+		box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
 	}
-  
+
 	.π-Pal-button {
-	  -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-	  box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
 	}
-  
+
 	.contribution-button::after,
 	.π-Pal-button::after {
-	  display: none;
+		display: none;
 	}
-  }
-  
-  @media screen and (-ms-high-contrast: active),
-  (-ms-high-contrast: none) {
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
 	.contribution-button,
 	.π-Pal-button {
-	  background: -webkit-gradient(linear, left top, right top, from(var(--dark-blue-π-Pal)), to(var(--blue-π-Pal)));
-	  background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
-	  -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-	  box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+		background: -webkit-gradient(linear, left top, right top, from(var(--dark-blue-π-Pal)), to(var(--blue-π-Pal)));
+		background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
+		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
 	}
-  
+
 	.contribution-button::after,
 	.π-Pal-button::after {
-	  display: none;
+		display: none;
 	}
-  
+
 	@keyframes gradient {
-	  0% {
-		background-position: 0% 50%;
-	  }
-  
-	  50% {
-		background-position: 100% 50%;
-	  }
-  
-	  100% {
-		background-position: 0% 50%;
-	  }
+		0% {
+			background-position: 0% 50%;
+		}
+
+		50% {
+			background-position: 100% 50%;
+		}
+
+		100% {
+			background-position: 0% 50%;
+		}
 	}
-  }  
+}
 /*=============== END OF CONTRIBUTION BUTTON ==============*/
 
 
