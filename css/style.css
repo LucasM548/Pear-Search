@@ -538,14 +538,14 @@ html {
 /**============================================
  *               CHOIX MOTEUR
  *=============================================**/
-.boxenav {
+ .boxenav {
 	position: absolute;
 	top: 50%;
 	left: 10px;
 	transform: translate(0, -50%);
-}
-
-.boxenav_text {
+  }
+  
+  .boxenav_text {
 	background-color: rgba(0, 0, 0, 0.3);
 	color: var(--text-color);
 	text-align: center;
@@ -553,13 +553,13 @@ html {
 	padding: 10px;
 	user-select: none;
 	transition: color .3s ease-in-out;
-}
-
-input[type="radio"] {
+  }
+  
+  input[type="radio"] {
 	display: none;
-}
-
-.search-engine-label {
+  }
+  
+  .search-engine-label {
 	display: inline-block;
 	padding: 10px 20px;
 	background-color: rgba(var(--boxnav-button-color), 0.5);
@@ -567,26 +567,18 @@ input[type="radio"] {
 	border-radius: 10px;
 	cursor: pointer;
 	margin-bottom: 10px;
-}
-
-input[type="radio"]:checked+.search-engine-label {
+	margin-inline: 10px;
+	transition: background-color 0.3s, transform 0.5s;
+  }
+  
+  input[type="radio"]:checked + .search-engine-label {
 	background-color: rgba(var(--boxnav-button-color), 0.8);
 	transform: scale(1.1);
-	transition: transform 0.5s;
-}
-
-.search-engine-label:hover {
+  }
+  
+  .search-engine-label:hover {
 	background-color: rgba(var(--boxnav-button-color), 0.3);
-}
-
-input[type="radio"]+.search-engine-label {
-	transition: background-color 0.3s;
-}
-
-input[type="radio"]:not(:checked)+.search-engine-label {
-	transform: scale(1);
-	transition: transform 0.5s;
-}
+  }  
 /*=============== END OF CHOIX MOTEUR ==============*/
 
 
