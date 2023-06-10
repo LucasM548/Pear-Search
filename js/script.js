@@ -151,7 +151,17 @@ window.addEventListener('load', function() {
   updateFlag(language);
 });
 
+var animationInProgress = false;
+
 function updateFlag(language) {
+  if (animationInProgress) {
+    setTimeout(function() {
+      updateFlag(language);
+    }, 100);
+    return;
+  }
+
+  animationInProgress = true;
   var flagImg = document.getElementById('flag');
   var flagSrc = '';
 
@@ -190,9 +200,11 @@ function updateFlag(language) {
     flagImg.style.animation = 'flagAnimation 1s';
     setTimeout(function() {
       flagImg.style.display = 'none';
+      animationInProgress = false;
     }, 1000);
   } else {
     flagImg.style.display = 'none';
+    animationInProgress = false;
   }
 }
 /*============================ END OF CHOIX LANGUE ============================*/
