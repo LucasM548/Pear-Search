@@ -40,7 +40,7 @@ const translations = {
   },
   es: {
       translation: {
-          "Ap-π-cations": "Aπ-licaciones",
+          "Ap-π-cations": "Ap-π-licaciones",
           "π-Translate": "π-Traducir",
           "Projects": "Proyectos",
           "Placeholder": "Escribe para encontrar tu felicidad - Pear",
@@ -50,7 +50,7 @@ const translations = {
   },
   it: {
       translation: {
-          "Ap-π-cations": "Aπ-plicazioni",
+          "Ap-π-cations": "Ap-π-plicazioni",
           "π-Translate": "π-Traduttore",
           "Projects": "Progetti",
           "Placeholder": "Scrivi per trovare la tua felicità - Pear",
@@ -70,7 +70,7 @@ const translations = {
   },
   zh: {
       translation: {
-          "Ap-π-cations": "应用π",
+          "Ap-π-cations": "应用-π",
           "π-Translate": "π-翻譯",
           "Projects": "項目",
           "Placeholder": "写信寻找你的幸福 - Pear",
@@ -78,9 +78,19 @@ const translations = {
           "Contribute": "贡献",
       }
   },
+  ja: {
+      translation: {
+          "Ap-π-cations": "ア-π-リケーション",
+          "π-Translate": "π-翻訳",
+          "Projects": "プロジェクト",
+          "Placeholder": "幸せを見つけるために書く - Pear",
+          "Choice of browser": "ブラウザの選択",
+          "Contribute": "貢献",
+      }
+  },
   ko: {
       translation: {
-          "Ap-π-cations": "응용프로-π-램",
+          "Ap-π-cations": "애플-π-케이션",
           "π-Translate": "π-변환",
           "Projects": "프로젝트",
           "Placeholder": "당신의 행복을 찾기 위해 글을 쓰세요 - Pear",
@@ -183,6 +193,9 @@ function updateFlag(language) {
       break;
     case 'zh':
       flagSrc = 'img/Country Flags/china.png';
+      break;
+    case 'ja':
+      flagSrc = 'img/Country Flags/japan.png';
       break;
     case 'ko':
       flagSrc = 'img/Country Flags/south-korea.png';
