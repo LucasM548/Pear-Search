@@ -4,15 +4,15 @@ The best search engine of all time, it will allow you to find what you're lookin
 
 ## 🌏 Languages
 
-- [x] English
-- [x] Français
-- [x] Español
-- [x] Italiano
-- [x] Русский
-- [x] 中文
-- [x] 日本
-- [x] 한국어
-- [x] π
+- [x] <img src="img/Country Flags/united-kingdom.png" width="20px" height="20px"> English
+- [x] <img src="img/Country Flags/france.png" width="20px" height="20px"> Français
+- [x] <img src="img/Country Flags/spain.png" width="20px" height="20px"> Español
+- [x] <img src="img/Country Flags/italy.png" width="20px" height="20px"> Italiano
+- [x] <img src="img/Country Flags/russia.png" width="20px" height="20px"> Русский
+- [x] <img src="img/Country Flags/china.png" width="20px" height="20px"> 中文
+- [x] <img src="img/Country Flags/japan.png" width="20px" height="20px"> 日本
+- [x] <img src="img/Country Flags/south-korea.png" width="20px" height="20px"> 한국어
+- [x] <img src="img/Pear.png" width="20px" height="20px"> π
 
 ## ⭐ Features
 
