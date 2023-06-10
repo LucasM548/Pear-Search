@@ -2,6 +2,18 @@
 
 The best search engine of all time, it will allow you to find what you're looking for while letting you wander the web. You can forget about your personal data, which will be stored directly on our servers to simplify your life.
 
+## 🌏 Languages
+
+- [x] English
+- [x] Français
+- [x] Español
+- [x] Italiano
+- [x] Русский
+- [x] 中文
+- [x] 日本
+- [x] 한국어
+- [x] π
+
 ## ⭐ Features
 
 - Apps panel with lots of π-Apps
