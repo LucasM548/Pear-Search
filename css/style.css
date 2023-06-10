@@ -597,7 +597,7 @@ input[type="radio"]:checked+.search-engine-label {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: min(3.5vw, 16px);
 	position: fixed;
-	bottom: 3vh;
+	bottom: 2vh;
 	right: 2vw;
 	outline: none;
 	border: none;
