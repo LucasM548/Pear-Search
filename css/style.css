@@ -4,6 +4,7 @@
 body {
 	background: var(--background-color);
 	background-image: var(--background-image);
+	background-size: 350px;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -21,7 +22,7 @@ html {
 }
 
 :root {
-	--background-image: url("../img/Pear Wallpaper.jpg");
+	--background-image: url("../img/Pear Wallpaper.png");
 	--background-color: #212129;
 	--theme-color: #1c1c23;
 	--scrollbar-thumb-color: #555;
@@ -37,7 +38,7 @@ html {
 }
 
 .Day-mode {
-	--background-image: url("../img/White Pear Wallpaper.jpg");
+	--background-image: url("../img/White Pear Wallpaper.png");
 	--background-color: #deded6;
 	--theme-color: #c8c8c8;
 	--scrollbar-thumb-color: #8b8b8b;
