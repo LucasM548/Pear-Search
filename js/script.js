@@ -146,7 +146,7 @@ function changeLanguage(event) {
 
 window.addEventListener('load', function() {
   var language = localStorage.getItem('language') || navigator.language.split('-')[0];
-  if (!['fr', 'en', 'es', 'it', 'ru', 'zh', 'ko', 'π'].includes(language)) {
+  if (!['en', 'fr', 'es', 'it', 'ru', 'zh', 'ja', 'ko', 'π'].includes(language)) {
     language = 'en';
   }
   localStorage.setItem('language', language);
