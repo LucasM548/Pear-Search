@@ -1,737 +1,736 @@
 /**======================
  *    GENERAL STYLE
  *========================**/
- body {
-	background: var(--background-color);
-	background-image: var(--background-image);
-	background-size: 350px;
-	transition: all 0.3s ease-in-out;
+body {
+  background: var(--background-color);
+  background-image: var(--background-image);
+  background-size: 350px;
+  transition: all 0.3s ease-in-out;
 }
 
 html {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: "Open Sans", Arial, Verdana, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", Arial, Verdana, "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
 }
 
 ::selection {
-	background: rgba(24, 143, 3, 0.4);
+  background: rgba(24, 143, 3, 0.4);
 }
 
 :root {
-	--background-image: url("../img/Pear Wallpaper.png");
-	--background-color: #212129;
-	--theme-color: #1c1c23;
-	--scrollbar-thumb-color: #555;
-	--text-color: white;
-	--text-color-rgba: 255, 255, 255;
-	--text-color-rgba-inverted: 0, 0, 0;
-	--hover-color: #2e2e3a;
-	--apps-panel-color: #3c3c48;
-	--boxnav-button-color: 0, 128, 0;
-	--search-icon-color: burlywood;
-	--search-icon-span-color: green;
-	--switch-background-image: url('https://assets.codepen.io/1462889/moon.svg');
-	--switch-background-color: #102770;
+  --background-image: url("../img/Pear Wallpaper.png");
+  --background-color: #212129;
+  --theme-color: #1c1c23;
+  --scrollbar-thumb-color: #555;
+  --text-color: white;
+  --text-color-rgba: 255, 255, 255;
+  --text-color-rgba-inverted: 0, 0, 0;
+  --hover-color: #2e2e3a;
+  --apps-panel-color: #3c3c48;
+  --boxnav-button-color: 0, 128, 0;
+  --search-icon-color: burlywood;
+  --search-icon-span-color: green;
+  --switch-background-image: url("https://assets.codepen.io/1462889/moon.svg");
+  --switch-background-color: #102770;
 }
 
 .Day-mode {
-	--background-image: url("../img/White Pear Wallpaper.png");
-	--background-color: #deded6;
-	--theme-color: #c8c8c8;
-	--scrollbar-thumb-color: #8b8b8b;
-	--text-color: black;
-	--text-color-rgba: 0, 0, 0;
-	--text-color-rgba-inverted: 255, 255, 255;
-	--hover-color: #a2a2a2;
-	--apps-panel-color: #bababa;
-	--boxnav-button-color: 60, 201, 60;
-	--search-icon-color: #FFF;
-	--search-icon-span-color: green;
-	--switch-background-image: url('https://assets.codepen.io/1462889/sun.svg');
-	--switch-background-color: #48dbfb;
+  --background-image: url("../img/White Pear Wallpaper.png");
+  --background-color: #deded6;
+  --theme-color: #c8c8c8;
+  --scrollbar-thumb-color: #8b8b8b;
+  --text-color: black;
+  --text-color-rgba: 0, 0, 0;
+  --text-color-rgba-inverted: 255, 255, 255;
+  --hover-color: #a2a2a2;
+  --apps-panel-color: #bababa;
+  --boxnav-button-color: 60, 201, 60;
+  --search-icon-color: #fff;
+  --search-icon-span-color: green;
+  --switch-background-image: url("https://assets.codepen.io/1462889/sun.svg");
+  --switch-background-color: #48dbfb;
 }
 /*==== END OF GENERAL STYLE ====*/
-
 
 /**============================================
  *               SCROLLBAR
  *=============================================**/
 ::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--background-color);
-	border-radius: 10px;
+  background-color: var(--background-color);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--scrollbar-thumb-color);
-	border-radius: 10px;
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 /*=============== END OF SCROLLBAR ==============*/
-
 
 /**========================================================================
  *                           TOP BAR
  *========================================================================**/
 .topbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: min(15vw, 55px);
-	display: flex;
-	background-color: var(--theme-color);
-	padding: 10px;
-	z-index: 100;
-	transition: background-color 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: min(15vw, 55px);
+  display: flex;
+  background-color: var(--theme-color);
+  padding: 10px;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .left-container {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .right-container {
-	display: flex;
-	align-items: center;
-	margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .button {
-	display: inline-block;
-	padding: min(3vw, 10px) min(3vw, 20px);
-	margin: 4px 2px;
-	font-size: min(4vw, 17px);
-	color: var(--text-color);
-	background-color: transparent;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	user-select: none;
-	transition: color 0.3s ease-in-out, background-color 0.5s;
+  display: inline-block;
+  padding: min(3vw, 10px) min(3vw, 20px);
+  margin: 4px 2px;
+  font-size: min(4vw, 17px);
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease-in-out, background-color 0.5s;
 }
 
 .button:hover,
 .button.hovered {
-	background-color: var(--hover-color);
-	border-radius: 10px;
+  background-color: var(--hover-color);
+  border-radius: 10px;
 }
 
 .button.active {
-	background-color: var(--hover-color);
+  background-color: var(--hover-color);
 }
 
 .label.hovered {
-	background-color: var(--hover-color);
-	border-radius: 10px;
+  background-color: var(--hover-color);
+  border-radius: 10px;
 }
 /*============================ END OF TOP BAR ============================*/
-
 
 /**========================================================================
  *                           SWITCH DAY/NIGHT
  *========================================================================**/
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked) {
-	position: absolute;
-	opacity: 0;
-	pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.day-light:checked+label,
-.day-light:not(:checked)+label {
-	display: block;
-	border-radius: 50%;
-	width: min(10vw, 46px);
-	height: min(10vw, 46px);
-	margin: min(2vw, 15px);
-	cursor: pointer;
-	transition: all 200ms linear;
-	user-select: none;
+.day-light:checked + label,
+.day-light:not(:checked) + label {
+  display: block;
+  border-radius: 50%;
+  width: min(10vw, 46px);
+  height: min(10vw, 46px);
+  margin: min(2vw, 15px);
+  cursor: pointer;
+  transition: all 200ms linear;
+  user-select: none;
 }
 
-.day-light:checked+label:after,
-.day-light:checked+label:before,
-.day-light:not(:checked)+label:after,
-.day-light:not(:checked)+label:before {
-	position: absolute;
-	content: '';
-	overflow: hidden;
-	display: block;
-	border-radius: 50%;
-	width: min(10vw, 46px);
-	height: min(10vw, 46px);
-	background-color: var(--switch-background-color);
-	background-image: var(--switch-background-image);
-	background-size: min(4.35vw, 20px) min(4.35vw, 20px);
-	box-shadow: 0 0 min(5vw, 20px) rgba(255, 235, 167, 0.2);
-	background-repeat: no-repeat;
-	background-position: center;
-	transition: all 200ms linear;
-	user-select: none;
+.day-light:checked + label:after,
+.day-light:checked + label:before,
+.day-light:not(:checked) + label:after,
+.day-light:not(:checked) + label:before {
+  position: absolute;
+  content: "";
+  overflow: hidden;
+  display: block;
+  border-radius: 50%;
+  width: min(10vw, 46px);
+  height: min(10vw, 46px);
+  background-color: var(--switch-background-color);
+  background-image: var(--switch-background-image);
+  background-size: min(4.35vw, 20px) min(4.35vw, 20px);
+  box-shadow: 0 0 min(5vw, 20px) rgba(255, 235, 167, 0.2);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 200ms linear;
+  user-select: none;
 }
 
-.day-light:not(:checked)+label:after {
-	background-size: min(5.43vw, 25px) min(5.43vw, 25px);
+.day-light:not(:checked) + label:after {
+  background-size: min(5.43vw, 25px) min(5.43vw, 25px);
 }
 
-.day-light:checked+label:after {
-	transform: rotate(360deg);
-	opacity: 1;
+.day-light:checked + label:after {
+  transform: rotate(360deg);
+  opacity: 1;
 }
 /*============================ END OF SWITCH DAY/NIGHT ============================*/
-
 
 /**============================================
  *               CHOIX LANGUE
  *=============================================**/
 .language {
-	display: inline-block;
-	position: relative;
-	border: 2px solid var(--text-color);
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 10px;
-	background-color: var(--theme-color);
-	transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-	box-shadow: 0 2px 10px rgba(var(--text-color-rgba), 0.2);
-	user-select: none;
+  display: inline-block;
+  position: relative;
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: var(--theme-color);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 2px 10px rgba(var(--text-color-rgba), 0.2);
+  user-select: none;
 }
 
 .language select {
-	appearance: none;
-	background-color: transparent;
-	border: none;
-	color: var(--text-color);
-	font-size: min(3vw, 17px);
-	padding: 10px min(4vw, 20px);
-	padding-right: min(8vw, 40px);
-	cursor: pointer;
-	transition: color 0.3s ease-in-out;
-	width: 100%;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: min(3vw, 17px);
+  padding: 10px min(4vw, 20px);
+  padding-right: min(8vw, 40px);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  width: 100%;
 }
 
 .language::after {
-	content: "▼";
-	position: absolute;
-	top: 50%;
-	right: min(1vw, 10px);
-	transform: translateY(-50%);
-	color: var(--text-color);
-	pointer-events: none;
-	transition: transform .3s ease-in-out;
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: min(1vw, 10px);
+  transform: translateY(-50%);
+  color: var(--text-color);
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .language:hover,
 .language:focus-within {
-	border-color: var(--hover-color);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: var(--hover-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .language:hover select,
 .language:focus-within select {
-	color: var(--text-color);
+  color: var(--text-color);
 }
 
 .language:hover::after,
 .language:focus-within::after {
-	color: var(--text-color);
+  color: var(--text-color);
 }
 
 .language select option {
-	background-color: var(--theme-color);
-	color: var(--text-color);
-	transition: background-color 0.3s ease-in-out;
+  background-color: var(--theme-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .language select option:hover,
 .language select option:checked {
-	background-color: var(--hover-color);
+  background-color: var(--hover-color);
 }
 
 .language select:focus {
-	outline: none;
+  outline: none;
 }
 
 .language:focus-within::after,
 .language:focus-within .select-list {
-	transform: translateY(-50%) rotate(180deg);
-	max-height: 200px;
-	opacity: 1;
+  transform: translateY(-50%) rotate(180deg);
+  max-height: 200px;
+  opacity: 1;
 }
 
-
 .language #flag {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 0;
-	height: 0;
-	opacity: 0;
-	user-select: none;
-	pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
 @keyframes flagAnimation {
-	0% {
-		opacity: 0;
-		width: 0;
-		height: 0;
-	}
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 
-	50% {
-		opacity: 0.3;
-	}
+  50% {
+    opacity: 0.3;
+  }
 
-	100% {
-		opacity: 0;
-		width: min(30vw, 100px);
-		height: min(30vw, 100px);
-	}
+  100% {
+    opacity: 0;
+    width: min(30vw, 100px);
+    height: min(30vw, 100px);
+  }
 }
 /*=============== END OF CHOIX LANGUE ==============*/
-
 
 /**========================================================================
  *                           APPS PANEL
  *========================================================================**/
 .app-panel {
-	transform: scaleY(0);
-	position: absolute;
-	top: min(22vw, 80px);
-	right: 15px;
-	width: 100%;
-	max-width: 300px;
-	background-color: var(--apps-panel-color);
-	padding: 10px;
-	border-radius: 10px;
-	box-sizing: border-box;
-	z-index: 1;
-	user-select: none;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	overflow-y: auto;
-	transform-origin: top;
-	max-height: 380px;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: scaleY(0);
+  position: absolute;
+  top: min(22vw, 80px);
+  right: 15px;
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--apps-panel-color);
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 1;
+  user-select: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transform-origin: top;
+  max-height: 380px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .app-panel.visible {
-	transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .app {
-	display: inline-block;
-	width: 33.33%;
-	padding: 0px;
-	text-align: center;
-	color: var(--text-color);
-	text-decoration: none;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	user-select: none;
-	aspect-ratio: 1/1;
-	margin-bottom: 5px;
+  display: inline-block;
+  width: 33.33%;
+  padding: 0px;
+  text-align: center;
+  color: var(--text-color);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  aspect-ratio: 1/1;
+  margin-bottom: 5px;
 }
 
 .app img {
-	width: 50%;
-	height: 50%;
-	object-fit: contain;
-	object-position: center;
-	margin-bottom: -10px;
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: -10px;
 }
 
 .app:hover {
-	background-color: var(--hover-color);
-	transition: background-color 0.5s;
-	border-radius: 10px;
+  background-color: var(--hover-color);
+  transition: background-color 0.5s;
+  border-radius: 10px;
 }
 
 .app-panel::-webkit-scrollbar {
-	width: 8px;
+  width: 8px;
 }
 
 .app-panel::-webkit-scrollbar-track {
-	background-color: var(--apps-panel-color);
-	border-radius: 10px;
+  background-color: var(--apps-panel-color);
+  border-radius: 10px;
 }
 
 .app-panel::-webkit-scrollbar-thumb {
-	background-color: var(--hover-color);
-	border-radius: 10px;
+  background-color: var(--hover-color);
+  border-radius: 10px;
 }
 /*============================ END OF APPS PANEL ============================*/
-
 
 /**========================================================================
  *                           BOUTON RECHERCHE
  *========================================================================**/
 .search-wrapper {
-	position: absolute;
-	transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .search-wrapper .input-holder {
-	height: 70px;
-	width: clamp(40px, 17vw, 70px);
-	overflow: hidden;
-	background: rgba(255, 255, 255, 0);
-	border-radius: 6px;
-	position: relative;
-	transition: all 0.3s ease-in-out;
-	user-select: none;
+  height: 70px;
+  width: clamp(40px, 17vw, 70px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
 }
 
 .search-wrapper.active .input-holder {
-	width: clamp(100px, calc(100vw - 130px), 450px);
-	border-radius: 50px;
-	background: rgba(var(--text-color-rgba-inverted), 0.5);
-	transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+  width: clamp(100px, calc(100vw - 130px), 450px);
+  border-radius: 50px;
+  background: rgba(var(--text-color-rgba-inverted), 0.5);
+  transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
 }
 
 .search-wrapper .input-holder .search-input {
-	width: 100%;
-	height: 50px;
-	padding: 0px 70px 0 20px;
-	opacity: 0;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	background: transparent;
-	box-sizing: border-box;
-	border: none;
-	outline: none;
-	font-size: clamp(15px, 3.3vw, 16px);
-	font-weight: 400;
-	line-height: 20px;
-	color: var(--text-color);
-	transform: translate(0, 60px);
-	transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570), font-size 0s, color 0s;
-	transition-delay: 0.3s, color 0s;
+  width: 100%;
+  height: 50px;
+  padding: 0px 70px 0 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-size: clamp(15px, 3.3vw, 16px);
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--text-color);
+  transform: translate(0, 60px);
+  transition: all 0.3s cubic-bezier(0, 0.105, 0.035, 1.57), font-size 0s,
+    color 0s;
+  transition-delay: 0.3s, color 0s;
 }
 
 .search-wrapper.active .input-holder .search-input {
-	opacity: 1;
-	transform: translate(0, 10px);
+  opacity: 1;
+  transform: translate(0, 10px);
 }
 
 .search-wrapper .input-holder .search-icon {
-	width: clamp(40px, 17vw, 70px);
-	height: clamp(40px, 17vw, 70px);
-	border: none;
-	border-radius: 6px;
-	background: var(--search-icon-color);
-	padding: 0px;
-	outline: none;
-	position: relative;
-	z-index: 2;
-	float: right;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+  width: clamp(40px, 17vw, 70px);
+  height: clamp(40px, 17vw, 70px);
+  border: none;
+  border-radius: 6px;
+  background: var(--search-icon-color);
+  padding: 0px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-wrapper.active .input-holder .search-icon {
-	width: 50px;
-	height: 50px;
-	margin: 10px;
-	border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 30px;
 }
 
 .search-wrapper .input-holder .search-icon span {
-	width: min(17vw, 22px);
-	height: min(17vw, 22px);
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-	transform: rotate(45deg);
-	transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+  width: min(17vw, 22px);
+  height: min(17vw, 22px);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transform: rotate(45deg);
+  transition: all 0.4s cubic-bezier(0.65, -0.6, 0.24, 1.65);
 }
 
 .search-wrapper.active .input-holder .search-icon span {
-	transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .search-wrapper .input-holder .search-icon span::before,
 .search-wrapper .input-holder .search-icon span::after {
-	position: absolute;
-	content: '';
+  position: absolute;
+  content: "";
 }
 
 .search-wrapper .input-holder .search-icon span::before {
-	width: 4px;
-	height: 11px;
-	left: 9px;
-	top: 18px;
-	border-radius: 2px;
-	background: var(--search-icon-span-color);
+  width: 4px;
+  height: 11px;
+  left: 9px;
+  top: 18px;
+  border-radius: 2px;
+  background: var(--search-icon-span-color);
 }
 
 .search-wrapper .input-holder .search-icon span::after {
-	width: 14px;
-	height: 14px;
-	left: 0px;
-	top: 0px;
-	border-radius: 16px;
-	border: 4px solid var(--search-icon-span-color);
+  width: 14px;
+  height: 14px;
+  left: 0px;
+  top: 0px;
+  border-radius: 16px;
+  border: 4px solid var(--search-icon-span-color);
 }
 
 .search-wrapper .close {
-	position: absolute;
-	z-index: 1;
-	top: 24px;
-	right: 20px;
-	width: 25px;
-	height: 25px;
-	cursor: pointer;
-	transform: rotate(-180deg);
-	transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
-	transition-delay: 0.2s;
-	opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(-180deg);
+  transition: all 0.3s cubic-bezier(0.285, -0.45, 0.935, 0.11);
+  transition-delay: 0.2s;
+  opacity: 0;
 }
 
 .search-wrapper.active .close {
-	right: -50px;
-	transform: rotate(45deg);
-	transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570), opacity 0s;
-	transition-delay: 0.5s;
-	opacity: 1;
+  right: -50px;
+  transform: rotate(45deg);
+  transition: all 0.6s cubic-bezier(0, 0.105, 0.035, 1.57), opacity 0s;
+  transition-delay: 0.5s;
+  opacity: 1;
 }
 
 .search-wrapper .close::before,
 .search-wrapper .close::after {
-	position: absolute;
-	content: '';
-	background: var(--search-icon-span-color);
-	border-radius: 2px;
+  position: absolute;
+  content: "";
+  background: var(--search-icon-span-color);
+  border-radius: 2px;
 }
 
 .search-wrapper .close::before {
-	width: 5px;
-	height: 25px;
-	left: 10px;
-	top: 0px;
+  width: 5px;
+  height: 25px;
+  left: 10px;
+  top: 0px;
 }
 
 .search-wrapper .close::after {
-	width: 25px;
-	height: 5px;
-	left: 0px;
-	top: 10px;
+  width: 25px;
+  height: 5px;
+  left: 0px;
+  top: 10px;
 }
 /*============================ END OF BOUTON RECHERCHE ============================*/
-
 
 /**============================================
  *               CHOIX MOTEUR
  *=============================================**/
 .boxenav {
-	position: absolute;
-	top: 50%;
-	left: 10px;
-	transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
 }
 
 .boxenav_text {
-	background-color: rgba(0, 0, 0, 0.3);
-	color: var(--text-color);
-	text-align: center;
-	border-radius: 10px;
-	padding: 10px;
-	user-select: none;
-	transition: color .3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  user-select: none;
+  transition: color 0.3s ease-in-out;
 }
 
 input[type="radio"] {
-	display: none;
+  display: none;
 }
 
 .search-engine-label {
-	display: inline-block;
-	padding: 10px 20px;
-	background-color: rgba(var(--boxnav-button-color), 0.5);
-	color: var(--text-color);
-	border-radius: 10px;
-	cursor: pointer;
-	margin-bottom: 10px;
-	margin-inline: 10px;
-	transition: background-color 0.3s, transform 0.5s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(var(--boxnav-button-color), 0.5);
+  color: var(--text-color);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-inline: 10px;
+  transition: background-color 0.3s, transform 0.5s;
 }
 
-input[type="radio"]:checked+.search-engine-label {
-	background-color: rgba(var(--boxnav-button-color), 0.8);
-	transform: scale(1.1);
+input[type="radio"]:checked + .search-engine-label {
+  background-color: rgba(var(--boxnav-button-color), 0.8);
+  transform: scale(1.1);
 }
 
 .search-engine-label:hover {
-	background-color: rgba(var(--boxnav-button-color), 0.3);
+  background-color: rgba(var(--boxnav-button-color), 0.3);
 }
 
 /*=============== END OF CHOIX MOTEUR ==============*/
-
 
 /**============================================
  *               CONTRIBUTION BUTTON
  *=============================================**/
 :root {
-	--green: rgb(33, 107, 22);
-	--dark-blue-pal: #02025e;
-	--blue-pal: #0303ab;
+  --green: rgb(33, 107, 22);
+  --dark-blue-pal: #02025e;
+  --blue-pal: #0303ab;
 }
 
 .contribution-button,
 .pal-button {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: min(3.5vw, 16px);
-	position: fixed;
-	bottom: 2vh;
-	right: 2vw;
-	outline: none;
-	border: none;
-	text-decoration: none;
-	appearance: none;
-	-webkit-appearance: none;
-	-webkit-tap-highlight-color: transparent;
-	cursor: pointer;
-	user-select: none;
-	padding: 0.75em 1.75em;
-	border-radius: 50px;
-	display: inline-block;
-	color: var(--text-color);
-	transition: all 0.3s ease-in-out;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: min(3.5vw, 16px);
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.75em 1.75em;
+  border-radius: 50px;
+  display: inline-block;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .contribution-button {
-	background: linear-gradient(to right, var(--theme-color), var(--green));
+  background: linear-gradient(to right, var(--theme-color), var(--green));
 }
 
 .pal-button {
-	right: 50%;
-	transform: translateX(50%);
-	background: linear-gradient(to right, var(--dark-blue-pal), var(--blue-pal));
+  right: 50%;
+  transform: translateX(50%);
+  background: linear-gradient(to right, var(--dark-blue-pal), var(--blue-pal));
 }
 
 .contribution-button::after,
 .pal-button::after {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	bottom: -10px;
-	left: 5%;
-	height: 110%;
-	width: 90%;
-	opacity: 0.8;
-	border-radius: 50px;
-	background: inherit;
-	filter: blur(6px);
-	transition: all 0.2s;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -10px;
+  left: 5%;
+  height: 110%;
+  width: 90%;
+  opacity: 0.8;
+  border-radius: 50px;
+  background: inherit;
+  filter: blur(6px);
+  transition: all 0.2s;
 }
 
 .contribution-button:hover::after,
 .pal-button:hover::after {
-	filter: blur(4px);
-	width: 100%;
-	bottom: -5px;
-	left: 0;
+  filter: blur(4px);
+  width: 100%;
+  bottom: -5px;
+  left: 0;
 }
 
 .contribution-button:active::after,
 .pal-button:active::after {
-	filter: blur(10px);
+  filter: blur(10px);
 }
 
 /* FIX For Edge and IE */
 
 @supports (-ms-ime-align: auto) {
+  .contribution-button,
+  .π-Pal-button {
+    -webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+    box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
+  }
 
-	.contribution-button,
-	.π-Pal-button {
-		-webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-		box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
-	}
+  .π-Pal-button {
+    -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+    box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+  }
 
-	.π-Pal-button {
-		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-	}
-
-	.contribution-button::after,
-	.π-Pal-button::after {
-		display: none;
-	}
+  .contribution-button::after,
+  .π-Pal-button::after {
+    display: none;
+  }
 }
 
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .contribution-button,
+  .π-Pal-button {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--dark-blue-π-Pal)),
+      to(var(--blue-π-Pal))
+    );
+    background: linear-gradient(
+      to right,
+      var(--dark-blue-π-Pal),
+      var(--blue-π-Pal)
+    );
+    -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+    box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
+  }
 
-	.contribution-button,
-	.π-Pal-button {
-		background: -webkit-gradient(linear, left top, right top, from(var(--dark-blue-π-Pal)), to(var(--blue-π-Pal)));
-		background: linear-gradient(to right, var(--dark-blue-π-Pal), var(--blue-π-Pal));
-		-webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-		box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
-	}
+  .contribution-button::after,
+  .π-Pal-button::after {
+    display: none;
+  }
 
-	.contribution-button::after,
-	.π-Pal-button::after {
-		display: none;
-	}
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
 
-	@keyframes gradient {
-		0% {
-			background-position: 0% 50%;
-		}
+    50% {
+      background-position: 100% 50%;
+    }
 
-		50% {
-			background-position: 100% 50%;
-		}
-
-		100% {
-			background-position: 0% 50%;
-		}
-	}
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
 /*=============== END OF CONTRIBUTION BUTTON ==============*/
-
 
 /**========================================================================
  *                           MEDIAS
  *========================================================================**/
 @media only screen and (max-width: 800px) {
-	.app-panel {
-		right: 10px;
-		width: 60vw;
-		height: max(34vh, 180px);
-	}
+  .app-panel {
+    right: 10px;
+    width: 60vw;
+    height: max(34vh, 180px);
+  }
 
-	.boxenav {
-		top: max(400px, 73vh);
-		right: 20%;
-		left: 20%
-	}
+  .boxenav {
+    top: max(400px, 73vh);
+    right: 20%;
+    left: 20%;
+  }
 
-	.boxenav_text {
-		font-size: min(5vw, 20px);
-	}
+  .boxenav_text {
+    font-size: min(5vw, 20px);
+  }
 
-	.search-wrapper {
-		top: max(45%, 180px);
-	}
+  .search-wrapper {
+    top: max(45%, 180px);
+  }
 }
 /*============================ END OF SECTION MEDIAS ============================*/
