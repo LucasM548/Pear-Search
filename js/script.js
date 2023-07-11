@@ -323,6 +323,9 @@ function searchToggle(evt) {
   if (!isActive) {
     container.classList.add("active");
     setTimeout(() => searchInput.focus(), 200);
+  } else if (isActive && evt.target.classList.contains("close")) {
+    container.classList.remove("active");
+    searchInput.value = "";
   } else if (
     searchInput.value.trim() !== "" &&
     (evt.key === "Enter" || evt.type === "click")
@@ -331,18 +334,19 @@ function searchToggle(evt) {
     const webUrl = getEngineURL(getSelectedEngine());
     if (webUrl) {
       const finalURL = webUrl + encodeURIComponent(searchText);
-      window.location.href = finalURL;
+      window.open(finalURL, '_blank'); //window.location.href = finalURL; si non blank
     }
-  } else if (isActive && evt.target.classList.contains("close")) {
-    container.classList.remove("active");
-    searchInput.value = "";
   }
 }
 
 document.querySelector(".search-icon").addEventListener("click", searchToggle);
 document
   .querySelector(".search-input")
-  .addEventListener("keypress", searchToggle);
+  .addEventListener("keypress", function(evt) {
+    if (evt.key === "Enter" || evt.key === "Return") {
+      searchToggle(evt);
+    }
+  });
 document.querySelector(".close").addEventListener("click", searchToggle);
 /*============================ END OF BOUTON RECHERCHE ============================*/
 
