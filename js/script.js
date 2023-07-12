@@ -78,7 +78,7 @@ const translations = {
       Contribute: "贡献",
     },
   },
-  ja: {
+  jp: {
     translation: {
       "Ap-π-cations": "ア-π-リケーション",
       "π-Translate": "π-翻訳",
@@ -108,6 +108,7 @@ const translations = {
       Google: "7-15-15-7-12-5",
       "Brave Search": "2-18-1-22-5  19-5-1-18-3-8",
       DuckDuckGo: "4-21-3-11-4-21-3-11-7-15",
+      Bing: "2-9-14-7",
       Contribute: "3-15-14-20-18-15-20-21-2-9-15-14",
     },
   },
@@ -151,7 +152,7 @@ window.addEventListener("load", function () {
   var language =
     localStorage.getItem("language") || navigator.language.split("-")[0];
   if (
-    !["en", "fr", "es", "it", "ru", "zh", "ja", "ko", "π"].includes(language)
+    !["en", "fr", "es", "it", "ru", "zh", "jp", "ko", "π"].includes(language)
   ) {
     language = "en";
   }
@@ -200,7 +201,7 @@ function updateFlag(language) {
     case "zh":
       flagSrc = "img/Country Flags/china.png";
       break;
-    case "ja":
+    case "jp":
       flagSrc = "img/Country Flags/japan.png";
       break;
     case "ko":
@@ -358,6 +359,7 @@ function getEngineURL(engine) {
     Google: "https://www.google.com/search?q=",
     Brave_search: "https://search.brave.com/search?q=",
     DuckDuckGo: "https://duckduckgo.com/?q=",
+    Bing: "https://www.bing.com/search?q=",
   };
 
   return engineURLs[engine] || "";
