@@ -546,6 +546,7 @@ html {
   background-color: rgba(0, 0, 0, 0.3);
   color: var(--text-color);
   text-align: center;
+  border: 1px solid rgba(var(--text-color-rgba), 0.5);
   border-radius: 10px;
   padding: 10px;
   user-select: none;
