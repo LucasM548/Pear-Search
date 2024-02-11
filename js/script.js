@@ -316,6 +316,10 @@ applicationsLabel.addEventListener("mouseleave", function (event) {
 /**========================================================================
  *                           BOUTON RECHERCHE
  *========================================================================**/
+document.addEventListener("DOMContentLoaded", function() {
+  searchToggle(); // Appel de la fonction lors du chargement de la page
+});
+
 function searchToggle(evt) {
   const container = document.querySelector(".search-wrapper");
   const searchInput = container.querySelector(".search-input");
@@ -324,12 +328,12 @@ function searchToggle(evt) {
   if (!isActive) {
     container.classList.add("active");
     setTimeout(() => searchInput.focus(), 200);
-  } else if (isActive && evt.target.classList.contains("close")) {
+  } else if (isActive && evt && evt.target.classList.contains("close")) {
     container.classList.remove("active");
     searchInput.value = "";
   } else if (
     searchInput.value.trim() !== "" &&
-    (evt.key === "Enter" || evt.type === "click")
+    (evt && (evt.key === "Enter" || evt.type === "click"))
   ) {
     const searchText = searchInput.value;
     const webUrl = getEngineURL(getSelectedEngine());
@@ -341,13 +345,11 @@ function searchToggle(evt) {
 }
 
 document.querySelector(".search-icon").addEventListener("click", searchToggle);
-document
-  .querySelector(".search-input")
-  .addEventListener("keypress", function(evt) {
-    if (evt.key === "Enter" || evt.key === "Return") {
-      searchToggle(evt);
-    }
-  });
+document.querySelector(".search-input").addEventListener("keypress", function(evt) {
+  if (evt.key === "Enter" || evt.key === "Return") {
+    searchToggle(evt);
+  }
+});
 document.querySelector(".close").addEventListener("click", searchToggle);
 /*============================ END OF BOUTON RECHERCHE ============================*/
 
