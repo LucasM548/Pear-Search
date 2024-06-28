@@ -16,85 +16,88 @@
 <body>
 
   <!--================= TOP BAR ================-->
-  <div class="topbar">
-    
-    <div class="left-container">
-      <!--====== SWITCH DAY/NIGHT MODE ======-->
-      <input class="day-light" type="checkbox" id="day-light" name="day-light"/>
-      <label for="day-light"></label>
-      <!--=== END OF SWITCH DAY/NIGHT MODE ===-->
+  <header>
+    <div class="topbar">
+      
+      <div class="left-container">
+        <!--====== SWITCH DAY/NIGHT MODE ======-->
+        <input class="day-light" type="checkbox" id="day-light" name="day-light"/>
+        <label for="day-light"></label>
+        <!--=== END OF SWITCH DAY/NIGHT MODE ===-->
 
-      <!--====== CHOIX LANGUE ======-->
-      <span id="language" class="language">
-        <img id="flag">
-        <select onchange="changeLanguage(event)">
-          <!-- https://www.flaticon.com/packs/countrys-flags -->
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="es">Español</option>
-          <option value="it">Italiano</option>
-          <option value="ru">Русский</option>
-          <option value="zh">中文</option>
-          <option value="ja">日本</option>
-          <option value="ko">한국어</option>
-          <option value="π">π</option>
-        </select>
-      </span>
-      <!--=== END OF CHOIX LANGUE ===-->
+        <!--====== CHOIX LANGUE ======-->
+        <span id="language" class="language">
+          <img id="flag">
+          <select onchange="changeLanguage(event)">
+            <!-- https://www.flaticon.com/packs/countrys-flags -->
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="ru">Русский</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本</option>
+            <option value="ko">한국어</option>
+            <option value="π">π</option>
+          </select>
+        </span>
+        <!--=== END OF CHOIX LANGUE ===-->
+      </div>
+
+      <div class="right-container">
+        <a href="https://mail.google.com" target="_blank" class="button">π-mail</a>
+        <input type="radio" id="Applications" onclick="toggleAppPanel(event)">
+        <label for="Applications" class="button" data-panel="#appPanel" data-i18n="Ap-π-cations"></label>
+      </div>
     </div>
 
-    <div class="right-container">
-      <a href="https://mail.google.com" target="_blank" class="button">π-mail</a>
-      <input type="radio" id="Applications" onclick="toggleAppPanel(event)">
-      <label for="Applications" class="button" data-panel="#appPanel" data-i18n="Ap-π-cations"></label>
-    </div>
-  </div>
-
-  <!--====== APPS PANEL ======-->
-  <div class="app-panel" id="appPanel"></div>
-  <!--=== END OF APPS PANEL ===-->
-
+    <!--====== APPS PANEL ======-->
+    <div class="app-panel" id="appPanel" role="menu" aria-label="Applications"></div>
+    <!--=== END OF APPS PANEL ===-->
+  </header>
   <!--============== END OF TOP BAR =============-->
 
-
-  <!--====== BOUTON RECHERCHE ======-->
-  <div class="search-wrapper">
-    <div class="input-holder">
-      <input type="text" class="search-input" data-i18n="Placeholder" />
-      <button class="search-icon"><span class="span"></span></button>
+  <main>
+    <!--====== BOUTON RECHERCHE ======-->
+    <div class="search-wrapper">
+      <div class="input-holder">
+        <input type="text" class="search-input" data-i18n="Placeholder" />
+        <button class="search-icon" aria-label="Search"><span class="span"></span></button>
+      </div>
+      <span class="close"></span>
     </div>
-    <span class="close"></span>
-  </div>
-  <!--=== END OF BOUTON RECHERCHE ===-->
+    <!--=== END OF BOUTON RECHERCHE ===-->
 
-  <!--================= CHOIX MOTEUR ================-->
-  <div class="boxenav">
-    <h2 class="boxenav_text">
-      <a data-i18n="Choice of browser"></a>
-      <br>
-      <br>
-      <input type="radio" id="google" name="search_engine" value="Google">
-      <label for="google" class="search-engine-label" data-i18n="Google"></label>
-      <br>
-      <input type="radio" id="brave_search" name="search_engine" value="Brave_search" checked>
-      <label for="brave_search" class="search-engine-label" data-i18n="Brave Search"></label>
-      <br>
-      <input type="radio" id="duckduckgo" name="search_engine" value="DuckDuckGo">
-      <label for="duckduckgo" class="search-engine-label" data-i18n="DuckDuckGo"></label>
-      <br>
-      <input type="radio" id="bing" name="search_engine" value="Bing">
-      <label for="bing" class="search-engine-label" data-i18n="Bing"></label>
-    </h2>
-  </div>
-  <!--============== END OF CHOIX MOTEUR =============-->
+    <!--================= CHOIX MOTEUR ================-->
+    <div class="boxenav">
+      <h2 class="boxenav_text">
+        <a data-i18n="Choice of browser"></a>
+        <br>
+        <br>
+        <input type="radio" id="google" name="search_engine" value="Google">
+        <label for="google" class="search-engine-label" data-i18n="Google"></label>
+        <br>
+        <input type="radio" id="brave_search" name="search_engine" value="Brave_search" checked>
+        <label for="brave_search" class="search-engine-label" data-i18n="Brave Search"></label>
+        <br>
+        <input type="radio" id="duckduckgo" name="search_engine" value="DuckDuckGo">
+        <label for="duckduckgo" class="search-engine-label" data-i18n="DuckDuckGo"></label>
+        <br>
+        <input type="radio" id="bing" name="search_engine" value="Bing">
+        <label for="bing" class="search-engine-label" data-i18n="Bing"></label>
+      </h2>
+    </div>
+    <!--============== END OF CHOIX MOTEUR =============-->
+  </main>
 
-
-  <!--====== CONTRIBUTION BUTTON ======-->
-  <a class="contribution-button" href="https://github.com/LucasM548/Pear-Search#-contribution" target="_blank" data-i18n="Contribute"></a>
-  <a class="pal-button" onclick="openRandomLink()">
-    <img src="img/Apps/π-Pal.png" style="height:min(3.5vw, 16px);  user-select: none;" alt="π-Pal"/>
-  </a>
-  <!--============== END OF CONTRIBUTION BUTTON =============-->
+  <footer>
+    <!--====== CONTRIBUTION BUTTON ======-->
+    <a class="contribution-button" href="https://github.com/LucasM548/Pear-Search#-contribution" target="_blank" data-i18n="Contribute"></a>
+    <a class="pal-button" onclick="openRandomLink()">
+      <img src="img/Apps/π-Pal.png" style="height:min(3.5vw, 16px);  user-select: none;" alt="π-Pal"/>
+    </a>
+    <!--============== END OF CONTRIBUTION BUTTON =============-->
+  </footer>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5563708308754475" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/10.0.0/i18next.min.js"></script>
