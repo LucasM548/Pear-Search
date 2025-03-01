@@ -103,7 +103,8 @@ const translations = {
       "Ap-π-cations": "1-16 - π - 3-1-20-9-15-14-19",
       "π-Translate": "π - 20-18-1-14-19-12-1-20-5",
       Projects: "16-18-15-10-5-3-20-19",
-      Placeholder: "23-18-9-20-5  20-15  6-9-14-4  25-15-21-18  8-1-16-16-9-14-5-19-19 - Pear",
+      Placeholder:
+        "23-18-9-20-5  20-15  6-9-14-4  25-15-21-18  8-1-16-16-9-14-5-19-19 - Pear",
       "Choice of browser": "3-8-15-9-3-5  15-6  2-18-15-23-19-5-18",
       Google: "7-15-15-7-12-5",
       "Brave Search": "2-18-1-22-5  19-5-1-18-3-8",
@@ -233,22 +234,102 @@ function updateFlag(language) {
  *                           APPS PANEL
  *========================================================================**/
 const appLinks = [
-  { href: "https://discord.com/", imgSrc: "img/Apps/π-Scord.png", alt: "π-Scord", text: "π-Scord" },
-  { href: "https://github.com/", imgSrc: "img/Apps/π-Hub.png", alt: "π-Hub", text: "π-Hub" },
-  { href: "https://www.paypal.com/", imgSrc: "img/Apps/π-Pal.png", alt: "π-Pal", text: "π-Pal" },
-  { href: "https://www.youtube.com/", imgSrc: "img/Apps/π-Tube.png", alt: "π-Tube", text: "π-Tube" },
-  { href: "https://translate.google.com/", imgSrc: "img/Apps/π-Translate.png", alt: "π-Translate", dataI18n: "π-Translate" },
-  { href: "https://www.google.com/maps/", imgSrc: "img/Apps/π-Maps.png", alt: "π-Maps", text: "π-Maps" },
-  { href: "https://play.google.com/", imgSrc: "img/Apps/π-Play.png", alt: "π-Play", text: "π-Play" },
-  { href: "https://docs.google.com/", imgSrc: "img/Apps/π-Docx.png", alt: "π-Docx", text: "π-Docx" },
-  { href: "https://sheets.google.com/", imgSrc: "img/Apps/π-Sheets.png", alt: "π-Sheets", text: "π-Sheets" },
-  { href: "https://slides.google.com/", imgSrc: "img/Apps/π-Slides.png", alt: "π-Slides", text: "π-Slides" },
-  { href: "https://forms.google.com/", imgSrc: "img/Apps/π-Forms.png", alt: "π-Forms", text: "π-Forms" },
-  { href: "https://earth.google.com/", imgSrc: "img/Apps/π-Earth.png", alt: "π-Earth", text: "π-Earth" },
-  { href: "https://meet.google.com/", imgSrc: "img/Apps/π-Meet.png", alt: "π-Meet", text: "π-Meet" },
-  { href: "https://news.google.com/", imgSrc: "img/Apps/π-News.png", alt: "π-News", text: "π-News" },
-  { href: "https://shopping.google.com/", imgSrc: "img/Apps/Shopp-π-G.png", alt: "Shopp-π-G", text: "Shopp-π-G" },
-  { href: "https://lucasm548.github.io/Projets-Lucas/", imgSrc: "img/Logo Axolotl.png", alt: "Logo Axolotl", dataI18n: "Projects" },
+  {
+    href: "https://discord.com/",
+    imgSrc: "img/Apps/π-Scord.png",
+    alt: "π-Scord",
+    text: "π-Scord",
+  },
+  {
+    href: "https://github.com/",
+    imgSrc: "img/Apps/π-Hub.png",
+    alt: "π-Hub",
+    text: "π-Hub",
+  },
+  {
+    href: "https://www.paypal.com/",
+    imgSrc: "img/Apps/π-Pal.png",
+    alt: "π-Pal",
+    text: "π-Pal",
+  },
+  {
+    href: "https://www.youtube.com/",
+    imgSrc: "img/Apps/π-Tube.png",
+    alt: "π-Tube",
+    text: "π-Tube",
+  },
+  {
+    href: "https://translate.google.com/",
+    imgSrc: "img/Apps/π-Translate.png",
+    alt: "π-Translate",
+    dataI18n: "π-Translate",
+  },
+  {
+    href: "https://www.google.com/maps/",
+    imgSrc: "img/Apps/π-Maps.png",
+    alt: "π-Maps",
+    text: "π-Maps",
+  },
+  {
+    href: "https://play.google.com/",
+    imgSrc: "img/Apps/π-Play.png",
+    alt: "π-Play",
+    text: "π-Play",
+  },
+  {
+    href: "https://docs.google.com/",
+    imgSrc: "img/Apps/π-Docx.png",
+    alt: "π-Docx",
+    text: "π-Docx",
+  },
+  {
+    href: "https://sheets.google.com/",
+    imgSrc: "img/Apps/π-Sheets.png",
+    alt: "π-Sheets",
+    text: "π-Sheets",
+  },
+  {
+    href: "https://slides.google.com/",
+    imgSrc: "img/Apps/π-Slides.png",
+    alt: "π-Slides",
+    text: "π-Slides",
+  },
+  {
+    href: "https://forms.google.com/",
+    imgSrc: "img/Apps/π-Forms.png",
+    alt: "π-Forms",
+    text: "π-Forms",
+  },
+  {
+    href: "https://earth.google.com/",
+    imgSrc: "img/Apps/π-Earth.png",
+    alt: "π-Earth",
+    text: "π-Earth",
+  },
+  {
+    href: "https://meet.google.com/",
+    imgSrc: "img/Apps/π-Meet.png",
+    alt: "π-Meet",
+    text: "π-Meet",
+  },
+  {
+    href: "https://news.google.com/",
+    imgSrc: "img/Apps/π-News.png",
+    alt: "π-News",
+    text: "π-News",
+  },
+  {
+    href: "https://shopping.google.com/",
+    imgSrc: "img/Apps/Shopp-π-G.png",
+    alt: "Shopp-π-G",
+    text: "Shopp-π-G",
+  },
+  {
+    href: "https://lucasm548.github.io/Projets-Lucas/",
+    imgSrc: "img/Logo Axolotl.png",
+    alt: "Logo Axolotl",
+    dataI18n: "Projects",
+  },
 ];
 
 const appPanel = document.getElementById("appPanel");
@@ -316,7 +397,7 @@ applicationsLabel.addEventListener("mouseleave", function (event) {
 /**========================================================================
  *                           BOUTON RECHERCHE
  *========================================================================**/
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   searchToggle(); // Appel de la fonction lors du chargement de la page
 });
 
@@ -333,23 +414,26 @@ function searchToggle(evt) {
     searchInput.value = "";
   } else if (
     searchInput.value.trim() !== "" &&
-    (evt && (evt.key === "Enter" || evt.type === "click"))
+    evt &&
+    (evt.key === "Enter" || evt.type === "click")
   ) {
     const searchText = searchInput.value;
     const webUrl = getEngineURL(getSelectedEngine());
     if (webUrl) {
       const finalURL = webUrl + encodeURIComponent(searchText);
-      window.open(finalURL, '_blank'); //window.location.href = finalURL; si non blank
+      window.open(finalURL, "_blank"); //window.location.href = finalURL; si non blank
     }
   }
 }
 
 document.querySelector(".search-icon").addEventListener("click", searchToggle);
-document.querySelector(".search-input").addEventListener("keypress", function(evt) {
-  if (evt.key === "Enter" || evt.key === "Return") {
-    searchToggle(evt);
-  }
-});
+document
+  .querySelector(".search-input")
+  .addEventListener("keypress", function (evt) {
+    if (evt.key === "Enter" || evt.key === "Return") {
+      searchToggle(evt);
+    }
+  });
 document.querySelector(".close").addEventListener("click", searchToggle);
 /*============================ END OF BOUTON RECHERCHE ============================*/
 
