@@ -54,20 +54,22 @@
         </div>
 
         <div class="right-container">
-          <a href="https://mail.google.com" target="_blank" class="button"
+          <a
+            href="https://mail.google.com"
+            target="_blank"
+            class="button"
+            rel="noopener noreferrer"
             >π-mail</a
           >
-          <input
-            type="radio"
-            id="Applications"
-            onclick="toggleAppPanel(event)"
-          />
-          <label
-            for="Applications"
+          <button
+            type="button"
+            id="applicationsToggler"
             class="button"
-            data-panel="#appPanel"
+            aria-controls="appPanel"
+            aria-expanded="false"
             data-i18n="Ap-π-cations"
-          ></label>
+            >Ap-π-cations</button
+          >
         </div>
       </div>
 
@@ -77,6 +79,7 @@
         id="appPanel"
         role="menu"
         aria-label="Applications"
+        aria-hidden="true"
       ></div>
       <!--=== END OF APPS PANEL ===-->
     </header>
@@ -150,15 +153,16 @@
         class="contribution-button"
         href="https://github.com/LucasM548/Pear-Search#-contribution"
         target="_blank"
+        rel="noopener noreferrer"
         data-i18n="Contribute"
       ></a>
-      <a class="pal-button" onclick="openRandomLink()">
+      <button type="button" class="pal-button" onclick="openRandomLink()">
         <img
           src="img/Apps/π-Pal.png"
           style="height: min(3.5vw, 16px); user-select: none"
           alt="π-Pal"
         />
-      </a>
+      </button>
       <!--============== END OF CONTRIBUTION BUTTON =============-->
     </footer>
 
@@ -168,7 +172,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/10.0.0/i18next.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-6MV2RQWCTV"

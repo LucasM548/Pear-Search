@@ -3,10 +3,15 @@
  *=============================================**/
 const checkbox = document.getElementById("day-light");
 const root = document.documentElement;
-const theme = localStorage.getItem("theme");
+const storedTheme = localStorage.getItem("theme");
 
-root.classList.toggle("Day-mode", theme === "Day-mode");
-checkbox.checked = theme !== "Day-mode";
+if (storedTheme === "Day-mode") {
+  root.classList.add("Day-mode");
+  checkbox.checked = false;
+} else {
+  root.classList.remove("Day-mode");
+  checkbox.checked = true;
+}
 
 checkbox.addEventListener("change", function () {
   if (this.checked) {
@@ -17,8 +22,7 @@ checkbox.addEventListener("change", function () {
     localStorage.setItem("theme", "Day-mode");
   }
 });
-/*=============== END OF SWITCH NIGHT/DAY ==============*
-
+/*=============== END OF SWITCH NIGHT/DAY ==============*/
 
 /**========================================================================
  *                           CHOIX LANGUE
@@ -78,7 +82,7 @@ const translations = {
       Contribute: "贡献",
     },
   },
-  jp: {
+  ja: {
     translation: {
       "Ap-π-cations": "ア-π-リケーション",
       "π-Translate": "π-翻訳",
@@ -121,15 +125,19 @@ i18next.init(
     resources: translations,
   },
   function (err, t) {
+    if (err) {
+      console.error("i18next initialization error:", err);
+      return;
+    }
     updateContent();
   }
 );
 
 function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach(function (element) {
-    var key = element.getAttribute("data-i18n");
+    const key = element.getAttribute("data-i18n");
     if (key === "Placeholder") {
-      element.setAttribute("Placeholder", i18next.t(key));
+      element.setAttribute("placeholder", i18next.t(key));
     } else {
       element.textContent = i18next.t(key);
     }
@@ -137,10 +145,10 @@ function updateContent() {
 }
 
 function changeLanguage(event) {
-  var selectedLanguage = event.target.value;
+  const selectedLanguage = event.target.value;
   i18next.changeLanguage(selectedLanguage, function (err, t) {
     if (err) {
-      console.log("Erreur lors du changement de langue :", err);
+      console.error("Erreur lors du changement de langue :", err);
       return;
     }
     localStorage.setItem("language", selectedLanguage);
@@ -150,10 +158,10 @@ function changeLanguage(event) {
 }
 
 window.addEventListener("load", function () {
-  var language =
+  let language =
     localStorage.getItem("language") || navigator.language.split("-")[0];
   if (
-    !["en", "fr", "es", "it", "ru", "zh", "jp", "ko", "π"].includes(language)
+    !["en", "fr", "es", "it", "ru", "zh", "ja", "ko", "π"].includes(language)
   ) {
     language = "en";
   }
@@ -161,15 +169,15 @@ window.addEventListener("load", function () {
   document.querySelector("#language select").value = language;
   i18next.changeLanguage(language, function (err, t) {
     if (err) {
-      console.log("Erreur lors du changement de langue :", err);
+      console.error("Erreur lors du changement de langue initial :", err);
       return;
     }
     updateContent();
+    updateFlag(language);
   });
-  updateFlag(language);
 });
 
-var animationInProgress = false;
+let animationInProgress = false;
 
 function updateFlag(language) {
   if (animationInProgress) {
@@ -180,8 +188,8 @@ function updateFlag(language) {
   }
 
   animationInProgress = true;
-  var flagImg = document.getElementById("flag");
-  var flagSrc = "";
+  const flagImg = document.getElementById("flag");
+  let flagSrc = "";
 
   switch (language) {
     case "en":
@@ -202,7 +210,7 @@ function updateFlag(language) {
     case "zh":
       flagSrc = "img/Country Flags/china.png";
       break;
-    case "jp":
+    case "ja":
       flagSrc = "img/Country Flags/japan.png";
       break;
     case "ko":
@@ -218,11 +226,18 @@ function updateFlag(language) {
   if (flagSrc) {
     flagImg.src = flagSrc;
     flagImg.style.display = "block";
-    flagImg.style.animation = "flagAnimation 1s";
-    setTimeout(function () {
-      flagImg.style.display = "none";
-      animationInProgress = false;
-    }, 1000);
+    flagImg.classList.add("flag-animate-class");
+
+    flagImg.addEventListener(
+      "animationend",
+      function handleAnimationEnd() {
+        flagImg.style.display = "none";
+        flagImg.classList.remove("flag-animate-class");
+        animationInProgress = false;
+        flagImg.removeEventListener("animationend", handleAnimationEnd);
+      },
+      { once: true }
+    );
   } else {
     flagImg.style.display = "none";
     animationInProgress = false;
@@ -333,12 +348,15 @@ const appLinks = [
 ];
 
 const appPanel = document.getElementById("appPanel");
-const applicationsLabel = document.querySelector('label[for="Applications"]');
+const applicationsToggler = document.getElementById("applicationsToggler");
+
+appPanel.setAttribute("aria-hidden", "true");
 
 appLinks.forEach((app) => {
   const appElement = document.createElement("a");
   appElement.href = app.href;
   appElement.target = "_blank";
+  appElement.rel = "noopener noreferrer";
   appElement.classList.add("app");
 
   const imgElement = document.createElement("img");
@@ -346,7 +364,6 @@ appLinks.forEach((app) => {
   imgElement.alt = app.alt;
 
   const textElement = document.createElement("p");
-  textElement.textContent = app.text;
   if (app.dataI18n) {
     textElement.setAttribute("data-i18n", app.dataI18n);
   } else {
@@ -357,40 +374,33 @@ appLinks.forEach((app) => {
   appElement.appendChild(textElement);
   appPanel.appendChild(appElement);
 });
+updateContent();
 
 function toggleAppPanel(event) {
-  event.stopPropagation();
-  appPanel.classList.toggle("visible");
-  applicationsLabel.classList.toggle("active");
-  applicationsLabel.classList.toggle(
-    "hovered",
-    appPanel.classList.contains("visible")
-  );
+  if (event) event.stopPropagation();
+
+  const isVisible = appPanel.classList.toggle("visible");
+  appPanel.setAttribute("aria-hidden", !isVisible);
+  applicationsToggler.setAttribute("aria-expanded", isVisible);
+  applicationsToggler.classList.toggle("active", isVisible);
 }
 
 function hideAppPanel() {
   appPanel.classList.remove("visible");
-  applicationsLabel.classList.remove("active", "hovered");
+  appPanel.setAttribute("aria-hidden", "true");
+  applicationsToggler.setAttribute("aria-expanded", "false");
+  applicationsToggler.classList.remove("active");
 }
+
+applicationsToggler.addEventListener("click", toggleAppPanel);
 
 document.addEventListener("click", function (event) {
   if (
     !appPanel.contains(event.target) &&
-    event.target.id !== "Applications" &&
-    event.target.tagName !== "LABEL"
+    !applicationsToggler.contains(event.target)
   ) {
     hideAppPanel();
   }
-});
-
-applicationsLabel.addEventListener("mouseenter", function (event) {
-  if (appPanel.classList.contains("visible")) {
-    applicationsLabel.classList.add("hovered");
-  }
-});
-
-applicationsLabel.addEventListener("mouseleave", function (event) {
-  applicationsLabel.classList.remove("hovered");
 });
 /*============================ END OF APPS PANEL ============================*/
 
@@ -398,7 +408,7 @@ applicationsLabel.addEventListener("mouseleave", function (event) {
  *                           BOUTON RECHERCHE
  *========================================================================**/
 document.addEventListener("DOMContentLoaded", function () {
-  searchToggle(); // Appel de la fonction lors du chargement de la page
+  searchToggle();
 });
 
 function searchToggle(evt) {
@@ -415,13 +425,14 @@ function searchToggle(evt) {
   } else if (
     searchInput.value.trim() !== "" &&
     evt &&
-    (evt.key === "Enter" || evt.type === "click")
+    (evt.key === "Enter" ||
+      (evt.type === "click" && evt.target.classList.contains("search-icon")))
   ) {
     const searchText = searchInput.value;
     const webUrl = getEngineURL(getSelectedEngine());
     if (webUrl) {
       const finalURL = webUrl + encodeURIComponent(searchText);
-      window.open(finalURL, "_blank"); //window.location.href = finalURL; si non blank
+      window.open(finalURL, "_blank", "noopener noreferrer");
     }
   }
 }
@@ -447,7 +458,6 @@ function getEngineURL(engine) {
     DuckDuckGo: "https://duckduckgo.com/?q=",
     Bing: "https://www.bing.com/search?q=",
   };
-
   return engineURLs[engine] || "";
 }
 
@@ -458,33 +468,40 @@ function getSelectedEngine() {
 
 function setSelectedEngine(engine) {
   localStorage.setItem("selectedEngine", engine);
-  $('input[name="search_engine"]')
-    .filter('[value="' + engine + '"]')
-    .prop("checked", true);
+  const radioButtons = document.querySelectorAll('input[name="search_engine"]');
+  radioButtons.forEach((radio) => {
+    radio.checked = radio.value === engine;
+  });
 }
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   const selectedEngine = getSelectedEngine();
   setSelectedEngine(selectedEngine);
-});
 
-$('input[name="search_engine"]').on("change", function () {
-  const newSelectedEngine = $('input[name="search_engine"]:checked').val();
-  setSelectedEngine(newSelectedEngine);
+  const searchEngineRadios = document.querySelectorAll(
+    'input[name="search_engine"]'
+  );
+  searchEngineRadios.forEach((radio) => {
+    radio.addEventListener("change", function () {
+      if (this.checked) {
+        setSelectedEngine(this.value);
+      }
+    });
+  });
 });
 /*=============== END OF CHOIX MOTEUR ==============*/
 
 /**======================
  *    BOUTON CONTRIBUTION
  *========================**/
-const links = [
+const piPalLinks = [
   "https://www.paypal.com/paypalme/LucasM54",
   "https://www.paypal.com/paypalme/biquidouLIV",
 ];
 
 function openRandomLink() {
-  const randomLink = links[Math.floor(Math.random() * links.length)];
-  window.open(randomLink, "_blank");
+  const randomLink = piPalLinks[Math.floor(Math.random() * piPalLinks.length)];
+  window.open(randomLink, "_blank", "noopener noreferrer");
 }
 /*==== END OF BOUTON CONTRIBUTION ====*/
 
@@ -497,7 +514,6 @@ function gtag() {
   dataLayer.push(arguments);
 }
 gtag("js", new Date());
-
 gtag("config", "G-6MV2RQWCTV");
 
 (function (c, l, a, r, i, t, y) {
@@ -512,4 +528,3 @@ gtag("config", "G-6MV2RQWCTV");
   y = l.getElementsByTagName(r)[0];
   y.parentNode.insertBefore(t, y);
 })(window, document, "clarity", "script", "hdfskdqo11");
-/*==== END OF ANALYTICS ====*/

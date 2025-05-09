@@ -119,6 +119,7 @@ html {
   cursor: pointer;
   user-select: none;
   transition: color 0.3s ease-in-out, background-color 0.5s;
+  font-family: inherit;
 }
 
 .button:hover,
@@ -129,11 +130,6 @@ html {
 
 .button.active {
   background-color: var(--hover-color);
-}
-
-.label.hovered {
-  background-color: var(--hover-color);
-  border-radius: 10px;
 }
 /*============================ END OF TOP BAR ============================*/
 
@@ -217,6 +213,7 @@ html {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
   width: 100%;
+  font-family: inherit;
 }
 
 .language::after {
@@ -278,6 +275,10 @@ html {
   opacity: 0;
   user-select: none;
   pointer-events: none;
+}
+
+.flag-animate-class {
+  animation: flagAnimation 1s;
 }
 
 @keyframes flagAnimation {
@@ -420,6 +421,7 @@ html {
   transition: all 0.3s cubic-bezier(0, 0.105, 0.035, 1.57), font-size 0s,
     color 0s;
   transition-delay: 0.3s, color 0s;
+  font-family: inherit;
 }
 
 .search-wrapper.active .input-holder .search-input {
@@ -652,62 +654,51 @@ input[type="radio"]:checked + .search-engine-label {
   filter: blur(10px);
 }
 
-/* FIX For Edge and IE */
-
 @supports (-ms-ime-align: auto) {
   .contribution-button,
-  .π-Pal-button {
+  .pal-button {
     -webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
     box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8);
   }
 
-  .π-Pal-button {
+  .pal-button {
     -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
     box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
   }
 
   .contribution-button::after,
-  .π-Pal-button::after {
+  .pal-button::after {
     display: none;
   }
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .contribution-button,
-  .π-Pal-button {
+  .pal-button {
     background: -webkit-gradient(
       linear,
       left top,
       right top,
-      from(var(--dark-blue-π-Pal)),
-      to(var(--blue-π-Pal))
+      from(var(--dark-blue-pal)),
+      to(var(--blue-pal))
     );
     background: linear-gradient(
       to right,
-      var(--dark-blue-π-Pal),
-      var(--blue-π-Pal)
+      var(--dark-blue-pal),
+      var(--blue-pal)
     );
     -webkit-box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
     box-shadow: 0 20px 20px -15px rgba(3, 3, 171, 0.8);
   }
-
-  .contribution-button::after,
-  .π-Pal-button::after {
-    display: none;
+  .contribution-button {
+    background: linear-gradient(to right, var(--theme-color), var(--green));
+    -webkit-box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8); /* Default, or specific high-contrast */
+    box-shadow: 0 20px 20px -15px rgba(33, 107, 22, 0.8); /* Default, or specific high-contrast */
   }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
+  .contribution-button::after,
+  .pal-button::after {
+    display: none;
   }
 }
 /*=============== END OF CONTRIBUTION BUTTON ==============*/
